@@ -1,0 +1,9 @@
+{
+  "schema": "freecad-benchmark/v1",
+  "run": {
+    "id": "FLG-002_r01",
+    "title": "セスナ級 固定オレオ主脚",
+    "specVersion": "2.0",
+    "model": "未登録"
+  }
+}

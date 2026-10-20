@@ -1,0 +1,27 @@
+{
+  "schema": "freecad-benchmark/v1",
+  "run": {
+    "id": "FLG-002",
+    "title": "セスナ級 固定オレオ主脚",
+    "specVersion": "2.0",
+    "model": "未登録",
+    "status": "pending",
+    "sourceFiles": ["01_design_spec.md · FLG-002 v2.0", "02_run_and_review.md · FLG-002 v2.0"]
+  },
+  "parts": [],
+  "evaluation": {
+    "status": "unverified",
+    "score": null,
+    "maxScore": 100,
+    "source": "仕様 v2.0 の必須ゲート。設計・採点結果は未読込。",
+    "gates": [
+      {"id":"G1","label":"荷重経路・構造強度","status":"pending","detail":"荷重・圧力ケースと主要構造・締結の余裕を確認。"},
+      {"id":"G2","label":"オレオ内部・動解析","status":"pending","detail":"ガスと油の内部構造、D1/D2、数値収束、エネルギー収支を確認。"},
+      {"id":"G3","label":"部品構成・組立・可動","status":"pending","detail":"タイヤ、ホイール、軸受、保持、ブレーキ、シール、トルクリンク等を確認。"},
+      {"id":"G4","label":"CAD再開・変更・交換","status":"pending","detail":"新規セッションでの再開・パラメータ変更とSTEP・図面を確認。"},
+      {"id":"G5","label":"CAD・計算・BOMの整合","status":"pending","detail":"重要寸法・質量・材料・購入品と、根拠の区別を確認。"}
+    ],
+    "metrics": [],
+    "issues": []
+  }
+}

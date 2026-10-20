@@ -1,0 +1,28 @@
+{
+  "schema": "freecad-benchmark/v1",
+  "run": { "id": "FLG-002_r01" },
+  "evaluation": {
+    "status": "unverified",
+    "score": null,
+    "maxScore": 100,
+    "source": "採点者・根拠ファイル・検証日を記入してください。",
+    "gates": [
+      {"id":"G1","label":"荷重経路・構造強度","status":"pending","detail":"未評価"},
+      {"id":"G2","label":"オレオ内部・動解析","status":"pending","detail":"未評価"},
+      {"id":"G3","label":"部品構成・組立・可動","status":"pending","detail":"未評価"},
+      {"id":"G4","label":"CAD再開・変更・交換","status":"pending","detail":"未評価"},
+      {"id":"G5","label":"CAD・計算・BOMの整合","status":"pending","detail":"未評価"}
+    ],
+    "categories": [
+      {"label":"要求・荷重・取合い","score":null,"maxScore":15},
+      {"label":"構造・圧力・締結","score":null,"maxScore":20},
+      {"label":"緩衝性能と内部構造","score":null,"maxScore":20},
+      {"label":"タイヤ・車輪・ブレーキ","score":null,"maxScore":15},
+      {"label":"製造・整備・寿命","score":null,"maxScore":10},
+      {"label":"CADと図面","score":null,"maxScore":10},
+      {"label":"再現性と説明の正確さ","score":null,"maxScore":10}
+    ],
+    "metrics": [],
+    "issues": []
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111c27">
+  <title>GEAR / LAB — FreeCAD Benchmark Viewer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314b8a6'/%3E%3Cpath d='M8 9h16v4H12v10h8v-4h-5v-4h9v12H8z' fill='%23111c27'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/controls/OrbitControls.js":"./vendor/OrbitControls.js","three/addons/loaders/STLLoader.js":"./vendor/STLLoader.js"}}</script>
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="GEAR LAB ホーム"><span class="brand-mark">G</span>GEAR<span class="brand-slash">/</span>LAB <span class="brand-sub">BENCHMARK VIEWER</span></a>
+    <div class="top-actions"><span class="local-badge"><i></i> LOCAL · OFFLINE READY</span><button class="primary" id="import-button">＋ 結果を読み込む</button></div>
+  </header>
+  <main>
+    <section class="title-row">
+      <div><div class="eyebrow">FREECAD → THREE.JS <span>/</span> DESIGN REVIEW</div><h1 id="run-title">セスナ級 固定オレオ主脚</h1><p class="subtitle"><span id="run-id">FLG-002</span><span class="dot">·</span>仕様 <span id="spec-version">v2.0</span><span class="dot">·</span><span id="run-description">固定式・単輪</span></p></div>
+      <div class="run-state"><span id="review-status" class="badge amber">結果待ち</span><span id="model-name">MODEL —</span></div>
+    </section>
+    <section class="summary-row" aria-label="結果サマリー">
+      <div class="stat"><span class="stat-label">BENCHMARK SCORE</span><div><strong id="score">—</strong><span id="score-max">/ 100</span><span id="score-note" class="stat-caption">未採点</span></div></div>
+      <div class="stat"><span class="stat-label">REQUIRED GATES</span><div><strong id="gate-count">0</strong><span id="gate-total">/ 5</span><span id="gate-note" class="stat-caption">全項目 未確認</span></div></div>
+      <div class="stat"><span class="stat-label">ASSEMBLY</span><div><strong id="part-count">—</strong><span>parts</span><span id="triangle-count" class="stat-caption">CAD未読込</span></div></div>
+      <div class="stat"><span class="stat-label">REVIEW READINESS</span><div><span id="readiness" class="readiness">評価待ち</span></div><span class="stat-caption">全ゲート通過 ＋ 90点以上</span></div>
+    </section>
+    <section class="workspace">
+      <aside class="parts-panel panel">
+        <div class="panel-heading"><h2>アセンブリ</h2><span id="tree-count" class="small-count">0</span></div>
+        <div class="tree-root"><span class="folder-icon">◇</span><span id="tree-root-name">landing_gear</span><span class="units">mm</span></div>
+        <div id="parts-list" class="parts-list"><div class="parts-empty">CADの読込後に<br>部品一覧を表示します。</div></div>
+        <section id="part-detail" class="part-detail"><span class="eyebrow">PART INSPECTOR</span><p>部品をクリックして詳細を確認</p></section>
+        <div class="parts-footer"><button id="show-all" class="text-button">すべて表示</button><span id="visible-count">0 visible</span></div>
+      </aside>
+      <section class="viewport-panel panel" aria-label="3Dビューポート">
+        <div class="viewport-toolbar"><div class="segmented" id="views"><button class="active" data-view="iso" aria-label="等角投影">ISO</button><button data-view="front">前</button><button data-view="right">右</button><button data-view="top">上</button></div><div class="viewport-actions"><button id="fit" title="全体表示 (F)">全体表示 <kbd>F</kbd></button><button id="screenshot" title="3D表示をPNGで保存">PNG ↗</button></div></div>
+        <div id="viewport" class="viewport"><div id="webgl-error" class="webgl-error" hidden></div><div id="empty-state" class="empty-state"><div class="empty-symbol">◇</div><span class="eyebrow">YOUR DESIGN, IN FOCUS</span><h2>設計結果を、ここから。</h2><p>FreeCADから書き出したJSON、またはSTLを読み込むと<br>部品構成とベンチマーク結果を確認できます。</p><button id="empty-import" class="primary">結果ファイルを選択</button><span class="empty-note">現在：FLG-002 の設計結果待ち</span></div><span id="view-label" class="view-label">ISOMETRIC VIEW</span><div class="axis-key"><span class="axis-x">X</span><span class="axis-y">Y</span><span class="axis-z">Z ↑</span></div></div>
+        <div class="viewport-bottom"><span>ドラッグ：回転 <span class="divider">/</span> 右ドラッグ：移動 <span class="divider">/</span> スクロール：ズーム</span><span id="bounds-label">mm · Z-UP</span></div>
+        <div class="display-controls"><label><input id="wireframe" type="checkbox"> ワイヤー</label><label><input id="transparent" type="checkbox"> 透過</label><label class="slider-label">分解 <input id="explode" type="range" min="0" max="100" value="0"><output id="explode-value">0%</output></label><label><input id="section" type="checkbox"> 断面</label><select id="section-axis" aria-label="断面の軸"><option>X</option><option>Y</option><option>Z</option></select><input id="section-position" aria-label="断面位置" type="range" min="0" max="100" value="50"></div>
+      </section>
+      <aside class="review-panel panel"><div class="panel-heading"><h2>必須ゲート</h2><span class="micro-label">ACCEPTANCE</span></div><p class="panel-intro">高い採点でも、未完のゲートは相殺しません。</p><div id="gates" class="gates"></div><div class="review-source"><span class="eyebrow">EVIDENCE & REVIEW</span><p id="evidence-note"></p><span id="evaluation-kind" class="badge neutral">独立検証 未実施</span></div></aside>
+    </section>
+    <section class="results-panel panel"><div class="results-heading"><div class="tabs" role="tablist" aria-label="結果の詳細"><button id="tab-overview" role="tab" aria-controls="tab-content" aria-selected="true" data-tab="overview">結果概要</button><button id="tab-csv" role="tab" aria-controls="tab-content" aria-selected="false" data-tab="csv">CSV・時刻歴 <span id="csv-count">0</span></button><button id="tab-files" role="tab" aria-controls="tab-content" aria-selected="false" data-tab="files">ソースファイル</button></div><button id="download-bundle" class="text-button">JSONを書き出す ↓</button></div><div id="tab-content" class="tab-content" role="tabpanel" aria-labelledby="tab-overview"></div></section>
+    <footer><span>GEAR / LAB <span class="dot">·</span> FreeCAD benchmark workspace</span><span>メッシュ表示は設計の可視化用。強度・干渉・耐空性の自動判定は行いません。</span></footer>
+  </main>
+  <input id="file-input" type="file" multiple accept=".json,.stl,.csv,.md,.pdf,.FCStd,.step,.stp" hidden>
+  <dialog id="import-dialog"><div class="dialog-heading"><div><span class="eyebrow">IMPORT RESULTS</span><h2>設計と評価を読み込む</h2></div><button id="close-dialog" class="icon-button" aria-label="閉じる">×</button></div><div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="ファイルを選択、またはここにドロップ"><div class="upload-symbol">↥</div><strong>ファイルをドロップ</strong><p>またはクリックして選択</p><span>FreeCAD書出しJSON · STL · CSV · 評価JSON</span></div><p class="import-help">FreeCAD の Python コンソールから同梱の <code>tools/export_freecad.py</code> を実行してください。FCStd / STEP はそのままブラウザで開けません。</p><p class="import-help">追加のCSV・報告書は現在の結果に添付されます。新しいCADを読み込むと、前の評価・添付はリセットします。ファイルはこのブラウザ内で処理します。</p><button id="reset-run" class="text-button">現在の結果をリセット</button></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

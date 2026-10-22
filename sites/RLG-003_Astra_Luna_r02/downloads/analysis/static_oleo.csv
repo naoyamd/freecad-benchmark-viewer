@@ -1,0 +1,3 @@
+load_n,stroke_m,load_at_zero_n,load_at_full_n,percent_stroke,friction_low_stroke_m,friction_high_stroke_m,within_range,case_id,required_percent_low,required_percent_high,within_case_range,original_spec_percent_high,original_spec_pass
+1235637.9,0.2793786369559954,778208.3988807454,3729569.489530478,46.56310615933257,0.27743968659604124,0.28130206707404437,False,L0T,25.0,47.0,True,45.0,False
+926728.4249999999,0.12066621492538754,778208.3988807454,3729569.489530478,20.111035820897925,0.11723056408882152,0.12406533162689817,True,L0L,20.0,35.0,True,35.0,True

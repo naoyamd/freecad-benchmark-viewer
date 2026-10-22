@@ -1,0 +1,15 @@
+case_id,variant,radius_mm,tire_scale,cross_slope,max_deflection_m,max_load_n,bottomed_wheels,note,surface_height_span_m,cavitation_detected
+L0T,radius_-10mm,647.225,1.0,0.0,0.1173886932405719,267721.545,0,radius changes envelope/ground geometry; task tire force curve is unchanged,,
+L0T,radius_+10mm,667.225,1.0,0.0,0.1173886932405719,267721.545,0,radius changes envelope/ground geometry; task tire force curve is unchanged,,
+L0T,tire_k_0.95,657.225,0.95,0.0,0.12231848673673171,267721.545,0,pressure-equivalent tire stiffness perturbation,,
+L0T,tire_k_1.05,657.225,1.05,0.0,0.11179875546721134,267721.545,0,pressure-equivalent tire stiffness perturbation,,
+L0T,cross_slope_-0.015,657.225,1.0,-0.015,0.1173886932405719,267721.545,0,cross-slope geometry span; lateral compliance is outside this vertical screen,0.0195,
+L0T,cross_slope_+0.015,657.225,1.0,0.015,0.1173886932405719,267721.545,0,cross-slope geometry span; lateral compliance is outside this vertical screen,0.0195,
+L0L,radius_-10mm,647.225,1.0,0.0,0.08804151993042894,200791.15875,0,radius changes envelope/ground geometry; task tire force curve is unchanged,,
+L0L,radius_+10mm,667.225,1.0,0.0,0.08804151993042894,200791.15875,0,radius changes envelope/ground geometry; task tire force curve is unchanged,,
+L0L,tire_k_0.95,657.225,0.95,0.0,0.09267528413729363,200791.15875,0,pressure-equivalent tire stiffness perturbation,,
+L0L,tire_k_1.05,657.225,1.05,0.0,0.0838490666004085,200791.15875,0,pressure-equivalent tire stiffness perturbation,,
+L0L,cross_slope_-0.015,657.225,1.0,-0.015,0.08804151993042894,200791.15875,0,cross-slope geometry span; lateral compliance is outside this vertical screen,0.0195,
+L0L,cross_slope_+0.015,657.225,1.0,0.015,0.08804151993042894,200791.15875,0,cross-slope geometry span; lateral compliance is outside this vertical screen,0.0195,
+D1,tire_k_0.95,657.225,0.95,0.0,0.16411640371654718,2442299.0622255616,0,dynamic D1 screen,,False
+D1,tire_k_1.05,657.225,1.05,0.0,0.15248004605967563,2442154.9018551996,0,dynamic D1 screen,,False

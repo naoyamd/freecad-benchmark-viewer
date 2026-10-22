@@ -1,0 +1,7 @@
+# Keep downloadable CAD/PDF evidence and its recorded hashes byte-for-byte.
+* -text -whitespace
+*.pdf binary
+*.step binary
+*.FCStd binary
+*.bin binary
+*.png binary

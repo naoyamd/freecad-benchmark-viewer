@@ -1,0 +1,101 @@
+source,parameter,value,unit,evidence,notes
+cad_parameters,run_id,RLG-003_Astra_Luna_r02,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,specification,RLG-003 v3.0 with user-authorized initial-design deviations,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.StrokeMax,600,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BarrelOD,550,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BarrelID,460,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BarrelLength,1450,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.PistonOD,330,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.PistonID,270,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.PistonLength,1080,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BogieLength,3400,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BogieWidth,350,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BogieHeight,500,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BogieWall,35,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.AxleOD,220,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.AxleID,140,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.CenterAxleOD,260,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.CenterAxleID,160,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BogiePinOD,260,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.AxleLength,1880,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.TrunnionOD,240,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.TireRadius,657.225,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.TireWidth,528.32,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.WheelY,650,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.AxlePitch,1500,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.WheelRimRadius,279.4,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.WheelFlangeSpacing,381,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BrakeOuterRadius,260,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BrakeInnerRadius,125,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.BrakeStackLength,300,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.TireEnvelopeRadius,725,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.TireEnvelopeHalfWidth,320,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.GasVolumeL,65,L,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.GasPrechargeMPaAbs,9.2,MPa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.StaticStrokeMLM,120.66621492538754,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.StaticStrokeMTOM,279.37863695599543,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.D1MaxStroke,435.50747144944665,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.OrificeDiameter,90,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.MeteringPinRadiusStart,30,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.MeteringPinRadiusEnd,42,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.CompPortRadius,10.741849642478902,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.ReturnPortRadius,9.812682638840242,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.SpringWireDiameter,58,mm,runtime JSON,r01の履歴値。r02では外付けばねを使わない
+cad_parameters,cad_mm.SpringMeanDiameter,280,mm,runtime JSON,r01の履歴値。r02では外付けばねを使わない
+cad_parameters,cad_mm.SpringFreeLength,1970,mm,runtime JSON,r01の履歴値。r02では外付けばねを使わない
+cad_parameters,cad_mm.SpringEngagement,150,mm,runtime JSON,r01の履歴値。r02では外付けばねを使わない
+cad_parameters,cad_mm.SpringLowerSeatZ,330,mm,runtime JSON,r01の履歴値。r02では外付けばねを使わない
+cad_parameters,cad_mm.D1TireDeflection,158.08235050487235,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.TorqueLinkLength,750,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,cad_mm.TorquePinDiameter,100,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.300M.E_Pa,205000000000,Pa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.300M.nu,0.29,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.300M.density_kg_m3,7840,kg/m^3,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.300M.yield_design_Pa,1400000000,Pa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.300M.ultimate_design_Pa,1700000000,Pa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.300M.basis,Preliminary design assumptions below Carpenter published typical values; supplier minimums require confirmation,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.7050-T7451.E_Pa,70300000000,Pa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.7050-T7451.nu,0.33,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.7050-T7451.density_kg_m3,2830,kg/m^3,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.7050-T7451.yield_design_Pa,393000000,Pa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.7050-T7451.ultimate_design_Pa,480000000,Pa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.7050-T7451.basis,Conservative preliminary section values; exact product/thickness/direction must be qualified,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.carbon_carbon.density_kg_m3,1800,kg/m^3,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.carbon_carbon.heat_capacity_J_kgK,1200,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.carbon_carbon.temperature_limit_C,1700,degC,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.carbon_carbon.friction_min,0.25,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,materials.carbon_carbon.basis,"Preliminary brake module assumptions, supplier friction/thermal qualification required",(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.oleo.gas_volume_m3,0.065,m^3,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.oleo.gas_precharge_abs_pa,9200000.0,Pa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.oleo.flow_area_m2,0.08066039138091793,m^2,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.oleo.orifice_compression_m2,0.0029,m^2,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.oleo.orifice_extension_m2,0.00532,m^2,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.oleo.auxiliary_spring_k_n_m,0.0,N/m,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.oleo.auxiliary_spring_engagement_m,0.15,m,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,analysis.static_mtom_upper_fraction,0.47,%/fraction,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,design_decisions.external_load_springs,false,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,design_decisions.mass_target,reference only,kg,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,design_decisions.bay_basis,777-class independent concept; maximum RLG-003 envelope retained,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,design_decisions.static_mtom_upper,"47% candidate, original45% also reported; user authorizes minimum justified adjustment",(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+cad_parameters,design_decisions.benchmark_ng_allowed,true,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,specification,RLG-003 v3.0 with user-authorized initial-design deviations,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,status,r02 evaluated conventional-oleo candidate; original MTOM static requirement fails,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.stroke_mm,600.0,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.gas_volume_full_extension_L,65.0,L,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.gas_precharge_abs_MPa_at_20C,9.2,MPa,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.effective_oil_flow_area_mm2,80660.39138091794,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.compression_orifice_area_mm2,2900.0,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.extension_orifice_area_mm2,5320.0,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.static_polytropic_exponent,1.0,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.polytropic_exponent,1.3,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,oleo.auxiliary_spring_rate_N_per_m,0.0,m,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MTOM.load_N,1235637.9,N,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MTOM.stroke_mm,279.37863695599543,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MTOM.stroke_percent,46.56310615933257,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MTOM.within_required_band,true,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MTOM.original_spec_pass,false,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MLM.load_N,926728.4249999999,N,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MLM.stroke_mm,120.66621492538754,mm,runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MLM.stroke_percent,20.111035820897925,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MLM.within_required_band,true,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照
+recommended_parameters,static_prediction.MLM.original_spec_pass,true,(source units),runtime JSON,生成時の入力値。仮定と採用値はevidenceを参照

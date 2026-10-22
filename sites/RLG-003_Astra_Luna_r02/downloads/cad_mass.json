@@ -1,0 +1,30 @@
+{
+  "mass_kg": 8010.063470326482,
+  "dry_mass_kg": 8010.063470326482,
+  "oleo_oil_charge_l": 128.2748493538083,
+  "oleo_oil_mass_kg": 111.59911893781322,
+  "operating_mass_kg": 8121.662589264295,
+  "unsprung_mass_kg": 5078.496766354391,
+  "dry_unsprung_mass_kg": 4995.79856071822,
+  "oil_effective_unsprung_assumption": "Piston tube charge 100%; upper/lower exchange charge 50%",
+  "bogie_inertia_kg_m2": 6101.487580541797,
+  "wheel_inertia_kg_m2": {
+    "FI": 46.60173063113282,
+    "FO": 46.60173063113286,
+    "MI": 46.60173063113282,
+    "MO": 46.60173063113282,
+    "RI": 46.60173063113284,
+    "RO": 46.601730631132845
+  },
+  "wheel_inertia_note": "Actual tire, liner, beads, wheel halves, rotors, rotating drive keys and service plugs; bearing rolling-speed correction remains excluded",
+  "brake_carbon_mass_kg": {
+    "FI": 69.7071466166144,
+    "FO": 69.7071466166144,
+    "MI": 69.70714661661444,
+    "MO": 69.70714661661444,
+    "RI": 69.70714661661444,
+    "RO": 69.70714661661444
+  },
+  "parts": 670,
+  "mass_parts": 595
+}

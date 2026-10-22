@@ -1,0 +1,6 @@
+step,start_s,end_s,duration_s,flow_boundary_lpm,pressure_gauge_mpa,force_pair_n,force_per_actuator_n
+door_open,0.0,3.0,3.0,,,,
+main_retraction,3.0,23.0,20.0,72.34501191154831,,,
+door_close,23.0,26.0,3.0,,,,
+,,,,,17.0,455248.191431697,227624.0957158485
+,,,,,20.7,556957.2535916666,278478.6267958333

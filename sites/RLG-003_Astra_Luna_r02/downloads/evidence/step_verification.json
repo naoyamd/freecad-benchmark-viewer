@@ -1,0 +1,26 @@
+[
+  {
+    "file": "landing_gear.step",
+    "state": 0,
+    "source_parts": 596,
+    "source_solids": 684,
+    "reimported_solids": 684,
+    "source_volume_mm3": 2221702887.6188083,
+    "reimported_volume_mm3": 2221702867.4103575,
+    "relative_volume_error": 9.095928565905353e-09,
+    "invalid_shapes": [],
+    "fresh_document_reimport": true
+  },
+  {
+    "file": "stowed_gear_and_bay.step",
+    "state": 9,
+    "source_parts": 652,
+    "source_solids": 740,
+    "reimported_solids": 740,
+    "source_volume_mm3": 3253335912.559329,
+    "reimported_volume_mm3": 3253335883.8563814,
+    "relative_volume_error": 8.822620300996675e-09,
+    "invalid_shapes": [],
+    "fresh_document_reimport": true
+  }
+]

@@ -1,0 +1,29 @@
+requirement_id,section,requirement,status,evidence,notes
+RLG-01-01,§1,初期設計レビュー用の編集可能CAD・計算・未確定事項をそろえる,Pass,cad_verification.json,実機搭載承認・耐空性証明の成果物ではない
+RLG-02-01,§2,"主脚・6輪・ブレーキ・引込機構の実測質量を記録する（6,000 kgは参考目標）",Pass,"cad_mass.json mass_kg=8,010.063",2026-10-22ユーザー指示で必達条件から除外。実測値は8.01 t。docs/rlg003_user_decisions.md参照
+RLG-03-01,§3,座標系、3軸6輪、FI〜ROの配置を再現する,Pass,cad_verification.json wheel_coordinates_verified,
+RLG-04-01,§4,収納庫・ふた・動作途中の連続干渉を許容値とガード込みで確認する,Pending,clearance_summary.json,静的包含・観測点の隙間・連続経路の保証を区別する
+RLG-04-02,§4,D4のタイヤ底付き境界から余裕を残す,Pass,analysis summary dynamic cases: D4 tire_bottom_margin=2.082 mm,算術上の底付き余裕と、購入品・物性の不確かさを区別する
+RLG-07-STATIC-ORIGINAL,§7,元仕様のMTOM静沈下上限45%,Fail,analysis/static_oleo.csv original_spec_pass,r02の中央オレオでは約46.56%。ユーザー承認により改訂上限47%を併記
+RLG-07-STATIC-REVISED,§7,改訂MTOM静沈下上限47%（初期設計ベンチマーク）,Pass,analysis/static_oleo.csv within_case_range,2026-10-22ユーザー承認。元仕様のFailを上書きしない
+RLG-05-01,§5,タイヤ断面、空洞、ビード、リム、保持、軸受を6組へ対応させる,Pass,cad_verification.json + bom.csv,購入品形状・軸受容量の最終供給者確認は別項目
+RLG-05-02,§5,材料・タイヤ・軸受のカタログ根拠を確定する,Pending,parameters.json / wheels_notes.md,材料値とSKF候補は初期設計用で、供給者・保証下限・航空用途適合は未確認
+RLG-06-01,§6,多輪荷重、主要構造、ピン・締結の荷重経路を追跡する,Pending,analysis summary structural,予備断面行はあるが、局部リガメント・座屈・締結部の実証は未完
+RLG-07-01,§7,D1〜D4の動解析、タイヤ底付き、油のキャビテーションを確認する,Pass,latest analysis summary dynamic/convergence,Passは自実装モデルの算術スクリーニングだけを意味する
+RLG-07-02,§7,ガス容積式と油チャージ保存を状態間で照合する,Pass,"fluid_probe gas=Pass, oil=Pass",明示的な保存証拠がない状態は保留のまま出力する
+RLG-08-01,§8,引込・ロック・非常伸長の系列、作動圧・流量を追跡する,Pending,kinematics.csv / analysis/motion/motion_dynamics_summary.json,12 L accumulator・cam20°の再計算済み。解除リンク、ロック所要時間と終端吸収機構が未完
+RLG-09-01,§9,各輪多板ブレーキ、反力、配管、熱容量を整合させる,Pending,latest analysis summary brakes + bom.csv,熱・摩擦行は予備計算。ロータ材・摩擦・換気・摩耗の供給者確認が必要
+RLG-10-01,§10,構造材料、圧力境界、製造方法、局部強度を根拠付きで示す,Pending,parameters.json + analysis structural,300M/7050/carbon値は設計仮定。局部強度の詳細検証・材料試験・耐圧試験は未実施
+RLG-11-01,§11,交換手順、アクセス、故障モード、寿命の初期評価を示す,Pending,design_report.md FMEA/maintenance,S-Nデータ、疲労試験、実機寿命資格は未実施
+RLG-12-01,§12,FCStdを新規セッションで開き、全11状態の登録部品を検査する,Pass,"fresh_session_open=True, valid_parts_all_11_states=670",
+RLG-12-02,§12,剛体部品の状態間体積変化をゼロとする,Pass,cad_verification.json + volume_changes.json,
+RLG-12-03,§12,寸法編集復元とq=0→1→0を再現する,Pass,cad_verification.json axle_dimension_edit_revert/sequence_q_0_1_0,
+RLG-12-04,§12,STEP・PDF・PNGを実在ファイルとJSON/manifestで確認する,Pass,"STEP=True, PDF=True, PNG=True",未生成またはmanifest未確認の成果物は保留
+RLG-13-01,§13,deliverablesを移動可能な相対参照でパッケージする,Pass,package_rlg003.py,生成時点の入力ハッシュをrun_record.mdへ記録
+RLG-14-G1,§14,G1 荷重と構造,Pending,analysis structural + materials,局部強度・締結部・材料保証が未完
+RLG-14-G2,§14,G2 緩衝,Pending,"D1-D4 screen=True, convergence=True, D4=2.082 mm",D4の名目余裕とD5感度を明示。タイヤ物性・接触剛性・試験相関は未確認
+RLG-14-G3,§14,G3 引込と非常伸長,Pending,analysis/motion/motion_dynamics_summary.json,動力学再計算済み。終端吸収・解除力伝達・ロック成立の実体根拠が未完
+RLG-14-G4,§14,G4 車輪と制動,Pending,wheel BOM + brake thermal,軸受・タイヤ・材料カタログはprovisional
+RLG-14-G5,§14,G5 収納とふた,Pending,clearance_summary.json,連続q掃引または許容距離が成立するまでゲートを閉じない
+RLG-14-G6,§14,G6 CAD再現,Pass,cad_verification.json + exchange/drawings files,状態検査、寸法復元、交換形式と図面の証拠を照合
+RLG-14-G7,§14,G7 証拠の整合,Pending,all runtime evidence,Astra主担当・Luna max支援のreference-informed assisted runであり盲検ベンチマークではない

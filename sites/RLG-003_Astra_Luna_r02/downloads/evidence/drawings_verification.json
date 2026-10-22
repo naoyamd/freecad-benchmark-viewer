@@ -1,0 +1,53 @@
+{
+  "status": "pass",
+  "pages": 10,
+  "pdf": "drawings.pdf",
+  "pdf_sha256": "88e74ba3af7faaf1b86f2da2c1fa703ed1f3f7c579d219ed3d64f3e0dcd53339",
+  "source": "landing_gear_and_bay.FCStd",
+  "source_sha256": "6f3fc2947a4493a6dd559621a969119fc22c48f4996718e6baa5b06a33cad1e4",
+  "visual_checked_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "rendered_png_count": 10,
+  "svg_pipeline": true,
+  "reused_unchanged_r02_pages": [
+    2,
+    3,
+    4
+  ],
+  "limitations": [
+    "Initial design benchmark; not certification evidence.",
+    "Storage containment passed in the current native check.",
+    "Route sweep remains unconverged and is pending further design work.",
+    "Supplier tolerances, fatigue life, and final fastener/material allowables remain preliminary."
+  ],
+  "parent_visual_checked_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "annotation_checks": [
+    "2 mm bay gap",
+    "10 MPa absolute accumulator precharge",
+    "2900/5320 mm2 metering areas",
+    "rotor 520/290 mm",
+    "nominal versus grown tyre dimensions"
+  ],
+  "review": "Parent reviewed all 10 final PNGs; projection layout and note spacing corrected; NTS review sheets, not manufacturing drawings"
+}

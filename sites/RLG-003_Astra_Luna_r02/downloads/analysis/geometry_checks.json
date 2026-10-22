@@ -1,0 +1,53 @@
+{
+  "piston_internal_capacity_m3": 0.0618359682006079,
+  "barrel_annulus_capacity_m3": 0.116957567502331,
+  "combined_conservative_capacity_m3": 0.1787935357029389,
+  "master_gas_volume_m3": 0.065,
+  "master_gas_capacity_margin_m3": 0.1137935357029389,
+  "master_gas_volume_at_full_stroke_m3": 0.013682084003610727,
+  "master_gas_volume_fraction_at_full_stroke": 0.21049360005554965,
+  "current_annular_oil_flow_area_m2": 0.08066039138091793,
+  "physical_annular_oil_flow_area_m2": 0.08066039138091793,
+  "460mm_ID_annular_oil_flow_area_m2": 0.08066039138091793,
+  "cad_input_dimensions_mm": {
+    "BarrelOD": 550.0,
+    "BarrelID": 460.0,
+    "PistonOD": 330.0,
+    "PistonID": 270.0,
+    "BogiePinOD": 260.0,
+    "BogieWidth": 350.0,
+    "BogieHeight": 500.0,
+    "BogieWall": 35.0,
+    "AxleOD": 220.0,
+    "AxleID": 140.0,
+    "CenterAxleOD": 260.0,
+    "CenterAxleID": 160.0
+  },
+  "stowed_tire_envelope_bounds_m": {
+    "x_min_m": -2.225,
+    "x_max_m": 2.225,
+    "y_min_m": -3.225,
+    "y_max_m": -1.775,
+    "z_min_m": -0.32,
+    "z_max_m": 0.32
+  },
+  "bay_bounds_m": {
+    "x_min_m": -2.3,
+    "x_max_m": 2.3,
+    "y_min_m": -3.4,
+    "y_max_m": 0.3,
+    "z_min_m": -1.1,
+    "z_max_m": 1.1
+  },
+  "stowed_clearance_m": {
+    "x_min_m": 0.07499999999999973,
+    "x_max_m": 0.07499999999999973,
+    "y_min_m": 0.17499999999999982,
+    "y_max_m": 2.0749999999999997,
+    "z_min_m": 0.78,
+    "z_max_m": 0.78
+  },
+  "all_tire_envelope_clearances_ge_25mm": true,
+  "gas_volume_minimum_20pct": true,
+  "note": "The cylindrical tire envelope is a specified comparison envelope; it is not a tire manufacturer growth curve."
+}

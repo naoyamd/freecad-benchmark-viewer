@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c27">
+  <meta name="description" content="RLG-003 r02 — 6輪引込主脚のCAD、格納動作、計算と検証記録を閲覧する独立した3Dビューワー。">
+  <title>RLG-003 r02 · Landing Gear Explorer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23101c27'/%3E%3Cpath d='M20 7v17m-7-11h14M10 28h20' stroke='%237cd6c0' stroke-width='3'/%3E%3Ccircle cx='11' cy='30' r='5' fill='%237cd6c0'/%3E%3Ccircle cx='29' cy='30' r='5' fill='%237cd6c0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <a class="skip" href="#workspace">Skip to viewer / ビューワーへ</a>
+  <header class="masthead">
+    <a class="wordmark" href="https://intake.nightly.dedyn.io/" aria-label="Design Benchmark Gallery"><span class="brand-icon">✣</span> DESIGN BENCHMARK <span class="slash">/</span></a>
+    <span class="run-label">INTAKE CAMP 2026 <span class="dot"></span> CAD EXPLORER</span>
+    <a class="header-link" href="./downloads/drawings.pdf" target="_blank" rel="noopener">Drawings <span>図面 ↗</span></a>
+  </header>
+  <div class="intro">
+    <div><p class="eyebrow">RLG-003 <span>/</span> REVISION 02</p><h1>Six wheels. <em>One mechanism.</em></h1><p class="subtitle">6輪引込主脚 — 中央オレオと非直方体脚庫を、CADから見る。</p></div>
+    <div class="intro-meta"><span class="status"><i></i> INITIAL DESIGN BENCHMARK</span><p>Astra + Luna <span>·</span> FreeCAD 1.1.4<br><strong id="part-count">670</strong> parts <span>·</span> 11 CAD states <span>·</span> r02</p></div>
+  </div>
+  <nav class="main-tabs" aria-label="コンテンツ">
+    <button class="active" data-tab="explorer" aria-pressed="true"><span>01</span> Explorer <small>3D・動作</small></button>
+    <button data-tab="analysis" aria-pressed="false"><span>02</span> Engineering <small>計算結果</small></button>
+    <button data-tab="requirements" aria-pressed="false"><span>03</span> Verification <small>要求・未解決</small></button>
+    <button data-tab="evidence" aria-pressed="false"><span>04</span> Evidence <small>図面・失敗例</small></button>
+    <button data-tab="downloads" aria-pressed="false"><span>05</span> Files <small>納入物</small></button>
+  </nav>
+  <main id="workspace">
+    <section id="explorer" class="tab-panel active" aria-label="3D Explorer">
+      <div class="explorer-grid">
+        <div class="viewport-column">
+          <div class="viewport" id="viewport" aria-label="3Dモデル。ドラッグで回転、ホイールで拡大、右ドラッグで移動。">
+            <div class="viewport-top"><span class="live"><i></i> CAD GEOMETRY</span><span id="mesh-status" role="status">Loading assembly…</span></div>
+            <div class="view-buttons" aria-label="視点"><button data-view="iso" class="selected">Iso</button><button data-view="front">Front</button><button data-view="side">Side</button><button data-view="top">Top</button><button data-view="fit" aria-label="全体を表示">Fit ↗</button><button data-view="zoom-in" aria-label="拡大">+</button><button data-view="zoom-out" aria-label="縮小">−</button></div>
+            <div class="viewport-hint">DRAG TO ORBIT <span>·</span> SCROLL TO ZOOM <span>·</span> CLICK TO INSPECT</div>
+            <div class="axis-key"><b>X</b> nose <b>Y</b> outboard <b>Z</b> up <span> / mm · grid: reference</span></div>
+            <div id="load-error" hidden role="alert"></div>
+          </div>
+          <div class="motion-deck">
+            <div class="motion-title"><div><p class="eyebrow">RETRACTION SEQUENCE</p><h2>格納シーケンス</h2></div><span class="frame-type" id="frame-type">S0 · 全伸長</span></div>
+            <div class="transport"><button id="play" class="play-button" disabled aria-label="格納動作を再生">▶</button><div class="timeline"><label for="sequence">DEPLOYED <span>STOWED</span></label><input id="sequence" type="range" min="0" max="100" step="1" value="0" disabled><div class="timeline-labels"><span>ボギー整列 → 解除</span><span>引込 → アップロック</span><span>扉閉鎖</span></div></div><output id="progress" for="sequence">0<small>%</small></output></div>
+            <div class="readouts"><div><span>θ / 引込角</span><strong id="theta">0.0<small>°</small></strong></div><div><span>s / ストローク</span><strong id="stroke">0.0<small>mm</small></strong></div><div><span>β / ボギー角</span><strong id="beta">−8.0<small>°</small></strong></div><div><span>DOORS / 扉角</span><strong id="door">180<small>°</small></strong></div><div><span>LOCK / 指令値</span><strong id="lock">DOWN</strong></div></div>
+            <p class="sample-note">FreeCADの保存形状・姿勢をサンプル再生。物理シミュレーション・連続経路の干渉判定ではありません。ロック表示はCADパラメータの指令値です。</p>
+          </div>
+        </div>
+        <aside class="controls" aria-label="表示コントロール">
+          <section class="control-block"><div class="block-heading"><h2>Configuration <small>姿勢</small></h2><span>01—11</span></div><label class="sr-only" for="state">CAD検査姿勢</label><select id="state" disabled><option>モデル読み込み中…</option></select><p id="state-note" class="fineprint">CADの11検査姿勢を選択できます。</p></section>
+          <section class="control-block"><div class="block-heading"><h2>Layers <small>表示</small></h2><button id="reset-layers" class="text-button">Reset</button></div><div id="layers"></div><div class="toggle-row"><label><input type="checkbox" id="xray"> X-ray <small>半透明</small></label><label><input type="checkbox" id="axes"> Axes <small>座標軸</small></label></div></section>
+          <section class="control-block"><div class="block-heading"><h2>Inspect <small>内部を見る</small></h2></div><label class="inline-check"><input type="checkbox" id="section"> Section <small>断面（切断面のふたなし）</small></label><div class="section-row"><label class="sr-only" for="section-axis">断面軸</label><select id="section-axis"><option value="x">X</option><option value="y" selected>Y</option><option value="z">Z</option></select><label class="sr-only" for="section-position">断面位置 mm</label><input type="range" id="section-position" min="-4500" max="4500" value="0" step="10"><output id="section-value">0 mm</output></div><label class="slider-label" for="explode">Explode <small>分解表示</small><output id="explode-value">0%</output></label><input id="explode" type="range" min="0" max="100" value="0"></section>
+          <section class="control-block part-block"><div class="block-heading"><h2>Parts <small>部品を選択</small></h2><span id="result-count">670</span></div><label class="sr-only" for="part-search">部品ID・名称・材質で検索</label><input id="part-search" type="search" placeholder="ID, name or material…" autocomplete="off"><div id="part-list" class="part-list" aria-label="部品一覧"></div><div id="selected-part" class="selected-part"><span class="eyebrow">SELECTED PART</span><p>モデルまたはリストから部品を選択。</p></div><label class="inline-check"><input id="isolate" type="checkbox"> Isolate <small>選択部品だけ表示</small></label><button class="text-button" id="clear-selection">Clear selection / 選択解除</button></section>
+        </aside>
+      </div>
+      <div class="benchmark-strip"><span class="strip-icon">↳</span><p><strong>見えることと、成立することを分けて確認。</strong> r02は初期設計の比較用モデル。連続格納経路の隙間、解除機構の力伝達、非常伸長の終端処理は未完です。</p><button data-go="requirements">View open items ↗</button></div>
+    </section>
+    <section id="analysis" class="tab-panel reading-panel" aria-label="Engineering results"><div class="section-intro"><p class="eyebrow">COMPUTED, WITH LIMITS</p><h2>Engineering results <span>計算結果</span></h2><p>納入済みの自実装Python解析から取得。CalculiXは使用していません。算術スクリーニングの結果であり、実機の適合性を示すものではありません。</p></div><div id="metrics" class="metric-grid"></div><div class="data-card"><h3>Landing response <small>着陸応答 D1–D5</small></h3><div id="dynamic-table" class="table-wrap"></div></div><div class="data-card"><h3>Stroke history <small>実計算の時刻歴</small></h3><div class="chart-controls"><label for="chart-case">Load case</label><select id="chart-case"></select></div><div id="history-chart"></div><p class="fineprint">表示用に間引いた時刻歴。全データは納入CSVから取得できます。</p></div><div class="two-columns"><div class="data-card"><h3>Structure <small>負余裕のある計算行</small></h3><p class="fineprint">CAD変更前の比較用行を含みます。部品名・ケース・basisを併読してください。未計算部位の合格を意味しません。</p><div id="structure-table" class="table-wrap"></div></div><div class="data-card"><h3>Braking <small>制動・熱容量</small></h3><div id="brake-table" class="table-wrap"></div><p class="fineprint">摩擦係数・熱容量・温度上限は初期仮定。供給者による裏付けは未完です。</p></div></div></section>
+    <section id="requirements" class="tab-panel reading-panel" aria-label="Verification"><div class="section-intro"><p class="eyebrow">TRACE THE EVIDENCE</p><h2>Verification & open items <span>検証と未解決</span></h2><p>要求追跡表の自己評価をそのまま掲載。採点・独立評価は未実施です。Passは各証拠の対象範囲に限ります。</p></div><div class="open-items"><article><span class="badge fail">NG / ORIGINAL</span><h3>MTOM static sag · 46.56%</h3><p>元仕様の上限45%にはNG。ユーザー承認の改訂上限47%では成立。元条件のNGは保持しています。</p></article><article><span class="badge pending">OPEN</span><h3>Retraction & release</h3><p>連続経路の残余隙間は未判定。ダウンロック解除の伝達リンク・支持と、負荷下の解除力は未完です。</p></article><article><span class="badge pending">OPEN</span><h3>Emergency extension</h3><p>終端エネルギーを受ける緩衝機構と、ダウンロック成立時間の実体根拠が不足しています。</p></article><article><span class="badge fail">NG / FLUID CHECK</span><h3>Oil charge conservation</h3><p>検証記録では油量保存がFail。要求原票RLG-07-02の自己評価Passと不一致があるため、成立済みとは扱いません。</p><a href="./downloads/verification.md">原文の検証記録 ↗</a></article><article><span class="badge fail">NG / PRESSURE FLOOR</span><h3>Emergency accumulator</h3><p>蓄圧器最低圧は約11.41 MPa。要求床17 MPaを下回ります。非常伸長の終端吸収と併せて未成立です。</p><a href="./downloads/analysis/retraction/retraction_accumulator.json">計算根拠 ↗</a></article></div><div class="data-card"><div class="table-heading"><h3>Requirements <small>要求追跡</small></h3><label for="requirement-filter" class="sr-only">要求の状態で絞り込み</label><select id="requirement-filter"><option value="all">All / すべて</option><option value="Fail">Fail / NG</option><option value="Pending">Pending / 保留</option><option value="Pass">Pass / 自己評価</option></select></div><div id="requirement-counts" class="status-counts"></div><div id="requirement-table" class="table-wrap"></div></div><div class="data-card"><h3>Verified scope <small>確認できたこと</small></h3><ul><li>正本の再読込・再計算、670部品の11姿勢における形状、寸法変更と復元。</li><li>STEP再読込、収納終端の脚庫内包含。全経路の隙間検証とは別の結果です。</li><li>脚庫は777級の配置を参考にした独自仮定。メーカー内部形状の再現ではありません。</li><li>材料・購入品・配管・局部強度・疲労は初期検討。6 tは必達条件ではありません。</li></ul><a href="./downloads/verification.md">検証記録を開く ↗</a> <a href="./downloads/r02_benchmark_findings.md">未解決項目の原文 ↗</a></div></section>
+    <section id="evidence" class="tab-panel reading-panel" aria-label="Drawings and images"><div class="section-intro"><p class="eyebrow">FROM THE ACTUAL CAD</p><h2>Drawings & design history <span>図面と設計履歴</span></h2><p>FreeCADで取得したr02画像と、不採用案・修正前モデルの記録。画像はクリックで原寸表示できます。</p><a class="primary-link" href="./downloads/drawings.pdf" target="_blank" rel="noopener">Open 10-page drawing set <span>10枚のレビュー図面 ↗</span></a><p class="fineprint">NTS・製造図ではありません。</p></div><div id="image-gallery" class="image-gallery"></div><div class="section-intro history-intro"><p class="eyebrow">FAILED IDEAS ARE EVIDENCE, TOO</p><h2>What changed <span>不採用案も残す</span></h2></div><div id="failure-gallery" class="failure-gallery"></div></section>
+    <section id="downloads" class="tab-panel reading-panel" aria-label="Download files"><div class="section-intro"><p class="eyebrow">TAKE A CLOSER LOOK</p><h2>Source deliverables <span>納入物</span></h2><p>CAD、交換形式、図面、解析CSVとレビュー記録。すべてこのサイト内の相対参照です。</p></div><div id="download-list" class="download-list"></div><div class="data-card"><h3>About this viewer <small>ビューワーについて</small></h3><p>設計試行の終了後に作成した閲覧用サイトです。CAD正本や解析を改変せず、部品形状と各姿勢をメッシュへ変換しています。独立した再評価・採点は含みません。</p><p id="provenance" class="hash"></p><p>3D: <a href="https://threejs.org/">Three.js</a> · <a href="./vendor/LICENSE-three.txt">MIT License</a> · 外部CDN・サーバーAPI不要。</p><a href="./model/assembly.json">Export metadata ↗</a></div></section>
+  </main>
+  <footer><span>RLG-003 r02 <b>/</b> DESIGN BENCHMARK</span><p>AIによる初期設計。飛行・製造用ではありません。独立検証・採点待ち。</p><a href="https://intake.nightly.dedyn.io/">Back to gallery ↗</a></footer>
+  <noscript><p class="noscript">3D表示にはJavaScriptが必要です。<a href="./downloads/drawings.pdf">PDF図面はこちら。</a></p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

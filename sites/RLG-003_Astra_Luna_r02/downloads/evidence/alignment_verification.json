@@ -1,0 +1,21 @@
+{
+  "before_sha256": "0997fb86e5b082d16191656f2c0a9dd9e73c60cc671b8e4692bef29802a6d7e9",
+  "after_sha256": "6f3fc2947a4493a6dd559621a969119fc22c48f4996718e6baa5b06a33cad1e4",
+  "corrected_heads": [
+    {
+      "part_id": "RLG003-DOWNLOCK-P-RELEASE-HEAD",
+      "outside_volume_mm3": 0.0,
+      "x_min": 565.0,
+      "x_max": 625.0
+    },
+    {
+      "part_id": "RLG003-DOWNLOCK-N-RELEASE-HEAD",
+      "outside_volume_mm3": 0.0,
+      "x_min": -435.0,
+      "x_max": -375.0
+    }
+  ],
+  "D1MaxStroke_mm": 435.50747144944665,
+  "updated_S3_shapes_valid": true,
+  "other_geometry_unchanged": true
+}

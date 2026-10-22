@@ -1,0 +1,6509 @@
+{
+  "mass": {
+    "mass_kg": 8010.063470326482,
+    "dry_mass_kg": 8010.063470326482,
+    "oleo_oil_charge_l": 128.2748493538083,
+    "oleo_oil_mass_kg": 111.59911893781322,
+    "operating_mass_kg": 8121.662589264295,
+    "unsprung_mass_kg": 5078.496766354391,
+    "dry_unsprung_mass_kg": 4995.79856071822,
+    "oil_effective_unsprung_assumption": "Piston tube charge 100%; upper/lower exchange charge 50%",
+    "bogie_inertia_kg_m2": 6101.487580541797,
+    "wheel_inertia_kg_m2": {
+      "FI": 46.60173063113282,
+      "FO": 46.60173063113286,
+      "MI": 46.60173063113282,
+      "MO": 46.60173063113282,
+      "RI": 46.60173063113284,
+      "RO": 46.601730631132845
+    },
+    "wheel_inertia_note": "Actual tire, liner, beads, wheel halves, rotors, rotating drive keys and service plugs; bearing rolling-speed correction remains excluded",
+    "brake_carbon_mass_kg": {
+      "FI": 69.7071466166144,
+      "FO": 69.7071466166144,
+      "MI": 69.70714661661444,
+      "MO": 69.70714661661444,
+      "RI": 69.70714661661444,
+      "RO": 69.70714661661444
+    },
+    "parts": 670,
+    "mass_parts": 595
+  },
+  "dynamic": [
+    {
+      "case_id": "D1",
+      "dt_s": 0.0005,
+      "max_stroke_m": 0.4355074714494467,
+      "max_ground_reaction_n": 2443812.6535205143,
+      "max_airframe_reaction_n": 2375513.428689333,
+      "max_tire_deflection_m": 0.15808263431013436,
+      "max_beta_deg": 0.0,
+      "max_pitch_torque_n_m": 0.0,
+      "max_axis_loads_n": {
+        "F": 814604.2178401714,
+        "M": 814604.2178401714,
+        "R": 814604.2178401714
+      },
+      "final_stroke_m": 0.0,
+      "rebound_complete": true,
+      "extension_stop": false,
+      "compression_stop": false,
+      "tire_bottomed": false,
+      "pressure_max_abs_pa": 27817031.77914416,
+      "pressure_max_gauge_pa": 27715706.77914416,
+      "max_orifice_dp_pa": 7555877.4568737475,
+      "min_oil_pressure_abs_pa": 3349300.0003646975,
+      "min_upper_oil_pressure_abs_pa": 9200000.0,
+      "min_lower_oil_pressure_abs_pa": 3349300.0003646975,
+      "max_upper_oil_pressure_abs_pa": 27817031.77914416,
+      "max_lower_oil_pressure_abs_pa": 27817032.1985211,
+      "max_oil_pressure_abs_pa": 27817032.1985211,
+      "max_oil_pressure_gauge_pa": 27715707.1985211,
+      "cavitation_detected": false,
+      "energy_initial_j": 487740.96,
+      "energy_gravity_j": 36189.914575496594,
+      "energy_lift_j": -10763.809001453454,
+      "energy_gas_j": 0.0,
+      "energy_spring_j": 0.0,
+      "energy_tire_j": 11546.275464940194,
+      "energy_dissipation_j": 186588.48844342204,
+      "energy_final_kinetic_j": 320565.51554819045,
+      "energy_residual_j": 5533.213882509539,
+      "time_to_max_stroke_s": 0.3010000000000002,
+      "energy_residual_pct": 1.056096166692353,
+      "tire_bottom_margin_m": 0.11191736568986566,
+      "max_F_axis_load_n": 814604.2178401714,
+      "max_M_axis_load_n": 814604.2178401714,
+      "max_R_axis_load_n": 814604.2178401714
+    },
+    {
+      "case_id": "D2",
+      "dt_s": 0.0005,
+      "max_stroke_m": 0.27273569607032755,
+      "max_ground_reaction_n": 1453435.4906581019,
+      "max_airframe_reaction_n": 1398767.5136953963,
+      "max_tire_deflection_m": 0.10621539191514827,
+      "max_beta_deg": 0.0,
+      "max_pitch_torque_n_m": 0.0,
+      "max_axis_loads_n": {
+        "F": 484478.496886034,
+        "M": 484478.496886034,
+        "R": 484478.496886034
+      },
+      "final_stroke_m": 0.0,
+      "rebound_complete": true,
+      "extension_stop": false,
+      "compression_stop": false,
+      "tire_bottomed": false,
+      "pressure_max_abs_pa": 16397008.31843574,
+      "pressure_max_gauge_pa": 16295683.31843574,
+      "max_orifice_dp_pa": 3464164.982866318,
+      "min_oil_pressure_abs_pa": 6750211.566494869,
+      "min_upper_oil_pressure_abs_pa": 9200000.0,
+      "min_lower_oil_pressure_abs_pa": 6750211.566494869,
+      "max_upper_oil_pressure_abs_pa": 16397008.31843574,
+      "max_lower_oil_pressure_abs_pa": 16397008.306492861,
+      "max_oil_pressure_abs_pa": 16397008.31843574,
+      "max_oil_pressure_gauge_pa": 16295683.31843574,
+      "cavitation_detected": false,
+      "energy_initial_j": 234115.6608,
+      "energy_gravity_j": 63455.3647490191,
+      "energy_lift_j": -42164.36148692389,
+      "energy_gas_j": 0.0,
+      "energy_spring_j": 0.0,
+      "energy_tire_j": 17283.00723730573,
+      "energy_dissipation_j": 51583.288411208196,
+      "energy_final_kinetic_j": 191645.1072246039,
+      "energy_residual_j": 5104.738811022602,
+      "time_to_max_stroke_s": 0.34750000000000025,
+      "energy_residual_pct": 1.7154690385612474,
+      "tire_bottom_margin_m": 0.16378460808485173,
+      "max_F_axis_load_n": 484478.496886034,
+      "max_M_axis_load_n": 484478.496886034,
+      "max_R_axis_load_n": 484478.496886034
+    },
+    {
+      "case_id": "D3",
+      "dt_s": 0.0005,
+      "max_stroke_m": 0.4561940796346921,
+      "max_ground_reaction_n": 2671999.631080699,
+      "max_airframe_reaction_n": 2588263.9786055787,
+      "max_tire_deflection_m": 0.16892136725360185,
+      "max_beta_deg": 0.0,
+      "max_pitch_torque_n_m": 0.0,
+      "max_axis_loads_n": {
+        "F": 890666.5436935665,
+        "M": 890666.5436935665,
+        "R": 890666.5436935665
+      },
+      "final_stroke_m": 0.0,
+      "rebound_complete": true,
+      "extension_stop": false,
+      "compression_stop": false,
+      "tire_bottomed": false,
+      "pressure_max_abs_pa": 30304388.67404011,
+      "pressure_max_gauge_pa": 30203063.67404011,
+      "max_orifice_dp_pa": 10276182.397192927,
+      "min_oil_pressure_abs_pa": 842805.53475287,
+      "min_upper_oil_pressure_abs_pa": 9200000.0,
+      "min_lower_oil_pressure_abs_pa": 842805.53475287,
+      "max_upper_oil_pressure_abs_pa": 30304388.67404011,
+      "max_lower_oil_pressure_abs_pa": 30304386.551863443,
+      "max_oil_pressure_abs_pa": 30304388.67404011,
+      "max_oil_pressure_gauge_pa": 30203063.67404011,
+      "cavitation_detected": false,
+      "energy_initial_j": 702346.9824,
+      "energy_gravity_j": 30531.116356097766,
+      "energy_lift_j": -13571.211685402239,
+      "energy_gas_j": 0.0,
+      "energy_spring_j": 0.0,
+      "energy_tire_j": 9253.168819446813,
+      "energy_dissipation_j": 264554.313453635,
+      "energy_final_kinetic_j": 451461.6327151872,
+      "energy_residual_j": 5962.227917573546,
+      "time_to_max_stroke_s": 0.2755000000000002,
+      "energy_residual_pct": 0.8135361020738837,
+      "tire_bottom_margin_m": 0.10107863274639817,
+      "max_F_axis_load_n": 890666.5436935665,
+      "max_M_axis_load_n": 890666.5436935665,
+      "max_R_axis_load_n": 890666.5436935665
+    },
+    {
+      "case_id": "D4a",
+      "dt_s": 0.0005,
+      "max_stroke_m": 0.4565217797158268,
+      "max_ground_reaction_n": 2740447.102107609,
+      "max_airframe_reaction_n": 2591904.471575779,
+      "max_tire_deflection_m": 0.26791810550283607,
+      "max_beta_deg": 8.0,
+      "max_pitch_torque_n_m": 1947347.2401468745,
+      "max_axis_loads_n": {
+        "F": 1575255.524885469,
+        "M": 868293.7135272869,
+        "R": 1585390.0139009226
+      },
+      "final_stroke_m": 0.0,
+      "rebound_complete": true,
+      "extension_stop": false,
+      "compression_stop": false,
+      "tire_bottomed": false,
+      "pressure_max_abs_pa": 30346940.019639455,
+      "pressure_max_gauge_pa": 30245615.019639455,
+      "max_orifice_dp_pa": 8523998.150623923,
+      "min_oil_pressure_abs_pa": 3266434.6538648885,
+      "min_upper_oil_pressure_abs_pa": 9200000.0,
+      "min_lower_oil_pressure_abs_pa": 3266434.6538648885,
+      "max_upper_oil_pressure_abs_pa": 30346940.019639455,
+      "max_lower_oil_pressure_abs_pa": 30346924.478999097,
+      "max_oil_pressure_abs_pa": 30346940.019639455,
+      "max_oil_pressure_gauge_pa": 30245615.019639455,
+      "cavitation_detected": false,
+      "energy_initial_j": 487740.96,
+      "energy_gravity_j": 223765.78601527115,
+      "energy_lift_j": -67016.62086667374,
+      "energy_gas_j": 0.0,
+      "energy_spring_j": 0.0,
+      "energy_tire_j": 4402.650213588899,
+      "energy_dissipation_j": 231342.81999552727,
+      "energy_final_kinetic_j": 417014.25837116025,
+      "energy_residual_j": 8269.603431679046,
+      "time_to_max_stroke_s": 0.35700000000000026,
+      "energy_residual_pct": 1.1622663422366981,
+      "tire_bottom_margin_m": 0.0020818944971639497,
+      "max_F_axis_load_n": 1575255.524885469,
+      "max_M_axis_load_n": 868293.7135272869,
+      "max_R_axis_load_n": 1585390.0139009226
+    },
+    {
+      "case_id": "D4b",
+      "dt_s": 0.0005,
+      "max_stroke_m": 0.4565217797158268,
+      "max_ground_reaction_n": 2740447.102107609,
+      "max_airframe_reaction_n": 2591904.471575779,
+      "max_tire_deflection_m": 0.26791810550283607,
+      "max_beta_deg": 8.0,
+      "max_pitch_torque_n_m": 1947347.2401468745,
+      "max_axis_loads_n": {
+        "F": 1585390.0139009226,
+        "M": 868293.7135272869,
+        "R": 1575255.524885469
+      },
+      "final_stroke_m": 0.0,
+      "rebound_complete": true,
+      "extension_stop": true,
+      "compression_stop": false,
+      "tire_bottomed": false,
+      "pressure_max_abs_pa": 30346940.019639455,
+      "pressure_max_gauge_pa": 30245615.019639455,
+      "max_orifice_dp_pa": 8523998.150623923,
+      "min_oil_pressure_abs_pa": 3266434.6538648885,
+      "min_upper_oil_pressure_abs_pa": 9200000.0,
+      "min_lower_oil_pressure_abs_pa": 3266434.6538648885,
+      "max_upper_oil_pressure_abs_pa": 30346940.019639455,
+      "max_lower_oil_pressure_abs_pa": 30346924.478999097,
+      "max_oil_pressure_abs_pa": 30346940.019639455,
+      "max_oil_pressure_gauge_pa": 30245615.019639455,
+      "cavitation_detected": false,
+      "energy_initial_j": 487740.96,
+      "energy_gravity_j": 223765.78601527115,
+      "energy_lift_j": -67016.62086667374,
+      "energy_gas_j": 0.0,
+      "energy_spring_j": 0.0,
+      "energy_tire_j": 4402.650213588899,
+      "energy_dissipation_j": 231342.81999552727,
+      "energy_final_kinetic_j": 417014.25837116025,
+      "energy_residual_j": 8269.603431679046,
+      "time_to_max_stroke_s": 0.35700000000000026,
+      "energy_residual_pct": 1.1622663422366981,
+      "tire_bottom_margin_m": 0.0020818944971639497,
+      "max_F_axis_load_n": 1585390.0139009226,
+      "max_M_axis_load_n": 868293.7135272869,
+      "max_R_axis_load_n": 1575255.524885469
+    },
+    {
+      "case_id": "D5",
+      "dt_s": 0.0005,
+      "max_stroke_m": 0.48965742644213955,
+      "max_ground_reaction_n": 3103184.2571981763,
+      "max_airframe_reaction_n": 3012926.4267013697,
+      "max_tire_deflection_m": 0.18940235640463063,
+      "max_beta_deg": 0.0,
+      "max_pitch_torque_n_m": 0.0,
+      "max_axis_loads_n": {
+        "F": 1034394.7523993921,
+        "M": 1034394.7523993921,
+        "R": 1034394.7523993921
+      },
+      "final_stroke_m": 0.0,
+      "rebound_complete": true,
+      "extension_stop": false,
+      "compression_stop": false,
+      "tire_bottomed": false,
+      "pressure_max_abs_pa": 35269483.39289455,
+      "pressure_max_gauge_pa": 35168158.39289455,
+      "max_orifice_dp_pa": 8280921.5567956995,
+      "min_oil_pressure_abs_pa": 2761263.9461956164,
+      "min_upper_oil_pressure_abs_pa": 9200000.0,
+      "min_lower_oil_pressure_abs_pa": 2761263.9461956164,
+      "max_upper_oil_pressure_abs_pa": 35269483.39289455,
+      "max_lower_oil_pressure_abs_pa": 35269485.05965241,
+      "max_oil_pressure_abs_pa": 35269485.05965241,
+      "max_oil_pressure_gauge_pa": 35168160.05965241,
+      "cavitation_detected": false,
+      "energy_initial_j": 487740.96,
+      "energy_gravity_j": 38464.701535919245,
+      "energy_lift_j": 0.0,
+      "energy_gas_j": 0.0,
+      "energy_spring_j": 0.0,
+      "energy_tire_j": 12745.807579301341,
+      "energy_dissipation_j": 231006.512974692,
+      "energy_final_kinetic_j": 289472.4545228339,
+      "energy_residual_j": 7019.113540908002,
+      "time_to_max_stroke_s": 0.3120000000000002,
+      "energy_residual_pct": 1.3339106843548985,
+      "tire_bottom_margin_m": 0.08059764359536939,
+      "max_F_axis_load_n": 1034394.7523993921,
+      "max_M_axis_load_n": 1034394.7523993921,
+      "max_R_axis_load_n": 1034394.7523993921
+    }
+  ],
+  "structural": [
+    {
+      "item": "support_reactions_L1",
+      "mode": "stay/trunnion free body",
+      "case_id": "L1",
+      "load_factor": 1.0,
+      "fx_n": 0.0,
+      "fy_n": 0.0,
+      "fz_n": 3000000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 0.0,
+      "stay_y_total_n": -0.0,
+      "stay_z_total_n": 0.0,
+      "roll_moment_applied_n_m": 0.0,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -0.0,
+      "trunnion_y_total_n": -0.0,
+      "trunnion_z_total_n": -3000000.0,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -1500000.0,
+      "trunnion_T2_fz_n": -1500000.0,
+      "trunnion_each_fx_n": -0.0,
+      "trunnion_each_fy_n": -0.0,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 1500000.0,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 0.0,
+      "guide_bending_moment_n_m": 0.0,
+      "barrel_axial_force_n": 3000000.0,
+      "piston_axial_force_n": 3000000.0,
+      "force_resultant_n": 3000000.0,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_L1",
+      "case_id": "L1",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3000000.0,
+      "axial_force_n": 3000000.0,
+      "guide_horizontal_force_n": 0.0,
+      "guide_bending_moment_n_m": 0.0,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 42021107.08696905,
+      "bending_stress_pa": 0.0,
+      "stress_pa": 42021107.08696905,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 32.316590091319775,
+      "ultimate_margin": 39.45585939660258,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_L1",
+      "case_id": "L1",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3000000.0,
+      "axial_force_n": 3000000.0,
+      "guide_horizontal_force_n": 0.0,
+      "guide_bending_moment_n_m": 0.0,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 106103295.39459687,
+      "bending_stress_pa": 0.0,
+      "stress_pa": 106103295.39459687,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 12.194689145077133,
+      "ultimate_margin": 15.022122533307947,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_U1.5_L1",
+      "mode": "stay/trunnion free body",
+      "case_id": "U1.5_L1",
+      "load_factor": 1.5,
+      "fx_n": 0.0,
+      "fy_n": 0.0,
+      "fz_n": 4500000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 0.0,
+      "stay_y_total_n": -0.0,
+      "stay_z_total_n": 0.0,
+      "roll_moment_applied_n_m": 0.0,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -0.0,
+      "trunnion_y_total_n": -0.0,
+      "trunnion_z_total_n": -4500000.0,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -2250000.0,
+      "trunnion_T2_fz_n": -2250000.0,
+      "trunnion_each_fx_n": -0.0,
+      "trunnion_each_fy_n": -0.0,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 2250000.0,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 0.0,
+      "guide_bending_moment_n_m": 0.0,
+      "barrel_axial_force_n": 4500000.0,
+      "piston_axial_force_n": 4500000.0,
+      "force_resultant_n": 4500000.0,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_U1.5_L1",
+      "case_id": "U1.5_L1",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 4500000.0,
+      "axial_force_n": 4500000.0,
+      "guide_horizontal_force_n": 0.0,
+      "guide_bending_moment_n_m": 0.0,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 63031660.63045357,
+      "bending_stress_pa": 0.0,
+      "stress_pa": 63031660.63045357,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 21.21106006087985,
+      "ultimate_margin": 25.970572931068386,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_U1.5_L1",
+      "case_id": "U1.5_L1",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 4500000.0,
+      "axial_force_n": 4500000.0,
+      "guide_horizontal_force_n": 0.0,
+      "guide_bending_moment_n_m": 0.0,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 159154943.0918953,
+      "bending_stress_pa": 0.0,
+      "stress_pa": 159154943.0918953,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 7.7964594300514225,
+      "ultimate_margin": 9.681415022205298,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_L2+",
+      "mode": "stay/trunnion free body",
+      "case_id": "L2+",
+      "load_factor": 1.0,
+      "fx_n": 750000.0,
+      "fy_n": 0.0,
+      "fz_n": 3000000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 0.0,
+      "stay_y_total_n": -0.0,
+      "stay_z_total_n": 0.0,
+      "roll_moment_applied_n_m": 0.0,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -750000.0,
+      "trunnion_y_total_n": -0.0,
+      "trunnion_z_total_n": -3000000.0,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": 473265.625,
+      "trunnion_T2_fz_n": -3473265.625,
+      "trunnion_each_fx_n": -375000.0,
+      "trunnion_each_fy_n": -0.0,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 3493450.8872755948,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 750000.0,
+      "guide_bending_moment_n_m": 1351668.75,
+      "barrel_axial_force_n": 3000000.0,
+      "piston_axial_force_n": 3000000.0,
+      "force_resultant_n": 3092329.2192132454,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_L2+",
+      "case_id": "L2+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3000000.0,
+      "axial_force_n": 3000000.0,
+      "guide_horizontal_force_n": 750000.0,
+      "guide_bending_moment_n_m": 1351668.75,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 42021107.08696905,
+      "bending_stress_pa": 162039756.25713688,
+      "stress_pa": 204060863.34410593,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 5.860698210607847,
+      "ultimate_margin": 7.3308478271666715,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_L2+",
+      "case_id": "L2+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3000000.0,
+      "axial_force_n": 3000000.0,
+      "guide_horizontal_force_n": 750000.0,
+      "guide_bending_moment_n_m": 1351668.75,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 106103295.39459687,
+      "bending_stress_pa": 694205322.4316175,
+      "stress_pa": 800308617.8262143,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.7493251588401708,
+      "ultimate_margin": 1.1241805500202076,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_U1.5_L2+",
+      "mode": "stay/trunnion free body",
+      "case_id": "U1.5_L2+",
+      "load_factor": 1.5,
+      "fx_n": 1125000.0,
+      "fy_n": 0.0,
+      "fz_n": 4500000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 0.0,
+      "stay_y_total_n": -0.0,
+      "stay_z_total_n": 0.0,
+      "roll_moment_applied_n_m": 0.0,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -1125000.0,
+      "trunnion_y_total_n": -0.0,
+      "trunnion_z_total_n": -4500000.0,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": 709898.4375,
+      "trunnion_T2_fz_n": -5209898.4375,
+      "trunnion_each_fx_n": -562500.0,
+      "trunnion_each_fy_n": -0.0,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 5240176.330913392,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 1125000.0,
+      "guide_bending_moment_n_m": 2027503.125,
+      "barrel_axial_force_n": 4500000.0,
+      "piston_axial_force_n": 4500000.0,
+      "force_resultant_n": 4638493.828819868,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_U1.5_L2+",
+      "case_id": "U1.5_L2+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 4500000.0,
+      "axial_force_n": 4500000.0,
+      "guide_horizontal_force_n": 1125000.0,
+      "guide_bending_moment_n_m": 2027503.125,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 63031660.63045357,
+      "bending_stress_pa": 243059634.38570535,
+      "stress_pa": 306091295.01615894,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 3.5737988070718973,
+      "ultimate_margin": 4.553898551444447,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_U1.5_L2+",
+      "case_id": "U1.5_L2+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 4500000.0,
+      "axial_force_n": 4500000.0,
+      "guide_horizontal_force_n": 1125000.0,
+      "guide_bending_moment_n_m": 2027503.125,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 159154943.0918953,
+      "bending_stress_pa": 1041307983.6474262,
+      "stress_pa": 1200462926.7393215,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.16621677256011402,
+      "ultimate_margin": 0.4161203666801383,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_L2-",
+      "mode": "stay/trunnion free body",
+      "case_id": "L2-",
+      "load_factor": 1.0,
+      "fx_n": -750000.0,
+      "fy_n": 0.0,
+      "fz_n": 3000000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 0.0,
+      "stay_y_total_n": -0.0,
+      "stay_z_total_n": 0.0,
+      "roll_moment_applied_n_m": 0.0,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": 750000.0,
+      "trunnion_y_total_n": -0.0,
+      "trunnion_z_total_n": -3000000.0,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -3473265.625,
+      "trunnion_T2_fz_n": 473265.625,
+      "trunnion_each_fx_n": 375000.0,
+      "trunnion_each_fy_n": -0.0,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 3493450.8872755948,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 750000.0,
+      "guide_bending_moment_n_m": 1351668.75,
+      "barrel_axial_force_n": 3000000.0,
+      "piston_axial_force_n": 3000000.0,
+      "force_resultant_n": 3092329.2192132454,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_L2-",
+      "case_id": "L2-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3000000.0,
+      "axial_force_n": 3000000.0,
+      "guide_horizontal_force_n": 750000.0,
+      "guide_bending_moment_n_m": 1351668.75,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 42021107.08696905,
+      "bending_stress_pa": 162039756.25713688,
+      "stress_pa": 204060863.34410593,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 5.860698210607847,
+      "ultimate_margin": 7.3308478271666715,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_L2-",
+      "case_id": "L2-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3000000.0,
+      "axial_force_n": 3000000.0,
+      "guide_horizontal_force_n": 750000.0,
+      "guide_bending_moment_n_m": 1351668.75,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 106103295.39459687,
+      "bending_stress_pa": 694205322.4316175,
+      "stress_pa": 800308617.8262143,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.7493251588401708,
+      "ultimate_margin": 1.1241805500202076,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_U1.5_L2-",
+      "mode": "stay/trunnion free body",
+      "case_id": "U1.5_L2-",
+      "load_factor": 1.5,
+      "fx_n": -1125000.0,
+      "fy_n": 0.0,
+      "fz_n": 4500000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 0.0,
+      "stay_y_total_n": -0.0,
+      "stay_z_total_n": 0.0,
+      "roll_moment_applied_n_m": 0.0,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": 1125000.0,
+      "trunnion_y_total_n": -0.0,
+      "trunnion_z_total_n": -4500000.0,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -5209898.4375,
+      "trunnion_T2_fz_n": 709898.4375,
+      "trunnion_each_fx_n": 562500.0,
+      "trunnion_each_fy_n": -0.0,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 5240176.330913392,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 1125000.0,
+      "guide_bending_moment_n_m": 2027503.125,
+      "barrel_axial_force_n": 4500000.0,
+      "piston_axial_force_n": 4500000.0,
+      "force_resultant_n": 4638493.828819868,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_U1.5_L2-",
+      "case_id": "U1.5_L2-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 4500000.0,
+      "axial_force_n": 4500000.0,
+      "guide_horizontal_force_n": 1125000.0,
+      "guide_bending_moment_n_m": 2027503.125,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 63031660.63045357,
+      "bending_stress_pa": 243059634.38570535,
+      "stress_pa": 306091295.01615894,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 3.5737988070718973,
+      "ultimate_margin": 4.553898551444447,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_U1.5_L2-",
+      "case_id": "U1.5_L2-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 4500000.0,
+      "axial_force_n": 4500000.0,
+      "guide_horizontal_force_n": 1125000.0,
+      "guide_bending_moment_n_m": 2027503.125,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 159154943.0918953,
+      "bending_stress_pa": 1041307983.6474262,
+      "stress_pa": 1200462926.7393215,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.16621677256011402,
+      "ultimate_margin": 0.4161203666801383,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_L3+",
+      "mode": "stay/trunnion free body",
+      "case_id": "L3+",
+      "load_factor": 1.0,
+      "fx_n": -900000.0,
+      "fy_n": 562500.0,
+      "fz_n": 2250000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 1470842.731329833,
+      "stay_y_total_n": -1183959.375,
+      "stay_z_total_n": 2692908.011717597,
+      "roll_moment_applied_n_m": 1775939.0625,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": 900000.0,
+      "trunnion_y_total_n": 621459.375,
+      "trunnion_z_total_n": -4942908.011717597,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -4839372.7558587985,
+      "trunnion_T2_fz_n": -103535.25585879851,
+      "trunnion_each_fx_n": 450000.0,
+      "trunnion_each_fy_n": 310729.6875,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 4870172.646718208,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 1061322.877356368,
+      "guide_bending_moment_n_m": 1912742.62264358,
+      "barrel_axial_force_n": 4942908.011717597,
+      "piston_axial_force_n": 2250000.0,
+      "force_resultant_n": 2487751.243593298,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_L3+",
+      "case_id": "L3+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 4942908.011717597,
+      "axial_force_n": 4942908.011717597,
+      "guide_horizontal_force_n": 1061322.877356368,
+      "guide_bending_moment_n_m": 1912742.62264358,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 69235488.96047413,
+      "bending_stress_pa": 229302000.47593203,
+      "stress_pa": 298537489.43640614,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 3.6895282821698183,
+      "ultimate_margin": 4.694427199777636,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_L3+",
+      "case_id": "L3+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 2250000.0,
+      "axial_force_n": 2250000.0,
+      "guide_horizontal_force_n": 1061322.877356368,
+      "guide_bending_moment_n_m": 1912742.62264358,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 79577471.54594766,
+      "bending_stress_pa": 982367987.0389725,
+      "stress_pa": 1061945458.5849202,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.3183351260483278,
+      "ultimate_margin": 0.6008355102015408,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_U1.5_L3+",
+      "mode": "stay/trunnion free body",
+      "case_id": "U1.5_L3+",
+      "load_factor": 1.5,
+      "fx_n": -1350000.0,
+      "fy_n": 843750.0,
+      "fz_n": 3375000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 2206264.0969947493,
+      "stay_y_total_n": -1775939.0625,
+      "stay_z_total_n": 4039362.017576395,
+      "roll_moment_applied_n_m": 2663908.59375,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": 1350000.0,
+      "trunnion_y_total_n": 932189.0625,
+      "trunnion_z_total_n": -7414362.017576395,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -7259059.133788197,
+      "trunnion_T2_fz_n": -155302.8837881973,
+      "trunnion_each_fx_n": 675000.0,
+      "trunnion_each_fy_n": 466094.53125,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 7305258.970077311,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "barrel_axial_force_n": 7414362.017576395,
+      "piston_axial_force_n": 3375000.0,
+      "force_resultant_n": 3731626.865389947,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_U1.5_L3+",
+      "case_id": "U1.5_L3+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 7414362.017576395,
+      "axial_force_n": 7414362.017576395,
+      "guide_horizontal_force_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 103853233.44071119,
+      "bending_stress_pa": 343953000.7138981,
+      "stress_pa": 447806234.1546093,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 2.1263521881132115,
+      "ultimate_margin": 2.796284799851757,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_U1.5_L3+",
+      "case_id": "U1.5_L3+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3375000.0,
+      "axial_force_n": 3375000.0,
+      "guide_horizontal_force_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 119366207.31892149,
+      "bending_stress_pa": 1473551980.558459,
+      "stress_pa": 1592918187.8773806,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": -0.12110991596778165,
+      "ultimate_margin": 0.06722367346769365,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_L3-",
+      "mode": "stay/trunnion free body",
+      "case_id": "L3-",
+      "load_factor": 1.0,
+      "fx_n": -900000.0,
+      "fy_n": -562500.0,
+      "fz_n": 2250000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": -1470842.731329833,
+      "stay_y_total_n": 1183959.375,
+      "stay_z_total_n": -2692908.011717597,
+      "roll_moment_applied_n_m": -1775939.0625,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": 900000.0,
+      "trunnion_y_total_n": -621459.375,
+      "trunnion_z_total_n": 442908.011717597,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -2146464.7441412015,
+      "trunnion_T2_fz_n": 2589372.7558587985,
+      "trunnion_each_fx_n": 450000.0,
+      "trunnion_each_fy_n": -310729.6875,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 2646489.0340746995,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 1061322.877356368,
+      "guide_bending_moment_n_m": 1912742.62264358,
+      "barrel_axial_force_n": 2250000.0,
+      "piston_axial_force_n": 2250000.0,
+      "force_resultant_n": 2487751.243593298,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_L3-",
+      "case_id": "L3-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 2250000.0,
+      "axial_force_n": 2250000.0,
+      "guide_horizontal_force_n": 1061322.877356368,
+      "guide_bending_moment_n_m": 1912742.62264358,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 31515830.315226786,
+      "bending_stress_pa": 229302000.47593203,
+      "stress_pa": 260817830.79115883,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 4.3677311698869365,
+      "ultimate_margin": 5.517959277719852,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_L3-",
+      "case_id": "L3-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 2250000.0,
+      "axial_force_n": 2250000.0,
+      "guide_horizontal_force_n": 1061322.877356368,
+      "guide_bending_moment_n_m": 1912742.62264358,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 79577471.54594766,
+      "bending_stress_pa": 982367987.0389725,
+      "stress_pa": 1061945458.5849202,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.3183351260483278,
+      "ultimate_margin": 0.6008355102015408,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_U1.5_L3-",
+      "mode": "stay/trunnion free body",
+      "case_id": "U1.5_L3-",
+      "load_factor": 1.5,
+      "fx_n": -1350000.0,
+      "fy_n": -843750.0,
+      "fz_n": 3375000.0,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": -2206264.0969947493,
+      "stay_y_total_n": 1775939.0625,
+      "stay_z_total_n": -4039362.017576395,
+      "roll_moment_applied_n_m": -2663908.59375,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": 1350000.0,
+      "trunnion_y_total_n": -932189.0625,
+      "trunnion_z_total_n": 664362.0175763951,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -3219697.1162118027,
+      "trunnion_T2_fz_n": 3884059.1337881973,
+      "trunnion_each_fx_n": 675000.0,
+      "trunnion_each_fy_n": -466094.53125,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 3969733.5511120493,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "barrel_axial_force_n": 3375000.0,
+      "piston_axial_force_n": 3375000.0,
+      "force_resultant_n": 3731626.865389947,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_U1.5_L3-",
+      "case_id": "U1.5_L3-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3375000.0,
+      "axial_force_n": 3375000.0,
+      "guide_horizontal_force_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 47273745.472840175,
+      "bending_stress_pa": 343953000.7138981,
+      "stress_pa": 391226746.1867383,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 2.57848744659129,
+      "ultimate_margin": 3.3453061851465664,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_U1.5_L3-",
+      "case_id": "U1.5_L3-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3375000.0,
+      "axial_force_n": 3375000.0,
+      "guide_horizontal_force_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 119366207.31892149,
+      "bending_stress_pa": 1473551980.558459,
+      "stress_pa": 1592918187.8773806,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": -0.12110991596778165,
+      "ultimate_margin": 0.06722367346769365,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_L4+",
+      "mode": "stay/trunnion free body",
+      "case_id": "L4+",
+      "load_factor": 1.0,
+      "fx_n": 0.0,
+      "fy_n": 463364.21249999997,
+      "fz_n": 1390092.6375,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 1211619.349180439,
+      "stay_y_total_n": -975296.7172068749,
+      "stay_z_total_n": 2218306.1336612706,
+      "roll_moment_applied_n_m": 1462945.0758103123,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -0.0,
+      "trunnion_y_total_n": 511932.5047068749,
+      "trunnion_z_total_n": -3608398.7711612703,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -1804199.3855806352,
+      "trunnion_T2_fz_n": -1804199.3855806352,
+      "trunnion_each_fx_n": -0.0,
+      "trunnion_each_fy_n": 255966.25235343745,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 1822266.2114173672,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 463364.21249999997,
+      "guide_bending_moment_n_m": 835086.5678728124,
+      "barrel_axial_force_n": 3608398.7711612703,
+      "piston_axial_force_n": 1390092.6375,
+      "force_resultant_n": 1465286.2977102636,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_L4+",
+      "case_id": "L4+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 3608398.7711612703,
+      "axial_force_n": 3608398.7711612703,
+      "guide_horizontal_force_n": 463364.21249999997,
+      "guide_bending_moment_n_m": 835086.5678728124,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 50542970.39181842,
+      "bending_stress_pa": 100111232.06904024,
+      "stress_pa": 150654202.46085864,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 8.292804164316179,
+      "ultimate_margin": 10.284119342383931,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_L4+",
+      "case_id": "L4+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 1390092.6375,
+      "axial_force_n": 1390092.6375,
+      "guide_horizontal_force_n": 463364.21249999997,
+      "guide_bending_moment_n_m": 835086.5678728124,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 49164469.91417226,
+      "bending_stress_pa": 428893203.3891133,
+      "stress_pa": 478057673.3032856,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 1.9285169513675453,
+      "ultimate_margin": 2.5560562980891626,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_U1.5_L4+",
+      "mode": "stay/trunnion free body",
+      "case_id": "U1.5_L4+",
+      "load_factor": 1.5,
+      "fx_n": 0.0,
+      "fy_n": 695046.31875,
+      "fz_n": 2085138.9562499998,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": 1817429.0237706585,
+      "stay_y_total_n": -1462945.0758103123,
+      "stay_z_total_n": 3327459.200491906,
+      "roll_moment_applied_n_m": 2194417.6137154684,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -0.0,
+      "trunnion_y_total_n": 767898.7570603123,
+      "trunnion_z_total_n": -5412598.156741906,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": -2706299.078370953,
+      "trunnion_T2_fz_n": -2706299.078370953,
+      "trunnion_each_fx_n": -0.0,
+      "trunnion_each_fy_n": 383949.37853015616,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 2733399.317126051,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 695046.31875,
+      "guide_bending_moment_n_m": 1252629.8518092188,
+      "barrel_axial_force_n": 5412598.156741906,
+      "piston_axial_force_n": 2085138.9562499998,
+      "force_resultant_n": 2197929.4465653957,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_U1.5_L4+",
+      "case_id": "U1.5_L4+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 5412598.156741906,
+      "axial_force_n": 5412598.156741906,
+      "guide_horizontal_force_n": 695046.31875,
+      "guide_bending_moment_n_m": 1252629.8518092188,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 75814455.58772764,
+      "bending_stress_pa": 150166848.10356036,
+      "stress_pa": 225981303.691288,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 5.1952027762107855,
+      "ultimate_margin": 6.522746228255953,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_U1.5_L4+",
+      "case_id": "U1.5_L4+",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 2085138.9562499998,
+      "axial_force_n": 2085138.9562499998,
+      "guide_horizontal_force_n": 695046.31875,
+      "guide_bending_moment_n_m": 1252629.8518092188,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 73746704.87125838,
+      "bending_stress_pa": 643339805.08367,
+      "stress_pa": 717086509.9549284,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.9523446342450304,
+      "ultimate_margin": 1.3707041987261084,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_L4-",
+      "mode": "stay/trunnion free body",
+      "case_id": "L4-",
+      "load_factor": 1.0,
+      "fx_n": 0.0,
+      "fy_n": -463364.21249999997,
+      "fz_n": 1390092.6375,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": -1211619.349180439,
+      "stay_y_total_n": 975296.7172068749,
+      "stay_z_total_n": -2218306.1336612706,
+      "roll_moment_applied_n_m": -1462945.0758103123,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -0.0,
+      "trunnion_y_total_n": -511932.5047068749,
+      "trunnion_z_total_n": 828213.4961612707,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": 414106.7480806353,
+      "trunnion_T2_fz_n": 414106.7480806353,
+      "trunnion_each_fx_n": -0.0,
+      "trunnion_each_fy_n": -255966.25235343745,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 486829.6633831821,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 463364.21249999997,
+      "guide_bending_moment_n_m": 835086.5678728124,
+      "barrel_axial_force_n": 1390092.6375,
+      "piston_axial_force_n": 1390092.6375,
+      "force_resultant_n": 1465286.2977102636,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_L4-",
+      "case_id": "L4-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 1390092.6375,
+      "axial_force_n": 1390092.6375,
+      "guide_horizontal_force_n": 463364.21249999997,
+      "guide_bending_moment_n_m": 835086.5678728124,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 19471077.19373158,
+      "bending_stress_pa": 100111232.06904024,
+      "stress_pa": 119582309.26277182,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 10.707417331468493,
+      "ultimate_margin": 13.21614961678317,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_L4-",
+      "case_id": "L4-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 1390092.6375,
+      "axial_force_n": 1390092.6375,
+      "guide_horizontal_force_n": 463364.21249999997,
+      "guide_bending_moment_n_m": 835086.5678728124,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 49164469.91417226,
+      "bending_stress_pa": 428893203.3891133,
+      "stress_pa": 478057673.3032856,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 1.9285169513675453,
+      "ultimate_margin": 2.5560562980891626,
+      "load_factor": 1.0,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "support_reactions_U1.5_L4-",
+      "mode": "stay/trunnion free body",
+      "case_id": "U1.5_L4-",
+      "load_factor": 1.5,
+      "fx_n": 0.0,
+      "fy_n": -695046.31875,
+      "fz_n": 2085138.9562499998,
+      "load_point_z_m": -3.157225,
+      "stay_pin_z_m": -1.5,
+      "guide_lever_m": 1.802225,
+      "stay_length_m": 1.30000000796485,
+      "stay_unit_y": -0.4024765359956421,
+      "stay_unit_z": 0.9154303020836423,
+      "stay_y_component": -0.4024765359956421,
+      "stay_axial_each_n": -1817429.0237706585,
+      "stay_y_total_n": 1462945.0758103123,
+      "stay_z_total_n": -3327459.200491906,
+      "roll_moment_applied_n_m": -2194417.6137154684,
+      "roll_moment_residual_n_m": 0.0,
+      "trunnion_x_total_n": -0.0,
+      "trunnion_y_total_n": -767898.7570603123,
+      "trunnion_z_total_n": 1242320.2442419063,
+      "trunnion_T1_x_m": -0.6,
+      "trunnion_T2_x_m": 0.6,
+      "trunnion_T1_fz_n": 621160.1221209532,
+      "trunnion_T2_fz_n": 621160.1221209532,
+      "trunnion_each_fx_n": -0.0,
+      "trunnion_each_fy_n": -383949.37853015616,
+      "pitch_moment_residual_n_m": 0.0,
+      "trunnion_each_resultant_n": 730244.4950747733,
+      "trunnion_mx_n_m": 0.0,
+      "guide_horizontal_n": 695046.31875,
+      "guide_bending_moment_n_m": 1252629.8518092188,
+      "barrel_axial_force_n": 2085138.9562499998,
+      "piston_axial_force_n": 2085138.9562499998,
+      "force_resultant_n": 2197929.4465653957,
+      "stay_x_m": 0.5,
+      "stay_anchor_y_m": -1.2,
+      "stay_anchor_z_m": 0.8,
+      "leg_pin_x_m": 0.5,
+      "leg_pin_y_m": 0.0,
+      "leg_pin_z_m": -1.5,
+      "trunnion_axis_mx_released": true,
+      "status": "traceable preliminary reaction",
+      "basis": "stay anchors (+/-500,-1200,800), leg pins (+/-500,0,-1500), 1300 mm links; no vertical 2.5 m barrel moment"
+    },
+    {
+      "item": "barrel_U1.5_L4-",
+      "case_id": "U1.5_L4-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 2085138.9562499998,
+      "axial_force_n": 2085138.9562499998,
+      "guide_horizontal_force_n": 695046.31875,
+      "guide_bending_moment_n_m": 1252629.8518092188,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 29206615.790597368,
+      "bending_stress_pa": 150166848.10356036,
+      "stress_pa": 179373463.89415774,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 6.804944887645661,
+      "ultimate_margin": 8.477433077855446,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "piston_U1.5_L4-",
+      "case_id": "U1.5_L4-",
+      "mode": "free-body axial + piston-guide horizontal bending",
+      "force_n": 2085138.9562499998,
+      "axial_force_n": 2085138.9562499998,
+      "guide_horizontal_force_n": 695046.31875,
+      "guide_bending_moment_n_m": 1252629.8518092188,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 73746704.87125838,
+      "bending_stress_pa": 643339805.08367,
+      "stress_pa": 717086509.9549284,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 0.9523446342450304,
+      "ultimate_margin": 1.3707041987261084,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever"
+    },
+    {
+      "item": "barrel",
+      "case_id": "U1.5_L3+",
+      "mode": "worst L1-L4/1.5x free-body screen",
+      "force_n": 7414362.017576395,
+      "axial_force_n": 7414362.017576395,
+      "guide_horizontal_force_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "section_area_m2": 0.07139269305282808,
+      "section_modulus_m3": 0.008341587158740662,
+      "axial_stress_pa": 103853233.44071119,
+      "bending_stress_pa": 343953000.7138981,
+      "stress_pa": 447806234.1546093,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": 2.1263521881132115,
+      "ultimate_margin": 2.796284799851757,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever; summary of explicit case rows"
+    },
+    {
+      "item": "piston",
+      "case_id": "U1.5_L3+",
+      "mode": "worst L1-L4/1.5x free-body screen",
+      "force_n": 3375000.0,
+      "axial_force_n": 3375000.0,
+      "guide_horizontal_force_n": 1591984.316034552,
+      "guide_bending_moment_n_m": 2869113.9339653705,
+      "section_area_m2": 0.028274333882308142,
+      "section_modulus_m3": 0.0019470734468953106,
+      "axial_stress_pa": 119366207.31892149,
+      "bending_stress_pa": 1473551980.558459,
+      "stress_pa": 1592918187.8773806,
+      "allowable_yield_pa": 1400000000.0,
+      "allowable_ultimate_pa": 1700000000.0,
+      "yield_margin": -0.12110991596778165,
+      "ultimate_margin": 0.06722367346769365,
+      "load_factor": 1.5,
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks.",
+      "basis": "vertical load is axial; horizontal guide force uses the 1.802225 m contact-to-lower-guide lever; summary of explicit case rows"
+    },
+    {
+      "item": "bogie_beam_current_7050",
+      "mode": "rectangular hollow L1 axial+bending",
+      "force_n": 3000000.0,
+      "moment_n_m": 1500000.0,
+      "section_area_m2": 0.05460000000000001,
+      "section_modulus_m3": 0.00716268,
+      "stress_pa": 264363875.8333258,
+      "bending_stress_pa": 209418820.88827085,
+      "allowable_yield_pa": 393000000.0,
+      "yield_margin": 0.4865873741682307,
+      "mass_estimate_kg": 525.3612,
+      "basis": "actual CAD 7050-T7451 beam 350 x 500 x 35 mm; 1.5 MN m L1 screen; local lugs/buckling remain open"
+    },
+    {
+      "item": "bogie_beam_legacy_7050",
+      "mode": "rectangular hollow comparison only",
+      "force_n": 3000000.0,
+      "moment_n_m": 1500000.0,
+      "section_area_m2": 0.03249999999999999,
+      "section_modulus_m3": 0.0035338541666666678,
+      "stress_pa": 516773425.5427696,
+      "bending_stress_pa": 424465733.23507726,
+      "allowable_yield_pa": 393000000.0,
+      "yield_margin": -0.23951197841253113,
+      "basis": "legacy 300 x 400 x 25 mm comparison; retained as an explicit negative result, not current CAD"
+    },
+    {
+      "item": "bogie_beam_recommended_7050",
+      "mode": "current-CAD alias for downstream consumers",
+      "force_n": 3000000.0,
+      "moment_n_m": 1500000.0,
+      "section_area_m2": 0.05460000000000001,
+      "section_modulus_m3": 0.00716268,
+      "stress_pa": 264363875.8333258,
+      "bending_stress_pa": 209418820.88827085,
+      "allowable_yield_pa": 393000000.0,
+      "yield_margin": 0.4865873741682307,
+      "mass_estimate_kg": 525.3612,
+      "basis": "same 350 x 500 x 35 mm current CAD section; alias retained for existing reports"
+    },
+    {
+      "item": "bogie_pin",
+      "mode": "double shear",
+      "force_n": 3103184.2571981763,
+      "stress_pa": 47036867.98648011,
+      "allowable_yield_pa": 808290376.8654761,
+      "yield_margin": 16.184187882105682,
+      "basis": "300M assumed; hollow 260/160 mm fork/pivot pin from CAD",
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks."
+    },
+    {
+      "item": "bogie_pin_bearing",
+      "mode": "projected bearing",
+      "force_n": 3103184.2571981763,
+      "stress_pa": 183620370.2484128,
+      "allowable_yield_pa": 1400000000.0,
+      "yield_margin": 6.624426408170264,
+      "basis": "65 mm fork-ear thickness from CAD; local edge distance and lug proof remain open",
+      "local_hole_note": "Gross-section screen only: R60 mounting-wing bore, fork R75.4 bore, guide oil port and local lug ligaments require separate net-section, bearing, edge-distance and proof-load checks."
+    },
+    {
+      "item": "barrel_pressure",
+      "mode": "closed-end hoop+axial",
+      "force_n": 0.0,
+      "pressure_gauge_pa": 35168160.05965241,
+      "stress_pa": 186659428.0225565,
+      "allowable_yield_pa": 1400000000.0,
+      "yield_margin": 6.500290849658125,
+      "yield_margin_at_1_5x": 4.000193899772084,
+      "ultimate_margin_at_2x": 3.553748015863862,
+      "basis": "preliminary pressure boundary; supply and peak dynamic pressure both included; local ports/grooves require proof"
+    },
+    {
+      "item": "piston_pressure",
+      "mode": "closed-end hoop+axial",
+      "force_n": 0.0,
+      "pressure_gauge_pa": 35168160.05965241,
+      "stress_pa": 167993485.22030088,
+      "allowable_yield_pa": 1400000000.0,
+      "yield_margin": 7.3336564996201385,
+      "yield_margin_at_1_5x": 4.555770999746759,
+      "ultimate_margin_at_2x": 4.059720017626512,
+      "basis": "preliminary pressure boundary; supply and peak dynamic pressure both included; local ports/grooves require proof"
+    }
+  ],
+  "brakes": [
+    {
+      "scenario": "normal_MLM_dry",
+      "aircraft_mass_kg": 210000.0,
+      "speed_m_s": 72.0,
+      "deceleration_g": 0.3,
+      "translational_energy_j": 544320000.0,
+      "rotational_energy_total_j": 3355754.168191921,
+      "wheel_inertia_kg_m2": 46.60173063113283,
+      "total_energy_j": 547675754.1681919,
+      "energy_per_brake_j": 52485593.10778505,
+      "carbon_stack_envelope_axial_m": 0.3,
+      "carbon_material_axial_m": 0.272,
+      "carbon_rotor_count": 8,
+      "carbon_stator_count": 8,
+      "carbon_rotor_outer_radius_m": 0.26,
+      "carbon_rotor_inner_radius_m": 0.145,
+      "carbon_stator_outer_radius_m": 0.25,
+      "carbon_stator_inner_radius_m": 0.135,
+      "carbon_rotor_volume_m3": 0.021070033609096026,
+      "carbon_stator_volume_m3": 0.017804033886424073,
+      "carbon_volume_m3": 0.03872619256478577,
+      "carbon_mass_kg": 69.7071466166144,
+      "starting_temperature_c": 100.0,
+      "temperature_rise_c": 627.4535163093706,
+      "final_temperature_c": 727.4535163093706,
+      "temperature_limit_c": 1700.0,
+      "thermal_margin_c": 972.5464836906294,
+      "required_clamp_n_at_17MPa": 44559.23834444444,
+      "required_torque_nm": 33837.1716178125,
+      "normal_load_per_wheel_n": 171616.37499999997,
+      "required_brake_force_per_wheel_n": 51484.9125,
+      "friction_limit_per_wheel_n": 116699.135,
+      "friction_margin_n": 65214.222499999996,
+      "antiskid_efficiency": 0.85,
+      "nominal_friction": 0.25,
+      "friction_interfaces": 15,
+      "mean_friction_radius_m": 0.2025,
+      "hydraulic_piston_count": 6,
+      "hydraulic_piston_radius_m": 0.0175,
+      "hydraulic_piston_area_m2": 0.005772676500971245,
+      "hydraulic_force_at_17MPa_n": 98135.50051651117,
+      "cad_piston_count_observed": 6,
+      "cad_piston_radius_observed_m": 0.0175,
+      "cad_piston_mismatch": "none; corrected CAD and analysis both use six OD35 pistons",
+      "recommended_total_piston_area_m2": 0.002621131667320261,
+      "recommended_piston_diameter_if_single_mm": 57.76961563650711,
+      "thermal_pass_preliminary": true,
+      "friction_pass_preliminary": true
+    },
+    {
+      "scenario": "RTO_MTOM_dry",
+      "aircraft_mass_kg": 280000.0,
+      "speed_m_s": 85.0,
+      "deceleration_g": 0.3,
+      "translational_energy_j": 1011500000.0,
+      "rotational_energy_total_j": 4676952.906093099,
+      "wheel_inertia_kg_m2": 46.60173063113283,
+      "total_energy_j": 1016176952.9060931,
+      "energy_per_brake_j": 97383624.65350059,
+      "carbon_stack_envelope_axial_m": 0.3,
+      "carbon_material_axial_m": 0.272,
+      "carbon_rotor_count": 8,
+      "carbon_stator_count": 8,
+      "carbon_rotor_outer_radius_m": 0.26,
+      "carbon_rotor_inner_radius_m": 0.145,
+      "carbon_stator_outer_radius_m": 0.25,
+      "carbon_stator_inner_radius_m": 0.135,
+      "carbon_rotor_volume_m3": 0.021070033609096026,
+      "carbon_stator_volume_m3": 0.017804033886424073,
+      "carbon_volume_m3": 0.03872619256478577,
+      "carbon_mass_kg": 69.7071466166144,
+      "starting_temperature_c": 300.0,
+      "temperature_rise_c": 1164.1994326768404,
+      "final_temperature_c": 1464.1994326768404,
+      "temperature_limit_c": 1700.0,
+      "thermal_margin_c": 235.8005673231596,
+      "required_clamp_n_at_17MPa": 59412.31779259259,
+      "required_torque_nm": 45116.22882375,
+      "normal_load_per_wheel_n": 228821.83333333334,
+      "required_brake_force_per_wheel_n": 68646.55,
+      "friction_limit_per_wheel_n": 155598.84666666668,
+      "friction_margin_n": 86952.29666666668,
+      "antiskid_efficiency": 0.85,
+      "nominal_friction": 0.25,
+      "friction_interfaces": 15,
+      "mean_friction_radius_m": 0.2025,
+      "hydraulic_piston_count": 6,
+      "hydraulic_piston_radius_m": 0.0175,
+      "hydraulic_piston_area_m2": 0.005772676500971245,
+      "hydraulic_force_at_17MPa_n": 98135.50051651117,
+      "cad_piston_count_observed": 6,
+      "cad_piston_radius_observed_m": 0.0175,
+      "cad_piston_mismatch": "none; corrected CAD and analysis both use six OD35 pistons",
+      "recommended_total_piston_area_m2": 0.0034948422230936817,
+      "recommended_piston_diameter_if_single_mm": 66.7066062774372,
+      "thermal_pass_preliminary": true,
+      "friction_pass_preliminary": true
+    },
+    {
+      "scenario": "normal_MLM_wet",
+      "aircraft_mass_kg": 210000.0,
+      "speed_m_s": 72.0,
+      "deceleration_g": 0.15,
+      "translational_energy_j": 544320000.0,
+      "rotational_energy_total_j": 3355754.168191921,
+      "wheel_inertia_kg_m2": 46.60173063113283,
+      "total_energy_j": 547675754.1681919,
+      "energy_per_brake_j": 52485593.10778505,
+      "carbon_stack_envelope_axial_m": 0.3,
+      "carbon_material_axial_m": 0.272,
+      "carbon_rotor_count": 8,
+      "carbon_stator_count": 8,
+      "carbon_rotor_outer_radius_m": 0.26,
+      "carbon_rotor_inner_radius_m": 0.145,
+      "carbon_stator_outer_radius_m": 0.25,
+      "carbon_stator_inner_radius_m": 0.135,
+      "carbon_rotor_volume_m3": 0.021070033609096026,
+      "carbon_stator_volume_m3": 0.017804033886424073,
+      "carbon_volume_m3": 0.03872619256478577,
+      "carbon_mass_kg": 69.7071466166144,
+      "starting_temperature_c": 100.0,
+      "temperature_rise_c": 627.4535163093706,
+      "final_temperature_c": 727.4535163093706,
+      "temperature_limit_c": 1700.0,
+      "thermal_margin_c": 972.5464836906294,
+      "required_clamp_n_at_17MPa": 22279.61917222222,
+      "required_torque_nm": 16918.58580890625,
+      "normal_load_per_wheel_n": 171616.37499999997,
+      "required_brake_force_per_wheel_n": 25742.45625,
+      "friction_limit_per_wheel_n": 43762.175624999996,
+      "friction_margin_n": 18019.719374999997,
+      "antiskid_efficiency": 0.85,
+      "nominal_friction": 0.25,
+      "friction_interfaces": 15,
+      "mean_friction_radius_m": 0.2025,
+      "hydraulic_piston_count": 6,
+      "hydraulic_piston_radius_m": 0.0175,
+      "hydraulic_piston_area_m2": 0.005772676500971245,
+      "hydraulic_force_at_17MPa_n": 98135.50051651117,
+      "cad_piston_count_observed": 6,
+      "cad_piston_radius_observed_m": 0.0175,
+      "cad_piston_mismatch": "none; corrected CAD and analysis both use six OD35 pistons",
+      "recommended_total_piston_area_m2": 0.0013105658336601306,
+      "recommended_piston_diameter_if_single_mm": 40.849286963114594,
+      "thermal_pass_preliminary": true,
+      "friction_pass_preliminary": true
+    },
+    {
+      "scenario": "RTO_one_brake_failed",
+      "aircraft_mass_kg": 280000.0,
+      "speed_m_s": 85.0,
+      "deceleration_g": 0.3,
+      "translational_energy_j": 1011500000.0,
+      "rotational_energy_total_j": 4676952.906093099,
+      "wheel_inertia_kg_m2": 46.60173063113283,
+      "total_energy_j": 1016176952.9060931,
+      "energy_per_brake_j": 106236681.44018245,
+      "carbon_stack_envelope_axial_m": 0.3,
+      "carbon_material_axial_m": 0.272,
+      "carbon_rotor_count": 8,
+      "carbon_stator_count": 8,
+      "carbon_rotor_outer_radius_m": 0.26,
+      "carbon_rotor_inner_radius_m": 0.145,
+      "carbon_stator_outer_radius_m": 0.25,
+      "carbon_stator_inner_radius_m": 0.135,
+      "carbon_rotor_volume_m3": 0.021070033609096026,
+      "carbon_stator_volume_m3": 0.017804033886424073,
+      "carbon_volume_m3": 0.03872619256478577,
+      "carbon_mass_kg": 69.7071466166144,
+      "starting_temperature_c": 300.0,
+      "temperature_rise_c": 1270.0357447383712,
+      "final_temperature_c": 1570.0357447383712,
+      "temperature_limit_c": 1700.0,
+      "thermal_margin_c": 129.96425526162875,
+      "required_clamp_n_at_17MPa": 59412.31779259259,
+      "required_torque_nm": 45116.22882375,
+      "normal_load_per_wheel_n": 228821.83333333334,
+      "required_brake_force_per_wheel_n": 68646.55,
+      "friction_limit_per_wheel_n": 155598.84666666668,
+      "friction_margin_n": 86952.29666666668,
+      "antiskid_efficiency": 0.85,
+      "nominal_friction": 0.25,
+      "friction_interfaces": 15,
+      "mean_friction_radius_m": 0.2025,
+      "hydraulic_piston_count": 6,
+      "hydraulic_piston_radius_m": 0.0175,
+      "hydraulic_piston_area_m2": 0.005772676500971245,
+      "hydraulic_force_at_17MPa_n": 98135.50051651117,
+      "cad_piston_count_observed": 6,
+      "cad_piston_radius_observed_m": 0.0175,
+      "cad_piston_mismatch": "none; corrected CAD and analysis both use six OD35 pistons",
+      "recommended_total_piston_area_m2": 0.0034948422230936817,
+      "recommended_piston_diameter_if_single_mm": 66.7066062774372,
+      "thermal_pass_preliminary": true,
+      "friction_pass_preliminary": true
+    }
+  ],
+  "static": [
+    {
+      "load_n": "1235637.9",
+      "stroke_m": "0.2793786369559954",
+      "load_at_zero_n": "778208.3988807454",
+      "load_at_full_n": "3729569.489530478",
+      "percent_stroke": "46.56310615933257",
+      "friction_low_stroke_m": "0.27743968659604124",
+      "friction_high_stroke_m": "0.28130206707404437",
+      "within_range": "False",
+      "case_id": "L0T",
+      "required_percent_low": "25.0",
+      "required_percent_high": "47.0",
+      "within_case_range": "True",
+      "original_spec_percent_high": "45.0",
+      "original_spec_pass": "False"
+    },
+    {
+      "load_n": "926728.4249999999",
+      "stroke_m": "0.12066621492538754",
+      "load_at_zero_n": "778208.3988807454",
+      "load_at_full_n": "3729569.489530478",
+      "percent_stroke": "20.111035820897925",
+      "friction_low_stroke_m": "0.11723056408882152",
+      "friction_high_stroke_m": "0.12406533162689817",
+      "within_range": "True",
+      "case_id": "L0L",
+      "required_percent_low": "20.0",
+      "required_percent_high": "35.0",
+      "within_case_range": "True",
+      "original_spec_percent_high": "35.0",
+      "original_spec_pass": "True"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "RLG-01-01",
+      "section": "§1",
+      "requirement": "初期設計レビュー用の編集可能CAD・計算・未確定事項をそろえる",
+      "status": "Pass",
+      "evidence": "cad_verification.json",
+      "notes": "実機搭載承認・耐空性証明の成果物ではない"
+    },
+    {
+      "requirement_id": "RLG-02-01",
+      "section": "§2",
+      "requirement": "主脚・6輪・ブレーキ・引込機構の実測質量を記録する（6,000 kgは参考目標）",
+      "status": "Pass",
+      "evidence": "cad_mass.json mass_kg=8,010.063",
+      "notes": "2026-10-22ユーザー指示で必達条件から除外。実測値は8.01 t。docs/rlg003_user_decisions.md参照"
+    },
+    {
+      "requirement_id": "RLG-03-01",
+      "section": "§3",
+      "requirement": "座標系、3軸6輪、FI〜ROの配置を再現する",
+      "status": "Pass",
+      "evidence": "cad_verification.json wheel_coordinates_verified",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RLG-04-01",
+      "section": "§4",
+      "requirement": "収納庫・ふた・動作途中の連続干渉を許容値とガード込みで確認する",
+      "status": "Pending",
+      "evidence": "clearance_summary.json",
+      "notes": "静的包含・観測点の隙間・連続経路の保証を区別する"
+    },
+    {
+      "requirement_id": "RLG-04-02",
+      "section": "§4",
+      "requirement": "D4のタイヤ底付き境界から余裕を残す",
+      "status": "Pass",
+      "evidence": "analysis summary dynamic cases: D4 tire_bottom_margin=2.082 mm",
+      "notes": "算術上の底付き余裕と、購入品・物性の不確かさを区別する"
+    },
+    {
+      "requirement_id": "RLG-07-STATIC-ORIGINAL",
+      "section": "§7",
+      "requirement": "元仕様のMTOM静沈下上限45%",
+      "status": "Fail",
+      "evidence": "analysis/static_oleo.csv original_spec_pass",
+      "notes": "r02の中央オレオでは約46.56%。ユーザー承認により改訂上限47%を併記"
+    },
+    {
+      "requirement_id": "RLG-07-STATIC-REVISED",
+      "section": "§7",
+      "requirement": "改訂MTOM静沈下上限47%（初期設計ベンチマーク）",
+      "status": "Pass",
+      "evidence": "analysis/static_oleo.csv within_case_range",
+      "notes": "2026-10-22ユーザー承認。元仕様のFailを上書きしない"
+    },
+    {
+      "requirement_id": "RLG-05-01",
+      "section": "§5",
+      "requirement": "タイヤ断面、空洞、ビード、リム、保持、軸受を6組へ対応させる",
+      "status": "Pass",
+      "evidence": "cad_verification.json + bom.csv",
+      "notes": "購入品形状・軸受容量の最終供給者確認は別項目"
+    },
+    {
+      "requirement_id": "RLG-05-02",
+      "section": "§5",
+      "requirement": "材料・タイヤ・軸受のカタログ根拠を確定する",
+      "status": "Pending",
+      "evidence": "parameters.json / wheels_notes.md",
+      "notes": "材料値とSKF候補は初期設計用で、供給者・保証下限・航空用途適合は未確認"
+    },
+    {
+      "requirement_id": "RLG-06-01",
+      "section": "§6",
+      "requirement": "多輪荷重、主要構造、ピン・締結の荷重経路を追跡する",
+      "status": "Pending",
+      "evidence": "analysis summary structural",
+      "notes": "予備断面行はあるが、局部リガメント・座屈・締結部の実証は未完"
+    },
+    {
+      "requirement_id": "RLG-07-01",
+      "section": "§7",
+      "requirement": "D1〜D4の動解析、タイヤ底付き、油のキャビテーションを確認する",
+      "status": "Pass",
+      "evidence": "latest analysis summary dynamic/convergence",
+      "notes": "Passは自実装モデルの算術スクリーニングだけを意味する"
+    },
+    {
+      "requirement_id": "RLG-07-02",
+      "section": "§7",
+      "requirement": "ガス容積式と油チャージ保存を状態間で照合する",
+      "status": "Pass",
+      "evidence": "fluid_probe gas=Pass, oil=Pass",
+      "notes": "明示的な保存証拠がない状態は保留のまま出力する"
+    },
+    {
+      "requirement_id": "RLG-08-01",
+      "section": "§8",
+      "requirement": "引込・ロック・非常伸長の系列、作動圧・流量を追跡する",
+      "status": "Pending",
+      "evidence": "kinematics.csv / analysis/motion/motion_dynamics_summary.json",
+      "notes": "12 L accumulator・cam20°の再計算済み。解除リンク、ロック所要時間と終端吸収機構が未完"
+    },
+    {
+      "requirement_id": "RLG-09-01",
+      "section": "§9",
+      "requirement": "各輪多板ブレーキ、反力、配管、熱容量を整合させる",
+      "status": "Pending",
+      "evidence": "latest analysis summary brakes + bom.csv",
+      "notes": "熱・摩擦行は予備計算。ロータ材・摩擦・換気・摩耗の供給者確認が必要"
+    },
+    {
+      "requirement_id": "RLG-10-01",
+      "section": "§10",
+      "requirement": "構造材料、圧力境界、製造方法、局部強度を根拠付きで示す",
+      "status": "Pending",
+      "evidence": "parameters.json + analysis structural",
+      "notes": "300M/7050/carbon値は設計仮定。局部強度の詳細検証・材料試験・耐圧試験は未実施"
+    },
+    {
+      "requirement_id": "RLG-11-01",
+      "section": "§11",
+      "requirement": "交換手順、アクセス、故障モード、寿命の初期評価を示す",
+      "status": "Pending",
+      "evidence": "design_report.md FMEA/maintenance",
+      "notes": "S-Nデータ、疲労試験、実機寿命資格は未実施"
+    },
+    {
+      "requirement_id": "RLG-12-01",
+      "section": "§12",
+      "requirement": "FCStdを新規セッションで開き、全11状態の登録部品を検査する",
+      "status": "Pass",
+      "evidence": "fresh_session_open=True, valid_parts_all_11_states=670",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RLG-12-02",
+      "section": "§12",
+      "requirement": "剛体部品の状態間体積変化をゼロとする",
+      "status": "Pass",
+      "evidence": "cad_verification.json + volume_changes.json",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RLG-12-03",
+      "section": "§12",
+      "requirement": "寸法編集復元とq=0→1→0を再現する",
+      "status": "Pass",
+      "evidence": "cad_verification.json axle_dimension_edit_revert/sequence_q_0_1_0",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RLG-12-04",
+      "section": "§12",
+      "requirement": "STEP・PDF・PNGを実在ファイルとJSON/manifestで確認する",
+      "status": "Pass",
+      "evidence": "STEP=True, PDF=True, PNG=True",
+      "notes": "未生成またはmanifest未確認の成果物は保留"
+    },
+    {
+      "requirement_id": "RLG-13-01",
+      "section": "§13",
+      "requirement": "deliverablesを移動可能な相対参照でパッケージする",
+      "status": "Pass",
+      "evidence": "package_rlg003.py",
+      "notes": "生成時点の入力ハッシュをrun_record.mdへ記録"
+    },
+    {
+      "requirement_id": "RLG-14-G1",
+      "section": "§14",
+      "requirement": "G1 荷重と構造",
+      "status": "Pending",
+      "evidence": "analysis structural + materials",
+      "notes": "局部強度・締結部・材料保証が未完"
+    },
+    {
+      "requirement_id": "RLG-14-G2",
+      "section": "§14",
+      "requirement": "G2 緩衝",
+      "status": "Pending",
+      "evidence": "D1-D4 screen=True, convergence=True, D4=2.082 mm",
+      "notes": "D4の名目余裕とD5感度を明示。タイヤ物性・接触剛性・試験相関は未確認"
+    },
+    {
+      "requirement_id": "RLG-14-G3",
+      "section": "§14",
+      "requirement": "G3 引込と非常伸長",
+      "status": "Pending",
+      "evidence": "analysis/motion/motion_dynamics_summary.json",
+      "notes": "動力学再計算済み。終端吸収・解除力伝達・ロック成立の実体根拠が未完"
+    },
+    {
+      "requirement_id": "RLG-14-G4",
+      "section": "§14",
+      "requirement": "G4 車輪と制動",
+      "status": "Pending",
+      "evidence": "wheel BOM + brake thermal",
+      "notes": "軸受・タイヤ・材料カタログはprovisional"
+    },
+    {
+      "requirement_id": "RLG-14-G5",
+      "section": "§14",
+      "requirement": "G5 収納とふた",
+      "status": "Pending",
+      "evidence": "clearance_summary.json",
+      "notes": "連続q掃引または許容距離が成立するまでゲートを閉じない"
+    },
+    {
+      "requirement_id": "RLG-14-G6",
+      "section": "§14",
+      "requirement": "G6 CAD再現",
+      "status": "Pass",
+      "evidence": "cad_verification.json + exchange/drawings files",
+      "notes": "状態検査、寸法復元、交換形式と図面の証拠を照合"
+    },
+    {
+      "requirement_id": "RLG-14-G7",
+      "section": "§14",
+      "requirement": "G7 証拠の整合",
+      "status": "Pending",
+      "evidence": "all runtime evidence",
+      "notes": "Astra主担当・Luna max支援のreference-informed assisted runであり盲検ベンチマークではない"
+    }
+  ],
+  "history": [
+    {
+      "case_id": "D1",
+      "t_s": 0.0,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.005000000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.010000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.01500000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.020000000000000014,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.02500000000000002,
+      "stroke_mm": 1.7668847144540893
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.030000000000000023,
+      "stroke_mm": 5.200598942685819
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.035000000000000024,
+      "stroke_mm": 10.134605810354941
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.04000000000000003,
+      "stroke_mm": 17.009276183127724
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.04500000000000003,
+      "stroke_mm": 25.977170325220136
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.05000000000000004,
+      "stroke_mm": 36.91813011804181
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.05500000000000004,
+      "stroke_mm": 49.51709405985714
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.060000000000000046,
+      "stroke_mm": 63.37883295614292
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.06500000000000004,
+      "stroke_mm": 78.1118563256314
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.07000000000000005,
+      "stroke_mm": 93.33697717813975
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.07500000000000005,
+      "stroke_mm": 108.72552713611707
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.08000000000000006,
+      "stroke_mm": 124.02542618909425
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.08500000000000006,
+      "stroke_mm": 139.07288618613984
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.09000000000000007,
+      "stroke_mm": 153.75708203766783
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.09500000000000007,
+      "stroke_mm": 168.00377502759113
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.10000000000000007,
+      "stroke_mm": 181.76638878500455
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.10500000000000008,
+      "stroke_mm": 195.01909869658712
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.11000000000000008,
+      "stroke_mm": 207.7516017388183
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.11500000000000009,
+      "stroke_mm": 219.965169288756
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.12000000000000009,
+      "stroke_mm": 231.66963237739023
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.12500000000000008,
+      "stroke_mm": 242.88102595685223
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.1300000000000001,
+      "stroke_mm": 253.6196934419755
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.1350000000000001,
+      "stroke_mm": 263.9087148457256
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.1400000000000001,
+      "stroke_mm": 273.77798426389637
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.1450000000000001,
+      "stroke_mm": 283.2887756552135
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.1500000000000001,
+      "stroke_mm": 292.5050217452936
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.1550000000000001,
+      "stroke_mm": 301.4763747411304
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.16000000000000011,
+      "stroke_mm": 310.2364317998969
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.16500000000000012,
+      "stroke_mm": 318.80245272337953
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.17000000000000012,
+      "stroke_mm": 327.17645596885944
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.17500000000000013,
+      "stroke_mm": 335.3474551832601
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.18000000000000013,
+      "stroke_mm": 343.2944926171079
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.18500000000000014,
+      "stroke_mm": 350.99008284869046
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.19000000000000014,
+      "stroke_mm": 358.4036989939109
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.19500000000000015,
+      "stroke_mm": 365.5049967832993
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.20000000000000015,
+      "stroke_mm": 372.26655599666236
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.20500000000000015,
+      "stroke_mm": 378.66600287956584
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.21000000000000016,
+      "stroke_mm": 384.68744830545523
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.21500000000000016,
+      "stroke_mm": 390.32223026907906
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.22000000000000017,
+      "stroke_mm": 395.5689880455308
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.22500000000000017,
+      "stroke_mm": 400.4331245793299
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.23000000000000018,
+      "stroke_mm": 404.9257391929488
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.23500000000000018,
+      "stroke_mm": 409.0621383823308
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.24000000000000019,
+      "stroke_mm": 412.8600589813744
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2450000000000002,
+      "stroke_mm": 416.33776259599017
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.25000000000000017,
+      "stroke_mm": 419.5121774951992
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.25500000000000017,
+      "stroke_mm": 422.39726754385856
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2600000000000002,
+      "stroke_mm": 425.0027917656263
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2650000000000002,
+      "stroke_mm": 427.3335804899831
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2700000000000002,
+      "stroke_mm": 429.3893972351975
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2750000000000002,
+      "stroke_mm": 431.1653867497228
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2800000000000002,
+      "stroke_mm": 432.65303944216134
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2850000000000002,
+      "stroke_mm": 433.84154181628253
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2900000000000002,
+      "stroke_mm": 434.7193403508278
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.2950000000000002,
+      "stroke_mm": 435.2757273426494
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3000000000000002,
+      "stroke_mm": 435.50226194404723
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3050000000000002,
+      "stroke_mm": 435.4110361806598
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3100000000000002,
+      "stroke_mm": 435.0330561878305
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3150000000000002,
+      "stroke_mm": 434.36732416433176
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.32000000000000023,
+      "stroke_mm": 433.41268162933477
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.32500000000000023,
+      "stroke_mm": 432.1688227281567
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.33000000000000024,
+      "stroke_mm": 430.6362994710323
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.33500000000000024,
+      "stroke_mm": 428.81638476744894
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.34000000000000025,
+      "stroke_mm": 426.7108216568357
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.34500000000000025,
+      "stroke_mm": 424.32150594077046
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.35000000000000026,
+      "stroke_mm": 421.6501593521349
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.35500000000000026,
+      "stroke_mm": 418.6980500831879
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.36000000000000026,
+      "stroke_mm": 415.4658075270832
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.36500000000000027,
+      "stroke_mm": 411.9533607545963
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3700000000000003,
+      "stroke_mm": 408.16000897256055
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3750000000000003,
+      "stroke_mm": 404.08461083509076
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3800000000000003,
+      "stroke_mm": 399.7258615554089
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3850000000000003,
+      "stroke_mm": 395.08261497656093
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3900000000000003,
+      "stroke_mm": 390.1542035416061
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.3950000000000003,
+      "stroke_mm": 384.9407125241895
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4000000000000003,
+      "stroke_mm": 379.4431747456102
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4050000000000003,
+      "stroke_mm": 373.6636661774594
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4100000000000003,
+      "stroke_mm": 367.6052986776408
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4150000000000003,
+      "stroke_mm": 361.27212099802085
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4200000000000003,
+      "stroke_mm": 354.66895094012216
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4250000000000003,
+      "stroke_mm": 347.80116868124
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4300000000000003,
+      "stroke_mm": 340.6745033023577
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.43500000000000033,
+      "stroke_mm": 333.2948417381883
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.44000000000000034,
+      "stroke_mm": 325.671146487017
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.44500000000000034,
+      "stroke_mm": 317.85057901684286
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.45000000000000034,
+      "stroke_mm": 309.8999012198489
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.45500000000000035,
+      "stroke_mm": 301.872543296968
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.46000000000000035,
+      "stroke_mm": 293.80481370476366
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.46500000000000036,
+      "stroke_mm": 285.71458491250223
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.47000000000000036,
+      "stroke_mm": 277.60174604005704
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.47500000000000037,
+      "stroke_mm": 269.45017027865214
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.48000000000000037,
+      "stroke_mm": 261.23087099834294
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4850000000000004,
+      "stroke_mm": 252.90597554158356
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4900000000000004,
+      "stroke_mm": 244.43312309816474
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.4950000000000004,
+      "stroke_mm": 235.76989150683332
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5000000000000003,
+      "stroke_mm": 226.87787991697405
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5049999999999998,
+      "stroke_mm": 217.72612317402726
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5099999999999992,
+      "stroke_mm": 208.2935900017613
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5149999999999987,
+      "stroke_mm": 198.57061588787423
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5199999999999981,
+      "stroke_mm": 188.55923289273824
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5249999999999976,
+      "stroke_mm": 178.27246847484352
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.529999999999997,
+      "stroke_mm": 167.7327793707099
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5349999999999965,
+      "stroke_mm": 156.96985302831325
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5399999999999959,
+      "stroke_mm": 146.01804200814956
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5449999999999954,
+      "stroke_mm": 134.91369637591595
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5499999999999948,
+      "stroke_mm": 123.69263099400794
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5549999999999943,
+      "stroke_mm": 112.38791754811433
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5599999999999937,
+      "stroke_mm": 101.0281346489874
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5649999999999932,
+      "stroke_mm": 89.63615174341453
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5699999999999926,
+      "stroke_mm": 78.228469852127
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5749999999999921,
+      "stroke_mm": 66.81509778694397
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5799999999999915,
+      "stroke_mm": 55.39990781781413
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.584999999999991,
+      "stroke_mm": 43.98138967558838
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5899999999999904,
+      "stroke_mm": 32.55370549596179
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5949999999999899,
+      "stroke_mm": 21.107939872730018
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.5999999999999893,
+      "stroke_mm": 9.633437750688666
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.6049999999999888,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D1",
+      "t_s": 0.6099999999999882,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.0,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.005000000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.010000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.01500000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.020000000000000014,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.02500000000000002,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.030000000000000023,
+      "stroke_mm": 0.7720957173247001
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.035000000000000024,
+      "stroke_mm": 1.7209224779532044
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.04000000000000003,
+      "stroke_mm": 2.7167929227609884
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.04500000000000003,
+      "stroke_mm": 4.288343526537078
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.05000000000000004,
+      "stroke_mm": 6.8900638914028836
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.05500000000000004,
+      "stroke_mm": 10.846608245442063
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.060000000000000046,
+      "stroke_mm": 16.311053772811043
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.06500000000000004,
+      "stroke_mm": 23.255378191974167
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.07000000000000005,
+      "stroke_mm": 31.498039813012774
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.07500000000000005,
+      "stroke_mm": 40.75694003376121
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.08000000000000006,
+      "stroke_mm": 50.707871260754416
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.08500000000000006,
+      "stroke_mm": 61.03222961419229
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.09000000000000007,
+      "stroke_mm": 71.44730251757441
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.09500000000000007,
+      "stroke_mm": 81.72045648196604
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.10000000000000007,
+      "stroke_mm": 91.67212070863206
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.10500000000000008,
+      "stroke_mm": 101.1725530689515
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.11000000000000008,
+      "stroke_mm": 110.13598198036564
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.11500000000000009,
+      "stroke_mm": 118.51419938727103
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.12000000000000009,
+      "stroke_mm": 126.29056218967067
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.12500000000000008,
+      "stroke_mm": 133.474687410576
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.1300000000000001,
+      "stroke_mm": 140.09778214170998
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.1350000000000001,
+      "stroke_mm": 146.2084070184861
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.1400000000000001,
+      "stroke_mm": 151.86844418943508
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.1450000000000001,
+      "stroke_mm": 157.14907779530586
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.1500000000000001,
+      "stroke_mm": 162.12667160436982
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.1550000000000001,
+      "stroke_mm": 166.87853039305762
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.16000000000000011,
+      "stroke_mm": 171.47864561333566
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.16500000000000012,
+      "stroke_mm": 175.99363388426832
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.17000000000000012,
+      "stroke_mm": 180.47915577475186
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.17500000000000013,
+      "stroke_mm": 184.97712885351518
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.18000000000000013,
+      "stroke_mm": 189.51400814125134
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.18500000000000014,
+      "stroke_mm": 194.10030078308682
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.19000000000000014,
+      "stroke_mm": 198.73133163072424
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.19500000000000015,
+      "stroke_mm": 203.38911845783218
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.20000000000000015,
+      "stroke_mm": 208.04508768232296
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.20500000000000015,
+      "stroke_mm": 212.6632903395451
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.21000000000000016,
+      "stroke_mm": 217.20377109090242
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.21500000000000016,
+      "stroke_mm": 221.62578930317045
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.22000000000000017,
+      "stroke_mm": 225.89066877552773
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.22500000000000017,
+      "stroke_mm": 229.96413807249394
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.23000000000000018,
+      "stroke_mm": 233.81809874890186
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.23500000000000018,
+      "stroke_mm": 237.4318146047517
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.24000000000000019,
+      "stroke_mm": 240.79254984524755
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2450000000000002,
+      "stroke_mm": 243.8957012426714
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.25000000000000017,
+      "stroke_mm": 246.7444751357864
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.25500000000000017,
+      "stroke_mm": 249.3491606706741
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2600000000000002,
+      "stroke_mm": 251.72605135824932
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2650000000000002,
+      "stroke_mm": 253.89607137185465
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2700000000000002,
+      "stroke_mm": 255.88317262041326
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2750000000000002,
+      "stroke_mm": 257.71258302206013
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2800000000000002,
+      "stroke_mm": 259.409003103282
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2850000000000002,
+      "stroke_mm": 260.994862987972
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2900000000000002,
+      "stroke_mm": 262.48876011863507
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.2950000000000002,
+      "stroke_mm": 263.90419511641227
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3000000000000002,
+      "stroke_mm": 265.24870620580543
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3050000000000002,
+      "stroke_mm": 266.5234716365935
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3100000000000002,
+      "stroke_mm": 267.7234078629485
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3150000000000002,
+      "stroke_mm": 268.8377449503254
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.32000000000000023,
+      "stroke_mm": 269.8510170703722
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.32500000000000023,
+      "stroke_mm": 270.74437161986367
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.33000000000000024,
+      "stroke_mm": 271.4970797236985
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.33500000000000024,
+      "stroke_mm": 272.0881247519392
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.34000000000000025,
+      "stroke_mm": 272.4977521354728
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.34500000000000025,
+      "stroke_mm": 272.7088793887503
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.35000000000000026,
+      "stroke_mm": 272.7146631068587
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.35500000000000026,
+      "stroke_mm": 272.5443988598909
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.36000000000000026,
+      "stroke_mm": 272.19867409230267
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.36500000000000027,
+      "stroke_mm": 271.6748524828195
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3700000000000003,
+      "stroke_mm": 270.9736802505738
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3750000000000003,
+      "stroke_mm": 270.09920675454777
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3800000000000003,
+      "stroke_mm": 269.0584065739885
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3850000000000003,
+      "stroke_mm": 267.8605417708959
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3900000000000003,
+      "stroke_mm": 266.5163275485433
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.3950000000000003,
+      "stroke_mm": 265.03698192911287
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4000000000000003,
+      "stroke_mm": 263.4332488514565
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4050000000000003,
+      "stroke_mm": 261.7144838526632
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4100000000000003,
+      "stroke_mm": 259.88788289708594
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4150000000000003,
+      "stroke_mm": 257.9579193871312
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4200000000000003,
+      "stroke_mm": 255.9260338336023
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4250000000000003,
+      "stroke_mm": 253.79059716761748
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4300000000000003,
+      "stroke_mm": 251.54714431210823
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.43500000000000033,
+      "stroke_mm": 249.18885133967854
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.44000000000000034,
+      "stroke_mm": 246.70720908599714
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.44500000000000034,
+      "stroke_mm": 244.09283001274258
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.45000000000000034,
+      "stroke_mm": 241.33631470354499
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.45500000000000035,
+      "stroke_mm": 238.42910054755794
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.46000000000000035,
+      "stroke_mm": 235.36421833768534
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.46500000000000036,
+      "stroke_mm": 232.136892475584
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.47000000000000036,
+      "stroke_mm": 228.74493632128952
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.47500000000000037,
+      "stroke_mm": 225.18891436278443
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.48000000000000037,
+      "stroke_mm": 221.4720651969867
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4850000000000004,
+      "stroke_mm": 217.6000014363507
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4900000000000004,
+      "stroke_mm": 213.58022228174323
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.4950000000000004,
+      "stroke_mm": 209.4214897195939
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5000000000000003,
+      "stroke_mm": 205.13312882949188
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5049999999999998,
+      "stroke_mm": 200.72431599835178
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5099999999999992,
+      "stroke_mm": 196.2034161331141
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5149999999999987,
+      "stroke_mm": 191.5774220529733
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5199999999999981,
+      "stroke_mm": 186.85153733975136
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5249999999999976,
+      "stroke_mm": 182.02892944696757
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.529999999999997,
+      "stroke_mm": 177.11066425203123
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5349999999999965,
+      "stroke_mm": 172.09581781477345
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5399999999999959,
+      "stroke_mm": 166.981747034686
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5449999999999954,
+      "stroke_mm": 161.76448912402037
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5499999999999948,
+      "stroke_mm": 156.43925105750196
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5549999999999943,
+      "stroke_mm": 151.00094491391542
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5599999999999937,
+      "stroke_mm": 145.44472353605659
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5649999999999932,
+      "stroke_mm": 139.76647318283946
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5699999999999926,
+      "stroke_mm": 133.96322552787095
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5749999999999921,
+      "stroke_mm": 128.0334598908674
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5799999999999915,
+      "stroke_mm": 121.97727714539576
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.584999999999991,
+      "stroke_mm": 115.79643832747473
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5899999999999904,
+      "stroke_mm": 109.49427250010702
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5949999999999899,
+      "stroke_mm": 103.07546887887177
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.5999999999999893,
+      "stroke_mm": 96.54577672210002
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6049999999999888,
+      "stroke_mm": 89.91164241366353
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6099999999999882,
+      "stroke_mm": 83.17981619501974
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6149999999999877,
+      "stroke_mm": 76.35696112056104
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6199999999999871,
+      "stroke_mm": 69.4492942736424
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6249999999999866,
+      "stroke_mm": 62.46228555609512
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.629999999999986,
+      "stroke_mm": 55.40043304964935
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6349999999999855,
+      "stroke_mm": 48.26712669695548
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6399999999999849,
+      "stroke_mm": 41.06460450671049
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6449999999999844,
+      "stroke_mm": 33.79399823790138
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6499999999999838,
+      "stroke_mm": 26.455459059700786
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6549999999999833,
+      "stroke_mm": 19.048348407519086
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6599999999999827,
+      "stroke_mm": 11.571475439931401
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6649999999999822,
+      "stroke_mm": 4.023360307363652
+    },
+    {
+      "case_id": "D2",
+      "t_s": 0.6699999999999816,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.0,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.005000000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.010000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.01500000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.020000000000000014,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.02500000000000002,
+      "stroke_mm": 3.096574441938657
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.030000000000000023,
+      "stroke_mm": 7.892650739765472
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.035000000000000024,
+      "stroke_mm": 14.884517687976508
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.04000000000000003,
+      "stroke_mm": 24.336022864176577
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.04500000000000003,
+      "stroke_mm": 36.23682884981344
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.05000000000000004,
+      "stroke_mm": 50.3673693114626
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.05500000000000004,
+      "stroke_mm": 66.25338259600494
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.060000000000000046,
+      "stroke_mm": 83.32650269039927
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.06500000000000004,
+      "stroke_mm": 101.05344335729211
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.07000000000000005,
+      "stroke_mm": 118.99774506780669
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.07500000000000005,
+      "stroke_mm": 136.8323056218118
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.08000000000000006,
+      "stroke_mm": 154.32734635178687
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.08500000000000006,
+      "stroke_mm": 171.3307602666064
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.09000000000000007,
+      "stroke_mm": 187.74907655939901
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.09500000000000007,
+      "stroke_mm": 203.53181562403162
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.10000000000000007,
+      "stroke_mm": 218.65946980536523
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.10500000000000008,
+      "stroke_mm": 233.13446999791074
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.11000000000000008,
+      "stroke_mm": 246.97436552182393
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.11500000000000009,
+      "stroke_mm": 260.206573147086
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.12000000000000009,
+      "stroke_mm": 272.86423388345946
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.12500000000000008,
+      "stroke_mm": 284.98287932172906
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.1300000000000001,
+      "stroke_mm": 296.59773371633713
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.1350000000000001,
+      "stroke_mm": 307.7415635961119
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.1400000000000001,
+      "stroke_mm": 318.4430387363892
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.1450000000000001,
+      "stroke_mm": 328.7255930287129
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.1500000000000001,
+      "stroke_mm": 338.60677745382793
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.1550000000000001,
+      "stroke_mm": 348.09808643902943
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.16000000000000011,
+      "stroke_mm": 357.2052198076112
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.16500000000000012,
+      "stroke_mm": 365.9287212758909
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.17000000000000012,
+      "stroke_mm": 374.264915852982
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.17500000000000013,
+      "stroke_mm": 382.2070557026325
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.18000000000000013,
+      "stroke_mm": 389.7465783331771
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.18500000000000014,
+      "stroke_mm": 396.8743820915034
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.19000000000000014,
+      "stroke_mm": 403.58203053533947
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.19500000000000015,
+      "stroke_mm": 409.8628077120438
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.20000000000000015,
+      "stroke_mm": 415.7125593236962
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.20500000000000015,
+      "stroke_mm": 421.1302694681982
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.21000000000000016,
+      "stroke_mm": 426.1183390326748
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.21500000000000016,
+      "stroke_mm": 430.6825502223221
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.22000000000000017,
+      "stroke_mm": 434.8317224856165
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.22500000000000017,
+      "stroke_mm": 438.577088116542
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.23000000000000018,
+      "stroke_mm": 441.9314400457244
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.23500000000000018,
+      "stroke_mm": 444.90812762337885
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.24000000000000019,
+      "stroke_mm": 447.51999537770024
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2450000000000002,
+      "stroke_mm": 449.7783711038461
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.25000000000000017,
+      "stroke_mm": 451.6922098079113
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.25500000000000017,
+      "stroke_mm": 453.2674869105523
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2600000000000002,
+      "stroke_mm": 454.5069077931492
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2650000000000002,
+      "stroke_mm": 455.4099639118185
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2700000000000002,
+      "stroke_mm": 455.9733232804718
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2750000000000002,
+      "stroke_mm": 456.19150145773057
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2800000000000002,
+      "stroke_mm": 456.07779535858555
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2850000000000002,
+      "stroke_mm": 455.65455365158994
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2900000000000002,
+      "stroke_mm": 454.91064310841386
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.2950000000000002,
+      "stroke_mm": 453.833574747092
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3000000000000002,
+      "stroke_mm": 452.41182989465824
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3050000000000002,
+      "stroke_mm": 450.63661391401956
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3100000000000002,
+      "stroke_mm": 448.50308351819933
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3150000000000002,
+      "stroke_mm": 446.0108521054271
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.32000000000000023,
+      "stroke_mm": 443.1637157220314
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.32500000000000023,
+      "stroke_mm": 439.96868612644516
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.33000000000000024,
+      "stroke_mm": 436.43453756004715
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.33500000000000024,
+      "stroke_mm": 432.5701477675379
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.34000000000000025,
+      "stroke_mm": 428.38293090290546
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.34500000000000025,
+      "stroke_mm": 423.87762244827644
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.35000000000000026,
+      "stroke_mm": 419.055596878094
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.35500000000000026,
+      "stroke_mm": 413.91479628369984
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.36000000000000026,
+      "stroke_mm": 408.4502426515948
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.36500000000000027,
+      "stroke_mm": 402.65501569003237
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3700000000000003,
+      "stroke_mm": 396.52151498332023
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3750000000000003,
+      "stroke_mm": 390.0427968599218
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3800000000000003,
+      "stroke_mm": 383.21378357266
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3850000000000003,
+      "stroke_mm": 376.03218043807493
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3900000000000003,
+      "stroke_mm": 368.49899624297126
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.3950000000000003,
+      "stroke_mm": 360.6186316548603
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4000000000000003,
+      "stroke_mm": 352.39856734606866
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4050000000000003,
+      "stroke_mm": 343.8487376696943
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4100000000000003,
+      "stroke_mm": 334.98071013324375
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4150000000000003,
+      "stroke_mm": 325.82097588825786
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4200000000000003,
+      "stroke_mm": 316.4484468645442
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4250000000000003,
+      "stroke_mm": 306.9417243884329
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4300000000000003,
+      "stroke_mm": 297.3591556940492
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.43500000000000033,
+      "stroke_mm": 287.73616926432896
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.44000000000000034,
+      "stroke_mm": 278.0850212490612
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.44500000000000034,
+      "stroke_mm": 268.3966082456376
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.45000000000000034,
+      "stroke_mm": 258.64391258007623
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.45500000000000035,
+      "stroke_mm": 248.78660312849814
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.46000000000000035,
+      "stroke_mm": 238.7762994159291
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.46500000000000036,
+      "stroke_mm": 228.56201169124313
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.47000000000000036,
+      "stroke_mm": 218.09529607887552
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.47500000000000037,
+      "stroke_mm": 207.33471690160192
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.48000000000000037,
+      "stroke_mm": 196.24929158692188
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4850000000000004,
+      "stroke_mm": 184.820705258053
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4900000000000004,
+      "stroke_mm": 173.0442127498043
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.4950000000000004,
+      "stroke_mm": 160.92827975238714
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5000000000000003,
+      "stroke_mm": 148.49313398798998
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5049999999999998,
+      "stroke_mm": 135.76848598141473
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5099999999999992,
+      "stroke_mm": 122.79072756350116
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5149999999999987,
+      "stroke_mm": 109.59992325672482
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5199999999999981,
+      "stroke_mm": 96.2368809861147
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5249999999999976,
+      "stroke_mm": 82.7405347587683
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.529999999999997,
+      "stroke_mm": 69.14580522264761
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5349999999999965,
+      "stroke_mm": 55.48203526686718
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5399999999999959,
+      "stroke_mm": 41.77203506376844
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5449999999999954,
+      "stroke_mm": 28.031718806167866
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5499999999999948,
+      "stroke_mm": 14.27027556702306
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5549999999999943,
+      "stroke_mm": 0.4907888962509127
+    },
+    {
+      "case_id": "D3",
+      "t_s": 0.5599999999999937,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.0,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.005000000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.010000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.01500000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.020000000000000014,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.02500000000000002,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.030000000000000023,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.035000000000000024,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.04000000000000003,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.04500000000000003,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.05000000000000004,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.05500000000000004,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.060000000000000046,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.06500000000000004,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.07000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.07500000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.08000000000000006,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.08500000000000006,
+      "stroke_mm": 0.5962971910407622
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.09000000000000007,
+      "stroke_mm": 3.7319896272249853
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.09500000000000007,
+      "stroke_mm": 8.90641198204445
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.10000000000000007,
+      "stroke_mm": 16.724199427077924
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.10500000000000008,
+      "stroke_mm": 27.085545757688234
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.11000000000000008,
+      "stroke_mm": 39.528840685273956
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.11500000000000009,
+      "stroke_mm": 53.45788262563583
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.12000000000000009,
+      "stroke_mm": 68.20799780648213
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.12500000000000008,
+      "stroke_mm": 83.2280321722681
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.1300000000000001,
+      "stroke_mm": 98.4854658189862
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.1350000000000001,
+      "stroke_mm": 114.13647979604758
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.1400000000000001,
+      "stroke_mm": 130.18095574076193
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.1450000000000001,
+      "stroke_mm": 146.48120231147556
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.1500000000000001,
+      "stroke_mm": 162.80210716545224
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.1550000000000001,
+      "stroke_mm": 178.8552470937253
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.16000000000000011,
+      "stroke_mm": 194.33962475724232
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.16500000000000012,
+      "stroke_mm": 208.97568262816984
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.17000000000000012,
+      "stroke_mm": 222.53329029986307
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.17500000000000013,
+      "stroke_mm": 234.98825683403385
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.18000000000000013,
+      "stroke_mm": 246.77722464098352
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.18500000000000014,
+      "stroke_mm": 258.3316872156921
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.19000000000000014,
+      "stroke_mm": 269.8916212585251
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.19500000000000015,
+      "stroke_mm": 281.51153007388444
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.20000000000000015,
+      "stroke_mm": 293.0876344042764
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.20500000000000015,
+      "stroke_mm": 304.40256106491603
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.21000000000000016,
+      "stroke_mm": 315.18030399759147
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.21500000000000016,
+      "stroke_mm": 325.1427259654589
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.22000000000000017,
+      "stroke_mm": 334.0577633805106
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.22500000000000017,
+      "stroke_mm": 342.0546689474302
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.23000000000000018,
+      "stroke_mm": 349.6749278048749
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.23500000000000018,
+      "stroke_mm": 357.3440043048747
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.24000000000000019,
+      "stroke_mm": 365.2827398260283
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2450000000000002,
+      "stroke_mm": 373.4946336582809
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.25000000000000017,
+      "stroke_mm": 381.7922863556999
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.25500000000000017,
+      "stroke_mm": 389.85541002128696
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2600000000000002,
+      "stroke_mm": 397.30262300553704
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2650000000000002,
+      "stroke_mm": 403.76920431984996
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2700000000000002,
+      "stroke_mm": 409.1555770893939
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2750000000000002,
+      "stroke_mm": 413.7361696412651
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2800000000000002,
+      "stroke_mm": 417.9879828012402
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2850000000000002,
+      "stroke_mm": 422.2786022121098
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2900000000000002,
+      "stroke_mm": 426.78148222064016
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.2950000000000002,
+      "stroke_mm": 431.4559990409125
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3000000000000002,
+      "stroke_mm": 436.0717801160221
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3050000000000002,
+      "stroke_mm": 440.2693132084462
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3100000000000002,
+      "stroke_mm": 443.6629508845186
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3150000000000002,
+      "stroke_mm": 446.1381827923171
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.32000000000000023,
+      "stroke_mm": 447.79018531645113
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.32500000000000023,
+      "stroke_mm": 448.93205519479153
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.33000000000000024,
+      "stroke_mm": 449.9879544998606
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.33500000000000024,
+      "stroke_mm": 451.2339419346082
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.34000000000000025,
+      "stroke_mm": 452.73586795258143
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.34500000000000025,
+      "stroke_mm": 454.3396316151873
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.35000000000000026,
+      "stroke_mm": 455.7107983609763
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.35500000000000026,
+      "stroke_mm": 456.4480490265463
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.36000000000000026,
+      "stroke_mm": 456.397062214446
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.36500000000000027,
+      "stroke_mm": 455.5904394645629
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3700000000000003,
+      "stroke_mm": 454.21506888199985
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3750000000000003,
+      "stroke_mm": 452.6627959474927
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3800000000000003,
+      "stroke_mm": 451.21906090154897
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3850000000000003,
+      "stroke_mm": 449.9755326850499
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3900000000000003,
+      "stroke_mm": 448.8124855601066
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.3950000000000003,
+      "stroke_mm": 447.4261263819998
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4000000000000003,
+      "stroke_mm": 445.40523855202974
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4050000000000003,
+      "stroke_mm": 442.5086083304222
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4100000000000003,
+      "stroke_mm": 438.75507896923017
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4150000000000003,
+      "stroke_mm": 434.42057908128663
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4200000000000003,
+      "stroke_mm": 429.96349326035323
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4250000000000003,
+      "stroke_mm": 425.71067959956093
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4300000000000003,
+      "stroke_mm": 421.7828688754263
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.43500000000000033,
+      "stroke_mm": 418.0782630666368
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.44000000000000034,
+      "stroke_mm": 414.2994126818001
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.44500000000000034,
+      "stroke_mm": 410.0183117504067
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.45000000000000034,
+      "stroke_mm": 404.7867212574968
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.45500000000000035,
+      "stroke_mm": 398.4631690710387
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.46000000000000035,
+      "stroke_mm": 391.4087438813221
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.46500000000000036,
+      "stroke_mm": 384.11689887847416
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.47000000000000036,
+      "stroke_mm": 376.95915302761705
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.47500000000000037,
+      "stroke_mm": 370.1189666446335
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.48000000000000037,
+      "stroke_mm": 363.5685871543536
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4850000000000004,
+      "stroke_mm": 357.08588281120603
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4900000000000004,
+      "stroke_mm": 350.32353385895385
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.4950000000000004,
+      "stroke_mm": 342.885811841094
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5000000000000003,
+      "stroke_mm": 334.43870440300844
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5049999999999998,
+      "stroke_mm": 325.13113049858606
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5099999999999992,
+      "stroke_mm": 315.4572483045375
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5149999999999987,
+      "stroke_mm": 305.8470568834236
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5199999999999981,
+      "stroke_mm": 296.58215799404013
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5249999999999976,
+      "stroke_mm": 287.8375643342892
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.529999999999997,
+      "stroke_mm": 279.5146634682118
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5349999999999965,
+      "stroke_mm": 271.21461179525295
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5399999999999959,
+      "stroke_mm": 262.5189183713899
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5449999999999954,
+      "stroke_mm": 253.0279488945636
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5499999999999948,
+      "stroke_mm": 242.63523176405621
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5549999999999943,
+      "stroke_mm": 231.4330583632846
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5599999999999937,
+      "stroke_mm": 219.69904506038128
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5649999999999932,
+      "stroke_mm": 207.94463933303214
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5699999999999926,
+      "stroke_mm": 196.80866910217497
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5749999999999921,
+      "stroke_mm": 186.6181976521481
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5799999999999915,
+      "stroke_mm": 177.30671234922252
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.584999999999991,
+      "stroke_mm": 168.45370553026174
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5899999999999904,
+      "stroke_mm": 159.35929921941133
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5949999999999899,
+      "stroke_mm": 149.2337872885058
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.5999999999999893,
+      "stroke_mm": 137.81946062733752
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6049999999999888,
+      "stroke_mm": 125.19804345611651
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6099999999999882,
+      "stroke_mm": 111.53732601585348
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6149999999999877,
+      "stroke_mm": 97.21530909289878
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6199999999999871,
+      "stroke_mm": 83.04104645198784
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6249999999999866,
+      "stroke_mm": 69.74797633538176
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.629999999999986,
+      "stroke_mm": 57.72008591598327
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6349999999999855,
+      "stroke_mm": 46.980533216897605
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6399999999999849,
+      "stroke_mm": 37.21974529847522
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6449999999999844,
+      "stroke_mm": 27.850099616412493
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6499999999999838,
+      "stroke_mm": 18.13451279591452
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6549999999999833,
+      "stroke_mm": 7.452129138849267
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6599999999999827,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4a",
+      "t_s": 0.6649999999999822,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.0,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.005000000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.010000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.01500000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.020000000000000014,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.02500000000000002,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.030000000000000023,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.035000000000000024,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.04000000000000003,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.04500000000000003,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.05000000000000004,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.05500000000000004,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.060000000000000046,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.06500000000000004,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.07000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.07500000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.08000000000000006,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.08500000000000006,
+      "stroke_mm": 0.5962971910407622
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.09000000000000007,
+      "stroke_mm": 3.7319896272249853
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.09500000000000007,
+      "stroke_mm": 8.90641198204445
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.10000000000000007,
+      "stroke_mm": 16.724199427077924
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.10500000000000008,
+      "stroke_mm": 27.085545757688234
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.11000000000000008,
+      "stroke_mm": 39.528840685273956
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.11500000000000009,
+      "stroke_mm": 53.45788262563583
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.12000000000000009,
+      "stroke_mm": 68.20799780648213
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.12500000000000008,
+      "stroke_mm": 83.2280321722681
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.1300000000000001,
+      "stroke_mm": 98.4854658189862
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.1350000000000001,
+      "stroke_mm": 114.13647979604758
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.1400000000000001,
+      "stroke_mm": 130.18095574076193
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.1450000000000001,
+      "stroke_mm": 146.48120231147556
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.1500000000000001,
+      "stroke_mm": 162.80210716545224
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.1550000000000001,
+      "stroke_mm": 178.8552470937253
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.16000000000000011,
+      "stroke_mm": 194.33962475724232
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.16500000000000012,
+      "stroke_mm": 208.97568262816984
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.17000000000000012,
+      "stroke_mm": 222.53329029986307
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.17500000000000013,
+      "stroke_mm": 234.98825683403385
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.18000000000000013,
+      "stroke_mm": 246.77722464098352
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.18500000000000014,
+      "stroke_mm": 258.3316872156921
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.19000000000000014,
+      "stroke_mm": 269.8916212585251
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.19500000000000015,
+      "stroke_mm": 281.51153007388444
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.20000000000000015,
+      "stroke_mm": 293.0876344042764
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.20500000000000015,
+      "stroke_mm": 304.40256106491603
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.21000000000000016,
+      "stroke_mm": 315.18030399759147
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.21500000000000016,
+      "stroke_mm": 325.1427259654589
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.22000000000000017,
+      "stroke_mm": 334.0577633805106
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.22500000000000017,
+      "stroke_mm": 342.0546689474302
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.23000000000000018,
+      "stroke_mm": 349.6749278048749
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.23500000000000018,
+      "stroke_mm": 357.3440043048747
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.24000000000000019,
+      "stroke_mm": 365.2827398260283
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2450000000000002,
+      "stroke_mm": 373.4946336582809
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.25000000000000017,
+      "stroke_mm": 381.7922863556999
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.25500000000000017,
+      "stroke_mm": 389.85541002128696
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2600000000000002,
+      "stroke_mm": 397.30262300553704
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2650000000000002,
+      "stroke_mm": 403.76920431984996
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2700000000000002,
+      "stroke_mm": 409.1555770893939
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2750000000000002,
+      "stroke_mm": 413.7361696412651
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2800000000000002,
+      "stroke_mm": 417.9879828012402
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2850000000000002,
+      "stroke_mm": 422.2786022121098
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2900000000000002,
+      "stroke_mm": 426.78148222064016
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.2950000000000002,
+      "stroke_mm": 431.4559990409125
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3000000000000002,
+      "stroke_mm": 436.0717801160221
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3050000000000002,
+      "stroke_mm": 440.2693132084462
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3100000000000002,
+      "stroke_mm": 443.6629508845186
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3150000000000002,
+      "stroke_mm": 446.1381827923171
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.32000000000000023,
+      "stroke_mm": 447.79018531645113
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.32500000000000023,
+      "stroke_mm": 448.93205519479153
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.33000000000000024,
+      "stroke_mm": 449.9879544998606
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.33500000000000024,
+      "stroke_mm": 451.2339419346082
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.34000000000000025,
+      "stroke_mm": 452.73586795258143
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.34500000000000025,
+      "stroke_mm": 454.3396316151873
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.35000000000000026,
+      "stroke_mm": 455.7107983609763
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.35500000000000026,
+      "stroke_mm": 456.4480490265463
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.36000000000000026,
+      "stroke_mm": 456.397062214446
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.36500000000000027,
+      "stroke_mm": 455.5904394645629
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3700000000000003,
+      "stroke_mm": 454.21506888199985
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3750000000000003,
+      "stroke_mm": 452.6627959474927
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3800000000000003,
+      "stroke_mm": 451.21906090154897
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3850000000000003,
+      "stroke_mm": 449.9755326850499
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3900000000000003,
+      "stroke_mm": 448.8124855601066
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.3950000000000003,
+      "stroke_mm": 447.4261263819998
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4000000000000003,
+      "stroke_mm": 445.40523855202974
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4050000000000003,
+      "stroke_mm": 442.5086083304222
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4100000000000003,
+      "stroke_mm": 438.75507896923017
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4150000000000003,
+      "stroke_mm": 434.42057908128663
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4200000000000003,
+      "stroke_mm": 429.96349326035323
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4250000000000003,
+      "stroke_mm": 425.71067959956093
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4300000000000003,
+      "stroke_mm": 421.7828688754263
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.43500000000000033,
+      "stroke_mm": 418.0782630666368
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.44000000000000034,
+      "stroke_mm": 414.2994126818001
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.44500000000000034,
+      "stroke_mm": 410.0183117504067
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.45000000000000034,
+      "stroke_mm": 404.7867212574968
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.45500000000000035,
+      "stroke_mm": 398.4631690710387
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.46000000000000035,
+      "stroke_mm": 391.4087438813221
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.46500000000000036,
+      "stroke_mm": 384.11689887847416
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.47000000000000036,
+      "stroke_mm": 376.95915302761705
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.47500000000000037,
+      "stroke_mm": 370.1189666446335
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.48000000000000037,
+      "stroke_mm": 363.5685871543536
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4850000000000004,
+      "stroke_mm": 357.08588281120603
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4900000000000004,
+      "stroke_mm": 350.32353385895385
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.4950000000000004,
+      "stroke_mm": 342.885811841094
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5000000000000003,
+      "stroke_mm": 334.43870440300844
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5049999999999998,
+      "stroke_mm": 325.13113049858606
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5099999999999992,
+      "stroke_mm": 315.4572483045375
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5149999999999987,
+      "stroke_mm": 305.8470568834236
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5199999999999981,
+      "stroke_mm": 296.58215799404013
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5249999999999976,
+      "stroke_mm": 287.8375643342892
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.529999999999997,
+      "stroke_mm": 279.5146634682118
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5349999999999965,
+      "stroke_mm": 271.21461179525295
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5399999999999959,
+      "stroke_mm": 262.5189183713899
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5449999999999954,
+      "stroke_mm": 253.0279488945636
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5499999999999948,
+      "stroke_mm": 242.63523176405621
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5549999999999943,
+      "stroke_mm": 231.4330583632846
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5599999999999937,
+      "stroke_mm": 219.69904506038128
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5649999999999932,
+      "stroke_mm": 207.94463933303214
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5699999999999926,
+      "stroke_mm": 196.80866910217497
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5749999999999921,
+      "stroke_mm": 186.6181976521481
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5799999999999915,
+      "stroke_mm": 177.30671234922252
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.584999999999991,
+      "stroke_mm": 168.45370553026174
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5899999999999904,
+      "stroke_mm": 159.35929921941133
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5949999999999899,
+      "stroke_mm": 149.2337872885058
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.5999999999999893,
+      "stroke_mm": 137.81946062733752
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6049999999999888,
+      "stroke_mm": 125.19804345611651
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6099999999999882,
+      "stroke_mm": 111.53732601585348
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6149999999999877,
+      "stroke_mm": 97.21530909289878
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6199999999999871,
+      "stroke_mm": 83.04104645198784
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6249999999999866,
+      "stroke_mm": 69.74797633538176
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.629999999999986,
+      "stroke_mm": 57.72008591598327
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6349999999999855,
+      "stroke_mm": 46.980533216897605
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6399999999999849,
+      "stroke_mm": 37.21974529847522
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6449999999999844,
+      "stroke_mm": 27.850099616412493
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6499999999999838,
+      "stroke_mm": 18.13451279591452
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6549999999999833,
+      "stroke_mm": 7.452129138849267
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6599999999999827,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D4b",
+      "t_s": 0.6649999999999822,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.0,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.005000000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.010000000000000005,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.01500000000000001,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.020000000000000014,
+      "stroke_mm": 0.0
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.02500000000000002,
+      "stroke_mm": 1.9233720946381512
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.030000000000000023,
+      "stroke_mm": 5.515146602336846
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.035000000000000024,
+      "stroke_mm": 10.724949777934977
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.04000000000000003,
+      "stroke_mm": 17.976877978392313
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.04500000000000003,
+      "stroke_mm": 27.395825470682144
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.05000000000000004,
+      "stroke_mm": 38.831576813584874
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.05500000000000004,
+      "stroke_mm": 51.95612009584363
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.060000000000000046,
+      "stroke_mm": 66.40237915555723
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.06500000000000004,
+      "stroke_mm": 81.76999609546826
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.07000000000000005,
+      "stroke_mm": 97.67077992180182
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.07500000000000005,
+      "stroke_mm": 113.7750348741182
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.08000000000000006,
+      "stroke_mm": 129.82742985503165
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.08500000000000006,
+      "stroke_mm": 145.64466650062909
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.09000000000000007,
+      "stroke_mm": 161.10507509018237
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.09500000000000007,
+      "stroke_mm": 176.13616199411084
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.10000000000000007,
+      "stroke_mm": 190.7029053458189
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.10500000000000008,
+      "stroke_mm": 204.79773297387118
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.11000000000000008,
+      "stroke_mm": 218.43225553684604
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.11500000000000009,
+      "stroke_mm": 231.63052794330352
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.12000000000000009,
+      "stroke_mm": 244.42357306518286
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.12500000000000008,
+      "stroke_mm": 256.8449585294631
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.1300000000000001,
+      "stroke_mm": 268.92729073437624
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.1350000000000001,
+      "stroke_mm": 280.6995468340632
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.1400000000000001,
+      "stroke_mm": 292.1851949767458
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.1450000000000001,
+      "stroke_mm": 303.4010568769787
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.1500000000000001,
+      "stroke_mm": 314.35685202446723
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.1550000000000001,
+      "stroke_mm": 325.0553390453992
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.16000000000000011,
+      "stroke_mm": 335.49294626576244
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.16500000000000012,
+      "stroke_mm": 345.6607674653802
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.17000000000000012,
+      "stroke_mm": 355.545793866377
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.17500000000000013,
+      "stroke_mm": 365.13225981739396
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.18000000000000013,
+      "stroke_mm": 374.4029950109723
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.18500000000000014,
+      "stroke_mm": 383.34069664416944
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.19000000000000014,
+      "stroke_mm": 391.9290568713337
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.19500000000000015,
+      "stroke_mm": 400.1537012348977
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.20000000000000015,
+      "stroke_mm": 408.00291082542486
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.20500000000000015,
+      "stroke_mm": 415.46811433922846
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.21000000000000016,
+      "stroke_mm": 422.5441465898072
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.21500000000000016,
+      "stroke_mm": 429.22927857363845
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.22000000000000017,
+      "stroke_mm": 435.5250321998456
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.22500000000000017,
+      "stroke_mm": 441.43580130945105
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.23000000000000018,
+      "stroke_mm": 446.96831011307273
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.23500000000000018,
+      "stroke_mm": 452.13095040316824
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.24000000000000019,
+      "stroke_mm": 456.93304880759723
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2450000000000002,
+      "stroke_mm": 461.3841232623346
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.25000000000000017,
+      "stroke_mm": 465.49319178162665
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.25500000000000017,
+      "stroke_mm": 469.2681946167418
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2600000000000002,
+      "stroke_mm": 472.71558180184945
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2650000000000002,
+      "stroke_mm": 475.84010178750003
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2700000000000002,
+      "stroke_mm": 478.64480462820273
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2750000000000002,
+      "stroke_mm": 481.13124760292504
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2800000000000002,
+      "stroke_mm": 483.29986571945403
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2850000000000002,
+      "stroke_mm": 485.1504481073042
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2900000000000002,
+      "stroke_mm": 486.6826472607044
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.2950000000000002,
+      "stroke_mm": 487.89644385020716
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3000000000000002,
+      "stroke_mm": 488.7924963377869
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3050000000000002,
+      "stroke_mm": 489.3723212748227
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3100000000000002,
+      "stroke_mm": 489.6382748049544
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3150000000000002,
+      "stroke_mm": 489.60313221834355
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.32000000000000023,
+      "stroke_mm": 489.3067128122004
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.32500000000000023,
+      "stroke_mm": 488.74958222367235
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.33000000000000024,
+      "stroke_mm": 487.9232446873592
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.33500000000000024,
+      "stroke_mm": 486.81542758881477
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.34000000000000025,
+      "stroke_mm": 485.4122166897933
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.34500000000000025,
+      "stroke_mm": 483.7004169311324
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.35000000000000026,
+      "stroke_mm": 481.6696908553979
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.35500000000000026,
+      "stroke_mm": 479.31408297514497
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.36000000000000026,
+      "stroke_mm": 476.632673316958
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.36500000000000027,
+      "stroke_mm": 473.6292856845691
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3700000000000003,
+      "stroke_mm": 470.31136415268816
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3750000000000003,
+      "stroke_mm": 466.68828381567397
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3800000000000003,
+      "stroke_mm": 462.769449199218
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3850000000000003,
+      "stroke_mm": 458.56254428600374
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3900000000000003,
+      "stroke_mm": 454.0722384996255
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.3950000000000003,
+      "stroke_mm": 449.29954363596767
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4000000000000003,
+      "stroke_mm": 444.2418846011983
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4050000000000003,
+      "stroke_mm": 438.89381864981067
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4100000000000003,
+      "stroke_mm": 433.248235276763
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4150000000000003,
+      "stroke_mm": 427.2978060084291
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4200000000000003,
+      "stroke_mm": 421.0364356075569
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4250000000000003,
+      "stroke_mm": 414.46049117798543
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4300000000000003,
+      "stroke_mm": 407.56964415706244
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.43500000000000033,
+      "stroke_mm": 400.36723850747353
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.44000000000000034,
+      "stroke_mm": 392.86018108523035
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.44500000000000034,
+      "stroke_mm": 385.05842287350094
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.45000000000000034,
+      "stroke_mm": 376.9741519357755
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.45500000000000035,
+      "stroke_mm": 368.6208451334951
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.46000000000000035,
+      "stroke_mm": 360.0123257997145
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.46500000000000036,
+      "stroke_mm": 351.16195295929066
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.47000000000000036,
+      "stroke_mm": 342.0820313353323
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.47500000000000037,
+      "stroke_mm": 332.78453232088293
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.48000000000000037,
+      "stroke_mm": 323.31609540275844
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4850000000000004,
+      "stroke_mm": 313.75948526038445
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4900000000000004,
+      "stroke_mm": 304.1819134355545
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.4950000000000004,
+      "stroke_mm": 294.6286669288779
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5000000000000003,
+      "stroke_mm": 285.1221846391696
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5049999999999998,
+      "stroke_mm": 275.6632142118326
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5099999999999992,
+      "stroke_mm": 266.2336495378856
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5149999999999987,
+      "stroke_mm": 256.8006073411963
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5199999999999981,
+      "stroke_mm": 247.32128734875602
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5249999999999976,
+      "stroke_mm": 237.74816343300097
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.529999999999997,
+      "stroke_mm": 228.03407133224562
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5349999999999965,
+      "stroke_mm": 218.13679633558192
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5399999999999959,
+      "stroke_mm": 208.0228267974129
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5449999999999954,
+      "stroke_mm": 197.67002813785652
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5499999999999948,
+      "stroke_mm": 187.06910248280596
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5549999999999943,
+      "stroke_mm": 176.22382027526393
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5599999999999937,
+      "stroke_mm": 165.1501268796236
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5649999999999932,
+      "stroke_mm": 153.87432395412665
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5699999999999926,
+      "stroke_mm": 142.4305904332064
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5749999999999921,
+      "stroke_mm": 130.858135964933
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5799999999999915,
+      "stroke_mm": 119.19827217907228
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.584999999999991,
+      "stroke_mm": 107.49165138245348
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5899999999999904,
+      "stroke_mm": 95.7758683541887
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5949999999999899,
+      "stroke_mm": 84.08355928237718
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.5999999999999893,
+      "stroke_mm": 72.44107120096838
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.6049999999999888,
+      "stroke_mm": 60.867721395827374
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.6099999999999882,
+      "stroke_mm": 49.375622133237385
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.6149999999999877,
+      "stroke_mm": 37.9700124306199
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.6199999999999871,
+      "stroke_mm": 26.650014733820957
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.6249999999999866,
+      "stroke_mm": 15.40971898784234
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.629999999999986,
+      "stroke_mm": 4.239488386957896
+    },
+    {
+      "case_id": "D5",
+      "t_s": 0.6349999999999855,
+      "stroke_mm": 0.0
+    }
+  ],
+  "images": [
+    {
+      "src": "images/current/01_deployed.png",
+      "title": "r02 · 01 deployed",
+      "caption": "S0 conventional central oleo; beta=-8 degrees; test fixture hidden"
+    },
+    {
+      "src": "images/current/02_oleo_section.png",
+      "title": "r02 · 02 oleo section",
+      "caption": "Actual Y=0 half-section at MTOM static stroke; colored gas and oil volumes"
+    },
+    {
+      "src": "images/current/03_wheel_section.png",
+      "title": "r02 · 03 wheel section",
+      "caption": "FI wheel and front axle cut at X=1500"
+    },
+    {
+      "src": "images/current/04_mechanism.png",
+      "title": "r02 · 04 mechanism",
+      "caption": "Theta=30 degrees; tire rubber hidden"
+    },
+    {
+      "src": "images/current/05_midfold.png",
+      "title": "r02 · 05 midfold",
+      "caption": "Theta=60 degrees; shaped wing/body bay and open doors"
+    },
+    {
+      "src": "images/current/06_stowed_transparent.png",
+      "title": "r02 · 06 stowed transparent",
+      "caption": "Theta=90 degrees; shaped wing/body bay and open doors"
+    },
+    {
+      "src": "images/current/07_closed_doors.png",
+      "title": "r02 · 07 closed doors",
+      "caption": "Opaque closed 10 mm doors viewed from below"
+    },
+    {
+      "src": "images/current/08_above_closed_doors.png",
+      "title": "r02 · 08 above closed doors",
+      "caption": "Horizontal cut Z=-1090, 10 mm above door inner surface"
+    }
+  ],
+  "failures": [
+    {
+      "src": "images/failures/r01/01_deployed.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 01 deployed",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r01/02_oleo_section.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 02 oleo section",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r01/03_wheel_section.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 03 wheel section",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r01/04_mechanism.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 04 mechanism",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r01/05_midfold.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 05 midfold",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r01/06_stowed_transparent.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 06 stowed transparent",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r01/07_closed_doors.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 07 closed doors",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r01/08_above_closed_doors.png",
+      "title": "r01 external springs / rectangular bay (rejected) · 08 above closed doors",
+      "caption": "不採用のr01。大型外付けばねと直方体脚庫を持つ初期案で、現行r02の根拠にはしません。",
+      "status": "Rejected"
+    },
+    {
+      "src": "images/failures/r02-initial/01_deployed.png",
+      "title": "r02 initial shaped bay (outdated) · 01 deployed",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    },
+    {
+      "src": "images/failures/r02-initial/02_oleo_section.png",
+      "title": "r02 initial shaped bay (outdated) · 02 oleo section",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    },
+    {
+      "src": "images/failures/r02-initial/03_wheel_section.png",
+      "title": "r02 initial shaped bay (outdated) · 03 wheel section",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    },
+    {
+      "src": "images/failures/r02-initial/04_mechanism.png",
+      "title": "r02 initial shaped bay (outdated) · 04 mechanism",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    },
+    {
+      "src": "images/failures/r02-initial/05_midfold.png",
+      "title": "r02 initial shaped bay (outdated) · 05 midfold",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    },
+    {
+      "src": "images/failures/r02-initial/06_stowed_transparent.png",
+      "title": "r02 initial shaped bay (outdated) · 06 stowed transparent",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    },
+    {
+      "src": "images/failures/r02-initial/07_closed_doors.png",
+      "title": "r02 initial shaped bay (outdated) · 07 closed doors",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    },
+    {
+      "src": "images/failures/r02-initial/08_above_closed_doors.png",
+      "title": "r02 initial shaped bay (outdated) · 08 above closed doors",
+      "caption": "修正前のr02。解除部の脚庫外へのはみ出し（96,509.7 mm³）を記録した過去形状です。現行r02では修正済みです。",
+      "status": "Outdated"
+    }
+  ],
+  "downloads": [
+    {
+      "href": "downloads/cad/landing_gear_and_bay.FCStd",
+      "name": "landing_gear_and_bay.FCStd",
+      "description": "Editable FreeCAD source",
+      "bytes": 6270220
+    },
+    {
+      "href": "downloads/cad/landing_gear.step",
+      "name": "landing_gear.step",
+      "description": "STEP exchange export",
+      "bytes": 11697973
+    },
+    {
+      "href": "downloads/cad/stowed_gear_and_bay.step",
+      "name": "stowed_gear_and_bay.step",
+      "description": "Stowed STEP exchange export",
+      "bytes": 12180560
+    },
+    {
+      "href": "downloads/drawings.pdf",
+      "name": "drawings.pdf",
+      "description": "Review drawing set",
+      "bytes": 125104
+    },
+    {
+      "href": "downloads/verification.md",
+      "name": "verification.md",
+      "description": "Verification record",
+      "bytes": 3363
+    },
+    {
+      "href": "downloads/design_report.md",
+      "name": "design_report.md",
+      "description": "Design report",
+      "bytes": 15547
+    },
+    {
+      "href": "downloads/r02_benchmark_findings.md",
+      "name": "r02_benchmark_findings.md",
+      "description": "Open benchmark findings",
+      "bytes": 2759
+    },
+    {
+      "href": "downloads/r02_bay_assumptions.md",
+      "name": "r02_bay_assumptions.md",
+      "description": "Bay assumptions",
+      "bytes": 2096
+    },
+    {
+      "href": "downloads/rlg003_user_decisions.md",
+      "name": "rlg003_user_decisions.md",
+      "description": "User decisions",
+      "bytes": 1666
+    },
+    {
+      "href": "downloads/START_HERE.md",
+      "name": "START_HERE.md",
+      "description": "Deliverables guide",
+      "bytes": 1718
+    },
+    {
+      "href": "downloads/run_record.md",
+      "name": "run_record.md",
+      "description": "Analysis run record",
+      "bytes": 5857
+    },
+    {
+      "href": "downloads/cad_mass.json",
+      "name": "cad_mass.json",
+      "description": "CAD mass snapshot",
+      "bytes": 1065
+    },
+    {
+      "href": "downloads/evidence/cad_verification.json",
+      "name": "cad_verification.json",
+      "description": "CAD verification evidence",
+      "bytes": 3778
+    },
+    {
+      "href": "downloads/evidence/alignment_verification.json",
+      "name": "alignment_verification.json",
+      "description": "Alignment verification",
+      "bytes": 615
+    },
+    {
+      "href": "downloads/evidence/clearance_summary.json",
+      "name": "clearance_summary.json",
+      "description": "Clearance summary",
+      "bytes": 625665
+    },
+    {
+      "href": "downloads/evidence/clearance_self_intersections.csv",
+      "name": "clearance_self_intersections.csv",
+      "description": "Clearance self-intersections",
+      "bytes": 150
+    },
+    {
+      "href": "downloads/evidence/motion_boundaries.json",
+      "name": "motion_boundaries.json",
+      "description": "Motion boundaries",
+      "bytes": 2639677
+    },
+    {
+      "href": "downloads/evidence/motion_copy_verification.json",
+      "name": "motion_copy_verification.json",
+      "description": "Motion copy verification",
+      "bytes": 184
+    },
+    {
+      "href": "downloads/evidence/shaped_stow_verification.json",
+      "name": "shaped_stow_verification.json",
+      "description": "Shaped stow verification",
+      "bytes": 291485
+    },
+    {
+      "href": "downloads/evidence/step_verification.json",
+      "name": "step_verification.json",
+      "description": "STEP verification",
+      "bytes": 727
+    },
+    {
+      "href": "downloads/evidence/drawings_verification.json",
+      "name": "drawings_verification.json",
+      "description": "Drawing verification",
+      "bytes": 1314
+    },
+    {
+      "href": "downloads/evidence/volume_changes.json",
+      "name": "volume_changes.json",
+      "description": "Rigid volume checks",
+      "bytes": 2
+    },
+    {
+      "href": "downloads/bom.csv",
+      "name": "bom.csv",
+      "description": "Bill of materials",
+      "bytes": 127930
+    },
+    {
+      "href": "downloads/clearance.csv",
+      "name": "clearance.csv",
+      "description": "Clearance observations",
+      "bytes": 502627
+    },
+    {
+      "href": "downloads/interface_reactions.csv",
+      "name": "interface_reactions.csv",
+      "description": "Interface reactions",
+      "bytes": 9633
+    },
+    {
+      "href": "downloads/kinematics.csv",
+      "name": "kinematics.csv",
+      "description": "Kinematics samples",
+      "bytes": 3095
+    },
+    {
+      "href": "downloads/loads_and_margins.csv",
+      "name": "loads_and_margins.csv",
+      "description": "Loads and margins",
+      "bytes": 30465
+    },
+    {
+      "href": "downloads/parameters.csv",
+      "name": "parameters.csv",
+      "description": "Parameter record",
+      "bytes": 14019
+    },
+    {
+      "href": "downloads/requirements.csv",
+      "name": "requirements.csv",
+      "description": "Requirements traceability",
+      "bytes": 5386
+    },
+    {
+      "href": "downloads/wheel_loads.csv",
+      "name": "wheel_loads.csv",
+      "description": "Wheel loads",
+      "bytes": 25645
+    },
+    {
+      "href": "downloads/analysis/summary.json",
+      "name": "summary.json",
+      "description": "Analysis summary",
+      "bytes": 87407
+    },
+    {
+      "href": "downloads/analysis/brake_thermal.csv",
+      "name": "brake_thermal.csv",
+      "description": "Brake thermal calculation",
+      "bytes": 3421
+    },
+    {
+      "href": "downloads/analysis/convergence.csv",
+      "name": "convergence.csv",
+      "description": "Convergence check",
+      "bytes": 932
+    },
+    {
+      "href": "downloads/analysis/dynamic_history.csv",
+      "name": "dynamic_history.csv",
+      "description": "Full dynamic history",
+      "bytes": 365532
+    },
+    {
+      "href": "downloads/analysis/dynamic_summary.csv",
+      "name": "dynamic_summary.csv",
+      "description": "Dynamic summary table",
+      "bytes": 4514
+    },
+    {
+      "href": "downloads/analysis/geometry_checks.json",
+      "name": "geometry_checks.json",
+      "description": "Geometry checks",
+      "bytes": 1681
+    },
+    {
+      "href": "downloads/analysis/load_cases_wheels.csv",
+      "name": "load_cases_wheels.csv",
+      "description": "Wheel load cases",
+      "bytes": 25645
+    },
+    {
+      "href": "downloads/analysis/puncture_cases.csv",
+      "name": "puncture_cases.csv",
+      "description": "Puncture cases",
+      "bytes": 6134
+    },
+    {
+      "href": "downloads/analysis/sensitivities.csv",
+      "name": "sensitivities.csv",
+      "description": "Sensitivity cases",
+      "bytes": 8756
+    },
+    {
+      "href": "downloads/analysis/static_oleo.csv",
+      "name": "static_oleo.csv",
+      "description": "Static oleo calculation",
+      "bytes": 563
+    },
+    {
+      "href": "downloads/analysis/structural_checks.csv",
+      "name": "structural_checks.csv",
+      "description": "Structural screen",
+      "bytes": 30465
+    },
+    {
+      "href": "downloads/analysis/u2_sensitivities.csv",
+      "name": "u2_sensitivities.csv",
+      "description": "U2 sensitivities",
+      "bytes": 2040
+    },
+    {
+      "href": "downloads/analysis/motion/motion_dynamics_summary.json",
+      "name": "motion_dynamics_summary.json",
+      "description": "Emergency and normal motion summary",
+      "bytes": 46174
+    },
+    {
+      "href": "downloads/analysis/retraction/retraction_accumulator.json",
+      "name": "retraction_accumulator.json",
+      "description": "Accumulator pressure check",
+      "bytes": 1007
+    },
+    {
+      "href": "downloads/analysis/retraction/retraction_summary.json",
+      "name": "retraction_summary.json",
+      "description": "Retraction summary",
+      "bytes": 3771019
+    },
+    {
+      "href": "downloads/analysis/retraction/retraction_emergency_path.csv",
+      "name": "retraction_emergency_path.csv",
+      "description": "Emergency retraction path",
+      "bytes": 501468
+    },
+    {
+      "href": "downloads/analysis/retraction/retraction_main_leverage.csv",
+      "name": "retraction_main_leverage.csv",
+      "description": "Retraction leverage",
+      "bytes": 4007
+    },
+    {
+      "href": "downloads/analysis/retraction/retraction_normal_load_path.csv",
+      "name": "retraction_normal_load_path.csv",
+      "description": "Normal load path",
+      "bytes": 61483
+    },
+    {
+      "href": "downloads/analysis/retraction/retraction_normal_path.csv",
+      "name": "retraction_normal_path.csv",
+      "description": "Normal retraction path",
+      "bytes": 304
+    },
+    {
+      "href": "downloads/analysis/retraction/retraction_normal_torque.csv",
+      "name": "retraction_normal_torque.csv",
+      "description": "Normal retraction torque",
+      "bytes": 8926
+    },
+    {
+      "href": "downloads/analysis/source/methods.md",
+      "name": "methods.md",
+      "description": "Analysis methods",
+      "bytes": 3614
+    },
+    {
+      "href": "downloads/analysis/source/motion_dynamics.py",
+      "name": "motion_dynamics.py",
+      "description": "Dynamic analysis source",
+      "bytes": 35688
+    },
+    {
+      "href": "downloads/analysis/source/retraction.py",
+      "name": "retraction.py",
+      "description": "Retraction analysis source",
+      "bytes": 28471
+    },
+    {
+      "href": "downloads/analysis/source/rlg003.py",
+      "name": "rlg003.py",
+      "description": "Landing analysis source",
+      "bytes": 80191
+    },
+    {
+      "href": "downloads/analysis/source/recommended_parameters.json",
+      "name": "recommended_parameters.json",
+      "description": "Recommended parameters",
+      "bytes": 1168
+    },
+    {
+      "href": "downloads/analysis/fluid_probe.json",
+      "name": "fluid_probe.json",
+      "description": "Fluid volume probe used for gas/oil conservation checks",
+      "bytes": 1104
+    },
+    {
+      "href": "downloads/evidence/viewer-export-verification.json",
+      "name": "viewer-export-verification.json",
+      "description": "CAD-to-viewer export verification",
+      "bytes": 12956
+    }
+  ],
+  "source": {
+    "run_id": "RLG-003_Astra_Luna_r02",
+    "cad_sha256": "6f3fc2947a4493a6dd559621a969119fc22c48f4996718e6baa5b06a33cad1e4",
+    "analysis_sha256": "0408f1f17760d2bc49aadaca1bd31beee3be0df16af17e7f52a7d9d68734225c",
+    "cad_path": "downloads/cad/landing_gear_and_bay.FCStd",
+    "analysis_path": "downloads/analysis/summary.json",
+    "model_source_sha256": "6f3fc2947a4493a6dd559621a969119fc22c48f4996718e6baa5b06a33cad1e4",
+    "model_ready": true
+  },
+  "verification": {
+    "gas": {
+      "status": "Observed",
+      "state_volumes_l": {
+        "0": 65.00000000000001,
+        "4": 13.682084003610735
+      },
+      "source": "downloads/analysis/fluid_probe.json"
+    },
+    "oil": {
+      "status": "Fail",
+      "state_totals_l": {
+        "0": 128.10690746817946,
+        "4": 128.23692699253724
+      },
+      "delta_l": 0.13001952435777753,
+      "source": "downloads/analysis/fluid_probe.json"
+    },
+    "accumulator": {
+      "status": "Fail",
+      "pressure_floor_mpa": 17.0,
+      "pressure_after_required_abs_mpa": 11.41256252263813,
+      "required_oil_l": 4.00909407264309,
+      "source": "downloads/analysis/retraction/retraction_accumulator.json"
+    },
+    "motion": {
+      "status": "OPEN",
+      "case_statuses": [
+        "OPEN",
+        "OPEN_LOCK_ALLOWANCE",
+        "OPEN_STOP_ABSORBER"
+      ],
+      "max_stop_contact_energy_j": 1203.0366025838894,
+      "source": "downloads/analysis/motion/motion_dynamics_summary.json"
+    }
+  }
+}

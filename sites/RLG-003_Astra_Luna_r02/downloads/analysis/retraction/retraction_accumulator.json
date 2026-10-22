@@ -1,0 +1,36 @@
+{
+  "shell_volume_l": 12.0,
+  "precharge_abs_mpa": 10.0,
+  "charge_abs_mpa": 20.801325,
+  "polytropic_n": 1.3,
+  "gas_volume_at_charge_l": 6.831182088734479,
+  "maximum_oil_displacement_l": 5.168817911265521,
+  "oil_available_while_above_17_mpa_l": 1.147163514259792,
+  "required_oil_l": 4.00909407264309,
+  "pressure_after_required_abs_mpa": 11.41256252263813,
+  "pressure_after_required_gauge_mpa": 11.31123752263813,
+  "pressure_floor_mpa": 17.0,
+  "pressure_floor_pass": false,
+  "pressure_path": [
+    {
+      "oil_delivered_l": 0.0,
+      "pressure_mpa": 20.801325
+    },
+    {
+      "oil_delivered_l": 1.0022735181607725,
+      "pressure_mpa": 17.409897623615876
+    },
+    {
+      "oil_delivered_l": 2.004547036321545,
+      "pressure_mpa": 14.88745660309146
+    },
+    {
+      "oil_delivered_l": 3.006820554482317,
+      "pressure_mpa": 12.946626063419245
+    },
+    {
+      "oil_delivered_l": 4.00909407264309,
+      "pressure_mpa": 11.41256252263813
+    }
+  ]
+}

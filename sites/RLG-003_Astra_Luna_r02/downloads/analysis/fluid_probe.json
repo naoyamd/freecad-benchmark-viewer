@@ -1,0 +1,54 @@
+[
+  {
+    "state": 0,
+    "fluids": [
+      {
+        "name": "GasVolume",
+        "id": "AUX-GAS",
+        "volume_l": 65.00000000000001
+      },
+      {
+        "name": "UpperOil",
+        "id": "AUX-OIL-UPPER",
+        "volume_l": 61.69860154520609
+      },
+      {
+        "name": "LowerAnnulusOil",
+        "id": "AUX-OIL-LOWER",
+        "volume_l": 4.572337722365456
+      },
+      {
+        "name": "PistonOil",
+        "id": "FL-001",
+        "volume_l": 61.8359682006079
+      }
+    ],
+    "negative_solids": []
+  },
+  {
+    "state": 4,
+    "fluids": [
+      {
+        "name": "GasVolume",
+        "id": "AUX-GAS",
+        "volume_l": 13.682084003610735
+      },
+      {
+        "name": "UpperOil",
+        "id": "AUX-OIL-UPPER",
+        "volume_l": 13.432386241013125
+      },
+      {
+        "name": "LowerAnnulusOil",
+        "id": "AUX-OIL-LOWER",
+        "volume_l": 52.9685725509162
+      },
+      {
+        "name": "PistonOil",
+        "id": "FL-001",
+        "volume_l": 61.8359682006079
+      }
+    ],
+    "negative_solids": []
+  }
+]

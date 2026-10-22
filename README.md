@@ -4,6 +4,8 @@
 
 実CAD・図面・解析・失敗例を含む完成サイトを **[sites/RLG-003_Astra_Luna_r02/](sites/RLG-003_Astra_Luna_r02/)** に収録しています。670部品の選択、11姿勢、通常格納のCADサンプル再生、断面・分解、要求追跡に対応しています。
 
+**[公開ビューワーを開く](https://intake.nightly.dedyn.io/sites/RLG-003_Astra_Luna_r02/)** · [ギャラリー](https://intake.nightly.dedyn.io/)（共通パスワードで閲覧）。
+
 ```powershell
 python -m http.server 8000 --bind 127.0.0.1
 # http://127.0.0.1:8000/sites/RLG-003_Astra_Luna_r02/

@@ -2,7 +2,7 @@
 
 ## RLG-003 r02 — 独立した6輪引込主脚サイト
 
-実CAD・図面・解析・失敗例を含む完成サイトを **[sites/RLG-003_Astra_Luna_r02/](sites/RLG-003_Astra_Luna_r02/)** に収録しています。670部品の選択、11姿勢、通常格納のCADサンプル再生、断面・分解、要求追跡に対応しています。
+実CAD・図面・解析・失敗例を含む完成サイトを **[sites/RLG-003_Astra_Luna_r02/](sites/RLG-003_Astra_Luna_r02/)** に収録しています。670部品の選択、11姿勢、通常格納のCADサンプル再生、オレオ上下動と記録ストローク再生、断面・分解、要求追跡に対応しています。上下動はCAD姿勢の表示補間で、接地・荷重の連続シミュレーションではありません。
 
 **[公開ビューワーを開く](https://intake.nightly.dedyn.io/sites/RLG-003_Astra_Luna_r02/)** · [ギャラリー](https://intake.nightly.dedyn.io/)（共通パスワードで閲覧）。
 

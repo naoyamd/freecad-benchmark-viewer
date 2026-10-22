@@ -28,3 +28,26 @@ export function validateAssembly(data, byteLength) {
 export function formatNumber(value, digits = 1) {
   return Number.isFinite(Number(value)) ? Number(value).toLocaleString('en-US', {minimumFractionDigits: digits, maximumFractionDigits: digits}) : '—';
 }
+
+export function strokeBracket(frames, stroke) {
+  if (!frames.length || !Number.isFinite(stroke)) throw new Error('Invalid suspension stroke');
+  const value = Math.max(frames[0].stroke_mm, Math.min(frames.at(-1).stroke_mm, stroke));
+  const right = frames.findIndex(frame => frame.stroke_mm >= value);
+  if (right <= 0) return {lower:frames[0],upper:frames[0],ratio:0,value};
+  const lower = frames[right-1], upper = frames[right];
+  return {lower,upper,ratio:(value-lower.stroke_mm)/(upper.stroke_mm-lower.stroke_mm),value};
+}
+
+export function validateStrokeHistory(points) {
+  if (points.length < 2 || points.some((point,i) => !Number.isFinite(point.t_s) || !Number.isFinite(point.stroke_mm) || (i && point.t_s <= points[i-1].t_s))) throw new Error('Invalid stroke history');
+  return points;
+}
+
+export function historyStrokeAt(points, time) {
+  if (!points.length || !Number.isFinite(time)) throw new Error('Invalid playback time');
+  if (time <= points[0].t_s) return points[0].stroke_mm;
+  if (time >= points.at(-1).t_s) return points.at(-1).stroke_mm;
+  const right = points.findIndex(point => point.t_s >= time);
+  const a=points[right-1], b=points[right], ratio=(time-a.t_s)/(b.t_s-a.t_s);
+  return a.stroke_mm+(b.stroke_mm-a.stroke_mm)*ratio;
+}

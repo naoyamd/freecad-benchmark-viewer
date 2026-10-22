@@ -1,12 +1,13 @@
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {nearestFrame, validateAssembly, formatNumber as number} from './core.mjs';
+import {nearestFrame, validateAssembly, formatNumber as number, strokeBracket, validateStrokeHistory, historyStrokeAt} from './core.mjs';
 
 const $ = id => document.getElementById(id);
 const labels = {Gear:['Main gear','主脚'],Bay:['Wing/body bay','脚庫'],Doors:['Bay doors','ふた'],Fixture:['Fixture','取付治具'],Envelopes:['Growth envelopes','成長包絡'],FluidVolumes:['Gas & oil','ガス・油']};
 const stateLabels = ['全伸長 / Deployed','MLM静止 / Static','MTOM静止 / Static','D1最大圧縮 / D1 peak','機械最大圧縮 / Full stroke','引込30° / Retraction','引込60° / Retraction','引込85° / Retraction','収納・扉開 / Stowed, open','収納・扉閉 / Stowed, closed','非常伸長終端 / Emergency end'];
 let assembly, meshes = [], geometry = [], renderer, camera, controls, scene, currentFrame, selected = -1, playing = false, playTime = 0, lastTime = 0, direction = 1;
 let axes, grid;
+let suspensionFrames = [], dropHistories = new Map(), bumpMode = null, bumpClock = 0, lastBumpPaint = 0;
 const layers = new Map(Object.keys(labels).map(g => [g, g === 'Gear']));
 const raycaster = new THREE.Raycaster();
 const clipPlane = new THREE.Plane();
@@ -16,7 +17,7 @@ function showTab(id) {
   if (!$(id)?.classList.contains('tab-panel')) id = 'explorer';
   document.querySelectorAll('.tab-panel').forEach(el => el.classList.toggle('active', el.id === id));
   document.querySelectorAll('[data-tab]').forEach(el => { const active = el.dataset.tab === id; el.classList.toggle('active', active); el.setAttribute('aria-pressed', String(active)); });
-  if (id !== 'explorer') stopPlayback();
+  if (id !== 'explorer') stopAllPlayback();
   history.replaceState(null, '', `#${id}`);
   resize();
 }
@@ -140,16 +141,43 @@ function applyFrame(frame) {
   $('door').replaceChildren(document.createTextNode(number(frame.door_angle_deg,0)), el('small','°'));
   $('lock').textContent = frame.downlock >= .999 ? 'DOWN' : frame.uplock >= .999 ? 'UP' : 'RELEASED';
   const isSequence = Number.isFinite(frame.q);
-  $('frame-type').textContent = isSequence ? `q = ${number(frame.q,2)} · CAD sample` : `${frame.id} · ${stateLabels[Number(frame.id.slice(1))]?.split(' / ')[0] ?? frame.label}`;
-  $('state').value = isSequence ? 'sequence' : frame.id;
+  const isBump = frame.id === 'suspension';
+  $('frame-type').textContent = isBump ? `s = ${number(frame.stroke_mm)} mm · visual blend` : isSequence ? `q = ${number(frame.q,2)} · CAD sample` : `${frame.id} · ${stateLabels[Number(frame.id.slice(1))]?.split(' / ')[0] ?? frame.label}`;
+  $('state').value = isBump ? 'suspension' : isSequence ? 'sequence' : frame.id;
+  $('bump-stroke').value = String(frame.stroke_mm);
+  $('bump-value').textContent = `${number(frame.stroke_mm)} mm`;
   if (isSequence) {
     $('sequence').value = String(frame.q * 100);
     $('progress').replaceChildren(document.createTextNode(number(frame.q*100,0)),el('small','%'));
   } else {
     $('progress').replaceChildren(document.createTextNode('—'));
   }
-  $('state-note').textContent = isSequence ? '通常シーケンスのCADサンプル。扉角・ロック指令を含みます。' : frame.id === 'S10' ? '非常伸長後の静的CAD姿勢。非常伸長の動的成立を示すものではありません。' : frame.id === 'S9' ? '全収納・扉閉。静的包含と連続経路の隙間は別の検証です。' : '保存済みCADの検査姿勢。格納スライダーを動かすと通常シーケンスへ切り替わります。';
-  updateAppearance(); render();
+  $('state-note').textContent = isBump ? 'S0〜S4のCAD姿勢を表示補間。タイヤ形状は全伸長時の形状に固定しています。' : isSequence ? '通常シーケンスのCADサンプル。扉角・ロック指令を含みます。' : frame.id === 'S10' ? '非常伸長後の静的CAD姿勢。非常伸長の動的成立を示すものではありません。' : frame.id === 'S9' ? '全収納・扉閉。静的包含と連続経路の隙間は別の検証です。' : '保存済みCADの検査姿勢。格納スライダーを動かすと通常シーケンスへ切り替わります。';
+  updateAppearance();
+}
+
+function applySuspension(stroke, caption) {
+  const leavingRetraction = currentFrame?.theta_deg > 0;
+  const {lower,upper,ratio,value} = strokeBracket(suspensionFrames,stroke);
+  const blend = key => lower[key]+(upper[key]-lower[key])*ratio;
+  const parts = lower.parts.map((a,i) => {
+    const b=upper.parts[i];
+    return {
+      // shortcut: changing tire topology is held at S0, add contact meshes for a contact simulation.
+      mesh:assembly.parts[i].id.endsWith('-TYRE-CONTACT') ? suspensionFrames[0].parts[i].mesh : ratio<.5 ? a.mesh : b.mesh,
+      position:a.position.map((value,j)=>value+(b.position[j]-value)*ratio),
+      quaternion:new THREE.Quaternion(...a.quaternion).slerp(new THREE.Quaternion(...b.quaternion),ratio).toArray(),
+    };
+  });
+  applyFrame({id:'suspension',parts,stroke_mm:value,theta_deg:0,beta_deg:blend('beta_deg'),door_angle_deg:180,downlock:1,uplock:0});
+  if(leavingRetraction) cameraView('fit');
+  $('bump-time').textContent = caption;
+}
+
+function enableBumpControls() {
+  const ready = suspensionFrames.length === 5 && Boolean(renderer) && meshes.length === assembly?.parts.length;
+  $('bump-stroke').disabled = $('bump-cycle').disabled = $('bump-quick').disabled = !ready;
+  $('bump-case').disabled = $('bump-drop').disabled = !ready || !dropHistories.size;
 }
 
 function updateAppearance() {
@@ -241,15 +269,35 @@ $('reset-layers').addEventListener('click',() => {
 ['xray','axes','isolate','section','section-axis'].forEach(id => $(id).addEventListener('change',updateAppearance));
 $('section-position').addEventListener('input',() => {$('section-value').textContent = `${$('section-position').value} mm`;updateAppearance();});
 $('explode').addEventListener('input',() => {$('explode-value').textContent = `${$('explode').value}%`;if(currentFrame)applyFrame(currentFrame);});
-$('state').addEventListener('change',() => {stopPlayback();const frame = assembly.states.find(frame => frame.id === $('state').value);applyFrame(frame ?? nearestFrame(assembly.sequence,Number($('sequence').value)/100));});
-$('sequence').addEventListener('input',() => {stopPlayback();applyFrame(nearestFrame(assembly.sequence,Number($('sequence').value)/100));});
+$('state').addEventListener('change',() => {stopAllPlayback();if($('state').value==='suspension'){applySuspension(Number($('bump-stroke').value),'Manual / 手動');return;}const frame = assembly.states.find(frame => frame.id === $('state').value);applyFrame(frame ?? nearestFrame(assembly.sequence,Number($('sequence').value)/100));});
+$('sequence').addEventListener('input',() => {stopAllPlayback();applyFrame(nearestFrame(assembly.sequence,Number($('sequence').value)/100));});
+$('bump-stroke').addEventListener('input',()=>{stopAllPlayback();applySuspension(Number($('bump-stroke').value),'Manual / 手動');});
 
 function stopPlayback() { playing = false; $('play').textContent = '▶'; $('play').setAttribute('aria-label','格納動作を再生'); }
+function stopBumpPlayback() {bumpMode=null;$('bump-cycle').textContent='↕ Cycle / 往復';$('bump-drop').textContent='▶ Drop / 着陸再生';$('bump-quick').textContent='↕';$('bump-quick').classList.remove('selected');$('bump-quick').setAttribute('aria-label','上下動を再生');}
+function stopAllPlayback() {stopPlayback();stopBumpPlayback();}
 $('play').addEventListener('click',() => {
   if (playing) {stopPlayback();return;}
+  stopBumpPlayback();
   playTime = Number.isFinite(currentFrame?.q) ? currentFrame.q : 0;
   if (playTime >= 1) direction = -1; else if(playTime <= 0) direction = 1;
   playing = true; $('play').textContent = 'Ⅱ'; $('play').setAttribute('aria-label','格納動作を停止');
+});
+function toggleCycle() {
+  if(bumpMode==='cycle'){stopBumpPlayback();return;}
+  stopAllPlayback();bumpMode='cycle';bumpClock=0;
+  $('bump-cycle').textContent='Ⅱ Stop cycle / 停止';
+  $('bump-quick').textContent='Ⅱ';$('bump-quick').classList.add('selected');$('bump-quick').setAttribute('aria-label','上下動を停止');
+  applySuspension(0,'Cycle / 表示往復');
+}
+$('bump-cycle').addEventListener('click',toggleCycle);
+$('bump-quick').addEventListener('click',()=>{if(bumpMode){stopBumpPlayback();return;}toggleCycle();});
+$('bump-drop').addEventListener('click',()=>{
+  if(bumpMode==='drop'){stopBumpPlayback();return;}
+  stopAllPlayback();bumpMode='drop';bumpClock=0;
+  $('bump-drop').textContent='Ⅱ Stop replay / 停止';
+  $('bump-quick').textContent='Ⅱ';$('bump-quick').classList.add('selected');$('bump-quick').setAttribute('aria-label','上下動を停止');
+  applySuspension(0,`${$('bump-case').value} · t = 0.000 s`);
 });
 function tick(time) {
   const dt = Math.min((time - lastTime)/1000,.1); lastTime = time;
@@ -259,6 +307,21 @@ function tick(time) {
     const frame = nearestFrame(assembly.sequence,playTime);
     if (frame !== currentFrame) applyFrame(frame);
   }
+  if(bumpMode && !document.hidden) {
+    bumpClock += dt*(bumpMode==='drop'?Number($('bump-speed').value):1);
+    if(time-lastBumpPaint>=1000/30) {
+      lastBumpPaint=time;
+      if(bumpMode==='cycle') {
+        bumpClock%=5;
+        applySuspension(300*(1-Math.cos(bumpClock*2*Math.PI/5)),'Cycle / 表示往復');
+      } else {
+        const points=dropHistories.get($('bump-case').value), end=points.at(-1).t_s;
+        const elapsed=Math.min(bumpClock,end), done=bumpClock>=end;
+        applySuspension(historyStrokeAt(points,elapsed),`${$('bump-case').value} · t = ${number(elapsed,3)} / ${number(end,3)} s${done?' · complete':''}`);
+        if(done)stopBumpPlayback();
+      }
+    }
+  }
   controls?.update();
   requestAnimationFrame(tick);
 }
@@ -267,6 +330,8 @@ async function loadModel() {
   try {
     const [data,buffer] = await Promise.all([fetchFile('./model/assembly.json'),fetchFile('./model/geometry.bin','buffer')]);
     assembly = validateAssembly(data,buffer.byteLength);
+    suspensionFrames = assembly.states.filter(frame=>/^S[0-4]$/.test(frame.id)).sort((a,b)=>a.stroke_mm-b.stroke_mm);
+    if(suspensionFrames.length!==5 || suspensionFrames.some(frame=>!Number.isFinite(frame.stroke_mm))) throw new Error('Missing suspension CAD samples');
     setupScene(); loadGeometry(buffer);
     $('part-count').textContent = assembly.parts.length;
     $('mesh-status').textContent = `${assembly.parts.length} PARTS / ${assembly.sequence.length} SAMPLES`;
@@ -281,8 +346,10 @@ async function loadModel() {
     }
     $('state').replaceChildren(...assembly.states.map(frame => {const option = el('option',`${frame.id} · ${stateLabels[Number(frame.id.slice(1))] ?? frame.label}`);option.value=frame.id;return option;}));
     const option = el('option','q · 通常シーケンス / Sequence'); option.value = 'sequence'; $('state').append(option);
+    const bumpOption=el('option','s · 上下動 / Visual interpolation');bumpOption.value='suspension';$('state').append(bumpOption);
     applyFrame(assembly.states[0]); populateParts(); resize(); cameraView('iso');
     ['state','sequence','play'].forEach(id => {$(id).disabled = false;});
+    enableBumpControls();
     const p = $('provenance'); p.textContent = `CAD SHA-256: ${assembly.source_sha256} · Units: mm · ${assembly.parts.length} parts · ${assembly.sequence.length} sequence samples`;
   } catch (error) {
     console.error(error);
@@ -332,8 +399,12 @@ async function loadReport() {
     table($('structure-table'),['PART / CASE','MODE','YIELD MARGIN','BASIS'],report.structural.filter(row=>Number(row.yield_margin)<0).map(row=>[`${row.item} / ${row.case_id??'comparison'}`,row.mode,el('span',number(row.yield_margin,3),'negative'),row.basis]));
     table($('brake-table'),['CASE','Energy / brake MJ','Final °C','Thermal margin °C'],report.brakes.map(row=>[row.scenario,number(row.energy_per_brake_j/1e6,2),number(row.final_temperature_c,0),number(row.thermal_margin_c,0)]));
     const cases = [...new Set(report.history.map(row=>row.case_id))];
+    dropHistories = new Map(cases.map(id=>[id,validateStrokeHistory(report.history.filter(row=>row.case_id===id))]));
+    $('bump-case').replaceChildren(...cases.map(id=>{const o=el('option',id);o.value=id;return o;}));
     $('chart-case').replaceChildren(...cases.map(id=>{const o=el('option',id);o.value=id;return o;}));
-    $('chart-case').addEventListener('change',()=>drawHistory(report));drawHistory(report);
+    $('chart-case').addEventListener('change',()=>{$('bump-case').value=$('chart-case').value;drawHistory(report);});drawHistory(report);
+    $('bump-case').addEventListener('change',()=>{stopBumpPlayback();$('chart-case').value=$('bump-case').value;drawHistory(report);$('bump-time').textContent='Ready / 再生待ち';});
+    enableBumpControls();
     const counts = ['Pass','Fail','Pending'].map(status => [status,report.requirements.filter(row=>row.status === status).length]);
     $('requirement-counts').replaceChildren(...counts.map(([status,count])=>el('span',`${status} · ${count}`)));
     const showRequirements = () => {

@@ -1,6 +1,20 @@
-export function nearestFrame(frames, progress) {
-  if (!frames.length || !Number.isFinite(progress)) throw new Error('Invalid sequence');
-  return frames.reduce((best, frame) => Math.abs(frame.q - progress) < Math.abs(best.q - progress) ? frame : best);
+function frameBracket(frames, requested, key) {
+  if (!frames.length || !Number.isFinite(requested)) throw new Error('Invalid animation position');
+  const value = Math.max(frames[0][key], Math.min(frames.at(-1)[key], requested));
+  const right = frames.findIndex(frame => frame[key] >= value);
+  if (right <= 0) return {lower:frames[0],upper:frames[0],ratio:0,value};
+  const lower = frames[right-1], upper = frames[right];
+  return {lower,upper,ratio:(value-lower[key])/(upper[key]-lower[key]),value};
+}
+
+export const sequenceBracket = (frames, progress) => frameBracket(frames,progress,'q');
+
+export function sameMeshTopology(a, b) {
+  return a.vertexCount === b.vertexCount && a.indices.length === b.indices.length && a.indices.every((value,i) => value === b.indices[i]);
+}
+
+export function interpolateAttribute(target, a, b, ratio) {
+  for (let i=0; i<target.length; i++) target[i] = a[i]+(b[i]-a[i])*ratio;
 }
 
 export function validateAssembly(data, byteLength) {
@@ -30,12 +44,7 @@ export function formatNumber(value, digits = 1) {
 }
 
 export function strokeBracket(frames, stroke) {
-  if (!frames.length || !Number.isFinite(stroke)) throw new Error('Invalid suspension stroke');
-  const value = Math.max(frames[0].stroke_mm, Math.min(frames.at(-1).stroke_mm, stroke));
-  const right = frames.findIndex(frame => frame.stroke_mm >= value);
-  if (right <= 0) return {lower:frames[0],upper:frames[0],ratio:0,value};
-  const lower = frames[right-1], upper = frames[right];
-  return {lower,upper,ratio:(value-lower.stroke_mm)/(upper.stroke_mm-lower.stroke_mm),value};
+  return frameBracket(frames,stroke,'stroke_mm');
 }
 
 export function validateStrokeHistory(points) {

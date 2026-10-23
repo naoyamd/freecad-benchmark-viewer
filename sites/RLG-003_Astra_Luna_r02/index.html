@@ -41,9 +41,9 @@
           </div>
           <div class="motion-deck">
             <div class="motion-title"><div><p class="eyebrow">RETRACTION SEQUENCE</p><h2>格納シーケンス</h2></div><span class="frame-type" id="frame-type">S0 · 全伸長</span></div>
-            <div class="transport"><button id="play" class="play-button" disabled aria-label="格納動作を再生">▶</button><div class="timeline"><label for="sequence">DEPLOYED <span>STOWED</span></label><input id="sequence" type="range" min="0" max="100" step="1" value="0" disabled><div class="timeline-labels"><span>ボギー整列 → 解除</span><span>引込 → アップロック</span><span>扉閉鎖</span></div></div><output id="progress" for="sequence">0<small>%</small></output></div>
+            <div class="transport"><button id="play" class="play-button" disabled aria-label="格納動作を再生">▶</button><div class="timeline"><label for="sequence">DEPLOYED <span>STOWED</span></label><input id="sequence" type="range" min="0" max="100" step="0.1" value="0" disabled><div class="timeline-labels"><span>ボギー整列 → 解除</span><span>引込 → アップロック</span><span>扉閉鎖</span></div></div><output id="progress" for="sequence">0<small>%</small></output></div>
             <div class="readouts"><div><span>θ / 引込角</span><strong id="theta">0.0<small>°</small></strong></div><div><span>s / ストローク</span><strong id="stroke">0.0<small>mm</small></strong></div><div><span>β / ボギー角</span><strong id="beta">−8.0<small>°</small></strong></div><div><span>DOORS / 扉角</span><strong id="door">180<small>°</small></strong></div><div><span>LOCK / 指令値</span><strong id="lock">DOWN</strong></div></div>
-            <p class="sample-note">FreeCADの保存形状・姿勢をサンプル再生。物理シミュレーション・連続経路の干渉判定ではありません。ロック表示はCADパラメータの指令値です。</p>
+            <p class="sample-note">FreeCADの保存姿勢間を表示用に連続補間。物理シミュレーション・連続経路の干渉判定ではありません。ロック表示はCADパラメータの指令値です。</p>
           </div>
         </div>
         <aside class="controls" aria-label="表示コントロール">

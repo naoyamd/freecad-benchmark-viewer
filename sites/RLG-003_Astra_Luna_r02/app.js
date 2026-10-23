@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {nearestFrame, validateAssembly, formatNumber as number, strokeBracket, validateStrokeHistory, historyStrokeAt} from './core.mjs';
+import {sequenceBracket, sameMeshTopology, interpolateAttribute, validateAssembly, formatNumber as number, strokeBracket, validateStrokeHistory, historyStrokeAt} from './core.mjs';
 
 const $ = id => document.getElementById(id);
 const labels = {Gear:['Main gear','主脚'],Bay:['Wing/body bay','脚庫'],Doors:['Bay doors','ふた'],Fixture:['Fixture','取付治具'],Envelopes:['Growth envelopes','成長包絡'],FluidVolumes:['Gas & oil','ガス・油']};
@@ -12,6 +12,7 @@ const layers = new Map(Object.keys(labels).map(g => [g, g === 'Gear']));
 const raycaster = new THREE.Raycaster();
 const clipPlane = new THREE.Plane();
 const pointer = new THREE.Vector2();
+const shapeBlends = new Map();
 
 function showTab(id) {
   if (!$(id)?.classList.contains('tab-panel')) id = 'explorer';
@@ -121,11 +122,54 @@ function layerFor(part) {
 }
 function isOverlay(part) { return /-TYRE-CARCASS/.test(part.id); }
 
+function blendShape(a, b, ratio) {
+  if (a === b || ratio === 0) return geometry[a];
+  if (ratio === 1) return geometry[b];
+  const key = `${a}:${b}`;
+  if (!shapeBlends.has(key)) {
+    const left=geometry[a], right=geometry[b];
+    const topology = shape => ({vertexCount:shape.attributes.position.count,indices:shape.index.array});
+    const compatible = sameMeshTopology(topology(left),topology(right));
+    const shape = compatible ? left.clone() : null;
+    if (shape) {
+      shape.boundingBox.union(right.boundingBox);
+      shape.boundingBox.getBoundingSphere(shape.boundingSphere);
+      for (const name of ['position','normal']) shape.attributes[name].setUsage(THREE.DynamicDrawUsage);
+    }
+    shapeBlends.set(key,{shape,ratio:null});
+  }
+  const blend=shapeBlends.get(key);
+  // shortcut: incompatible CAD triangulations switch samples; re-export matching topology for continuous fine detail.
+  if (!blend.shape) return geometry[ratio<.5 ? a : b];
+  if (blend.ratio !== ratio) {
+    for (const name of ['position','normal']) {
+      const attribute=blend.shape.attributes[name];
+      interpolateAttribute(attribute.array,geometry[a].attributes[name].array,geometry[b].attributes[name].array,ratio);
+      attribute.needsUpdate=true;
+    }
+    blend.ratio=ratio;
+  }
+  return blend.shape;
+}
+
+function interpolateParts(lower, upper, ratio, holdTires=false) {
+  return lower.parts.map((a,i) => {
+    const b=upper.parts[i];
+    return {
+      mesh:ratio<.5 ? a.mesh : b.mesh,
+      // shortcut: changing tire topology is held at S0, add contact meshes for a contact simulation.
+      geometry:holdTires && assembly.parts[i].id.endsWith('-TYRE-CONTACT') ? geometry[suspensionFrames[0].parts[i].mesh] : blendShape(a.mesh,b.mesh,ratio),
+      position:a.position.map((value,j)=>value+(b.position[j]-value)*ratio),
+      quaternion:new THREE.Quaternion(...a.quaternion).slerp(new THREE.Quaternion(...b.quaternion),ratio).toArray(),
+    };
+  });
+}
+
 function applyFrame(frame) {
   currentFrame = frame;
   const explode = Number($('explode').value) * 5;
   frame.parts.forEach((pose, i) => {
-    const mesh = meshes[i]; mesh.geometry = geometry[pose.mesh];
+    const mesh = meshes[i]; mesh.geometry = pose.geometry ?? geometry[pose.mesh];
     mesh.position.set(...pose.position); mesh.quaternion.set(...pose.quaternion);
     if (explode) {
       const center = mesh.geometry.boundingSphere.center.clone().applyQuaternion(mesh.quaternion).add(mesh.position);
@@ -142,33 +186,33 @@ function applyFrame(frame) {
   $('lock').textContent = frame.downlock >= .999 ? 'DOWN' : frame.uplock >= .999 ? 'UP' : 'RELEASED';
   const isSequence = Number.isFinite(frame.q);
   const isBump = frame.id === 'suspension';
-  $('frame-type').textContent = isBump ? `s = ${number(frame.stroke_mm)} mm · visual blend` : isSequence ? `q = ${number(frame.q,2)} · CAD sample` : `${frame.id} · ${stateLabels[Number(frame.id.slice(1))]?.split(' / ')[0] ?? frame.label}`;
+  $('frame-type').textContent = isBump ? `s = ${number(frame.stroke_mm)} mm · visual blend` : isSequence ? `q = ${number(frame.q,3)} · visual blend` : `${frame.id} · ${stateLabels[Number(frame.id.slice(1))]?.split(' / ')[0] ?? frame.label}`;
   $('state').value = isBump ? 'suspension' : isSequence ? 'sequence' : frame.id;
   $('bump-stroke').value = String(frame.stroke_mm);
   $('bump-value').textContent = `${number(frame.stroke_mm)} mm`;
+  if (!isBump) $('bump-time').textContent = 'Manual / 手動';
   if (isSequence) {
     $('sequence').value = String(frame.q * 100);
     $('progress').replaceChildren(document.createTextNode(number(frame.q*100,0)),el('small','%'));
   } else {
     $('progress').replaceChildren(document.createTextNode('—'));
   }
-  $('state-note').textContent = isBump ? 'S0〜S4のCAD姿勢を表示補間。タイヤ形状は全伸長時の形状に固定しています。' : isSequence ? '通常シーケンスのCADサンプル。扉角・ロック指令を含みます。' : frame.id === 'S10' ? '非常伸長後の静的CAD姿勢。非常伸長の動的成立を示すものではありません。' : frame.id === 'S9' ? '全収納・扉閉。静的包含と連続経路の隙間は別の検証です。' : '保存済みCADの検査姿勢。格納スライダーを動かすと通常シーケンスへ切り替わります。';
+  $('state-note').textContent = isBump ? 'S0〜S4のCAD姿勢を表示補間。タイヤ形状は全伸長時の形状に固定しています。' : isSequence ? '17個のCAD姿勢間を連続表示補間。一部の細部形状はサンプル切替です。連続干渉・拘束の成立を示すものではありません。' : frame.id === 'S10' ? '非常伸長後の静的CAD姿勢。非常伸長の動的成立を示すものではありません。' : frame.id === 'S9' ? '全収納・扉閉。静的包含と連続経路の隙間は別の検証です。' : '保存済みCADの検査姿勢。格納スライダーを動かすと通常シーケンスへ切り替わります。';
   updateAppearance();
+}
+
+function applySequence(progress) {
+  const {lower,upper,ratio,value} = sequenceBracket(assembly.sequence,progress);
+  const frame={id:'sequence',q:value,parts:interpolateParts(lower,upper,ratio)};
+  for (const key of ['stroke_mm','theta_deg','beta_deg','door_angle_deg','downlock','uplock']) frame[key]=lower[key]+(upper[key]-lower[key])*ratio;
+  applyFrame(frame);
 }
 
 function applySuspension(stroke, caption) {
   const leavingRetraction = currentFrame?.theta_deg > 0;
   const {lower,upper,ratio,value} = strokeBracket(suspensionFrames,stroke);
   const blend = key => lower[key]+(upper[key]-lower[key])*ratio;
-  const parts = lower.parts.map((a,i) => {
-    const b=upper.parts[i];
-    return {
-      // shortcut: changing tire topology is held at S0, add contact meshes for a contact simulation.
-      mesh:assembly.parts[i].id.endsWith('-TYRE-CONTACT') ? suspensionFrames[0].parts[i].mesh : ratio<.5 ? a.mesh : b.mesh,
-      position:a.position.map((value,j)=>value+(b.position[j]-value)*ratio),
-      quaternion:new THREE.Quaternion(...a.quaternion).slerp(new THREE.Quaternion(...b.quaternion),ratio).toArray(),
-    };
-  });
+  const parts = interpolateParts(lower,upper,ratio,true);
   applyFrame({id:'suspension',parts,stroke_mm:value,theta_deg:0,beta_deg:blend('beta_deg'),door_angle_deg:180,downlock:1,uplock:0});
   if(leavingRetraction) cameraView('fit');
   $('bump-time').textContent = caption;
@@ -269,8 +313,8 @@ $('reset-layers').addEventListener('click',() => {
 ['xray','axes','isolate','section','section-axis'].forEach(id => $(id).addEventListener('change',updateAppearance));
 $('section-position').addEventListener('input',() => {$('section-value').textContent = `${$('section-position').value} mm`;updateAppearance();});
 $('explode').addEventListener('input',() => {$('explode-value').textContent = `${$('explode').value}%`;if(currentFrame)applyFrame(currentFrame);});
-$('state').addEventListener('change',() => {stopAllPlayback();if($('state').value==='suspension'){applySuspension(Number($('bump-stroke').value),'Manual / 手動');return;}const frame = assembly.states.find(frame => frame.id === $('state').value);applyFrame(frame ?? nearestFrame(assembly.sequence,Number($('sequence').value)/100));});
-$('sequence').addEventListener('input',() => {stopAllPlayback();applyFrame(nearestFrame(assembly.sequence,Number($('sequence').value)/100));});
+$('state').addEventListener('change',() => {stopAllPlayback();if($('state').value==='suspension'){applySuspension(Number($('bump-stroke').value),'Manual / 手動');return;}const frame = assembly.states.find(frame => frame.id === $('state').value);if(frame)applyFrame(frame);else applySequence(Number($('sequence').value)/100);});
+$('sequence').addEventListener('input',() => {stopAllPlayback();applySequence(Number($('sequence').value)/100);});
 $('bump-stroke').addEventListener('input',()=>{stopAllPlayback();applySuspension(Number($('bump-stroke').value),'Manual / 手動');});
 
 function stopPlayback() { playing = false; $('play').textContent = '▶'; $('play').setAttribute('aria-label','格納動作を再生'); }
@@ -304,8 +348,7 @@ function tick(time) {
   if (playing && assembly && !document.hidden) {
     playTime += dt * direction / 14;
     if (playTime >= 1 || playTime <= 0) {playTime = Math.max(0,Math.min(1,playTime));direction *= -1;}
-    const frame = nearestFrame(assembly.sequence,playTime);
-    if (frame !== currentFrame) applyFrame(frame);
+    applySequence(playTime);
   }
   if(bumpMode && !document.hidden) {
     bumpClock += dt*(bumpMode==='drop'?Number($('bump-speed').value):1);

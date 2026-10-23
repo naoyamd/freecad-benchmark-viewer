@@ -1,6 +1,6 @@
 # RLG-003 r02 ビューワー
 
-このフォルダは、CAD・解析結果を相対参照だけで閲覧する独立サイトの入力です。ビルド成果物は `sites/RLG-003_Astra_Luna_r02/` に配置します。公開時の想定URLは <https://intake.nightly.dedyn.io/sites/RLG-003_Astra_Luna_r02/> です。
+このフォルダは、CAD・解析結果を相対参照で閲覧する独立サイトの入力です。ビルド成果物は `sites/RLG-003_Astra_Luna_r02/` に配置します。公開時の想定URLは <https://intake.nightly.dedyn.io/sites/RLG-003_Astra_Luna_r02/> です。
 
 ## ビルド
 
@@ -27,6 +27,8 @@ python scripts/build_viewer.py
 指定納品先は [`naoyamd/freecad-benchmark-viewer`](https://github.com/naoyamd/freecad-benchmark-viewer) の `sites/RLG-003_Astra_Luna_r02/`。このサブフォルダのファイルだけで閲覧でき、元の設計プロジェクトやFreeCADは配信時には不要です。
 
 確認内容と限界は [VERIFICATION.md](VERIFICATION.md) を参照してください。
+
+「Files / 納入物」の先頭から発表スライド `INTAKE_CAD_20261023.pdf`（22ページ）をダウンロードできます。このPDFには共有パスワードが含まれるため、原本は認証付きギャラリーの暗号化パッケージ内だけで配信し、公開リポジトリにはリンクを収録します。
 
 ## ローカル確認
 
